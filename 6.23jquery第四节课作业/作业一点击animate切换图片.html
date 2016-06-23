@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用jquery做出一个图片轮播的效果，</title>
+		<style>
+			#father{
+				width: 600px;
+				margin: 110px auto;
+				position: relative;
+			}
+			#left,#right{
+				font-size: 80px;
+				position: absolute;
+				width: 40px;
+				height: 80px;
+				background: #ccc;
+				opacity: 0.5;
+			}
+			#left{
+				top: 200px;
+			}
+			#right{
+				top: 200px;
+				right:210px;
+			}
+			#box
+			{
+				width: 392px;
+				height: 580px;
+				position: relative;
+				overflow: hidden;
+			}
+			ul{
+				position: absolute;
+				left: 0px;
+			}
+			li{
+				float: left;
+				list-style: none;
+				width:392px;
+				height: 580px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$('li').each(function(){
+					$(this).css('background','url(img/'+$(this).index()+'.jpg)');
+				});
+//				alert(parseInt($('li:eq(0)').css('width'))*$('li').length);
+				$('ul').css('width',parseInt($('li:eq(0)').css('width'))*$('li').length);
+				var count=0;
+				var L=0;
+				$('#right').bind('click',function(e){
+					L=L-parseInt($('li:eq(0)').css('width'));
+					if(L<=-parseInt($('li:eq(0)').css('width'))*$('li').length)
+					{
+						L=0;
+					}
+					$('ul').animate({left:L},1000)
+				})
+				$('#left').bind('click',function(e){
+					L=L+parseInt($('li:eq(0)').css('width'));
+					if(L>=0)
+					{
+						L=-parseInt($('li:eq(0)').css('width'))*($('li').length-1);
+					}
+					$('ul').animate({left:L},1000)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="father">
+			<div id="box">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div id="left"><</div>
+			<div id="right">></div>
+		</div>
+	</body>
+</html>

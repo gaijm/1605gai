@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<style>
+			#father{
+				width: 600px;
+				margin: 0 auto;
+				position: absolute;
+				margin-top: 100px;
+				top: 0px;
+				left: 600px;
+			}
+			#box{
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				top: -400px;
+				text-indent: 1em;
+				word-spacing: 2px;
+				line-height: 1.5;
+				z-index: 2;
+			}
+			button{
+				margin-right: 20px;
+				position: absolute;
+				z-index: 2;
+			}
+			#btn1{
+				left: 100px;
+			}
+			#btn2{
+				left: 200px;
+			}
+			#close{
+				width: 40px;
+				height: 40px;
+				border-radius: 20px;
+				background: red;
+				color: white;
+				font-size: 30px;
+				line-height: 40px;
+				text-align:left;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				z-index: 2;
+			}
+			#masking{
+				width: 96%;
+				height: 500px;
+				background: #ccc;
+				position: absolute;
+				z-index: 1px;
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+				//关闭按钮
+				$('#close').bind('click',function(){
+					$('#box').fadeOut(2000);
+					$('#masking').slideUp(1000);
+				});
+				//弹出按钮
+				$('button:first').bind('click',function(){
+					$('#box').animate({top:20},2000);
+					$('#masking').slideDown(1000);
+				});
+				//折叠按钮
+				$('button:last').bind('click',function(){
+					$('#box').animate({top:-440},2000);
+					$('#masking').slideUp(1000);
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="father">
+			<button id="btn1">弹出</button>
+			<button id="btn2">折叠</button>
+			<div id="box">
+				DIR 显示磁盘目录列表的命令
+				参数/A 显示具有指定属性的文件
+				参数/S 显示指定目录和所有子目录中的文件。
+				参考资料为dos命令行dir命令的百科，有更多参数可供参考提问者评价
+				按照你说的，真的成功了，好开心，谢谢你！
+				DIR 显示磁盘目录列表的命令
+				参数/A 显示具有指定属性的文件
+				参数/S 显示指定目录和所有子目录中的文件。
+				参考资料为dos命令行dir命令的百科，有更多参数可供参考提问者评价
+				按照你说的，真的成功了，好开心，谢谢你！
+				<div id="close">
+				x
+				</div>
+			</div>
+		</div>
+		<div id="masking"></div>
+	</body>
+</html>
