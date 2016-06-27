@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<style>
+			h2{
+				width: 180px;
+				margin: 0 auto;
+				font-size: 32px;
+				font-family: "微软雅黑";
+			}
+			form{
+				text-align: center;
+			}
+			form li{
+				list-style: none;
+				margin: 3px;
+			}
+			form li input{
+				width: 200px;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 600px;
+				height: 600px;
+				border: 1px solid black;
+				margin:0 auto;
+				position: relative;
+			}
+			#msg{
+				with:100%;
+				height: 500px;
+				border-bottom: 1px solid black;
+			}
+			button{
+				width: 140px;
+				height: 30px;
+			}
+			#msg_inner{
+				border-top: 1px solid red;
+				height: 360px;
+				overflow-y: auto;
+			}
+			#msg_inner span{
+				display: inline-block;
+				margin: 5px;
+				width: 100px;
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+			}
+			.deleted{
+				width: 80px;
+				margin-left:10px;
+			}
+			#allbtn{
+				text-align: center;
+			}
+			#allbtn button{
+				margin-top: 14px;
+			}
+			#show{
+				width: 400px;
+				height: 400px;
+				border: 1px solid black;
+				position: absolute;
+				left: 100px;
+				top: 90px;
+				background: darkgray;
+				display: none;
+			}
+			#show div{
+				width: 100%;
+				height: 70px;
+				border-bottom: 1px solid black;
+				text-align: center;
+				line-height: 70px;
+				font-family: "微软雅黑";
+				color: white;
+			}
+			#show div input{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				font-size: 24px;
+			}
+			#changge{
+				width: 120px;
+				margin:30px 0px 0px 130px;
+			}
+			img{
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				z-index: 10;
+			}
+		</style>
+		<script>
+			$(function(){
+				$('#btn').click(function(){
+					$.ajax({
+						type:'get',
+						url:'http://localhost:5000/myshop',
+						success:function(response)
+						{
+							console.log(response);
+							for(var i=0;i<response.length;i++)
+							{
+								$('<li><input type="checkbox" value="http://localhost:5000/myshop/'+response[i].id+'"/><a href="#" title="http://localhost:5000/myshop/'+response[i].id+'">查看</a><span>'+response[i].name+'</span><span>'+response[i].price+'</span><span>'+response[i].miaoshu+'</span><span>'+response[i].url1+'</span><button class="deleted" value="http://localhost:5000/myshop/'+response[i].id+'">删除数据</button></li>').appendTo($('#msg_ul'));
+							};
+							$('#msg_ul li').each(function(index,elem){
+								if(index%2==0)
+								{
+									$(this).css('background','red');
+								}
+								else{
+									$(this).css('background','yellow')
+								}
+							})
+							//点击一行删除
+							$('.deleted').click(function(){
+								var urlbtn=$(this).attr('value');
+								var that=this;
+								var result=window.confirm('是否删除数据');
+								if(result){
+								$.ajax({
+									url:urlbtn,
+									type:'delete',
+									success:function(){
+										$(that).parent().remove();
+										//删除的同时变色
+										$('#msg_ul li').each(function(index,elem){
+											if(index%2==0)
+											{
+												$(this).css('background','red');
+											}
+											else{
+												$(this).css('background','yellow')
+											}
+										});
+									}
+								})
+								}
+							})
+							
+							//全删除
+							$('#btn2').click(function(){
+								var resultall=window.confirm('是否删除数据');
+								if(resultall){
+									var arr=[];
+									$('input:checked').each(function(index){
+											arr.push($(this).attr('value'));
+											$.ajax({
+											type:"delete",
+											url:$(this).attr('value'),
+											async:true,
+											success:function(){
+												$('input:checked').parent().remove();
+												//删除的同时变色
+												$('#msg_ul li').each(function(index,elem){
+													if(index%2==0)
+													{
+														$(this).css('background','red');
+													}
+													else{
+														$(this).css('background','yellow')
+													}
+												});
+											}
+										});
+									});
+//									方法二:
+//								console.log(arr);
+//									for(var i=0;i<arr.length;i++){
+//										$.ajax({
+//											type:"delete",
+//											url:arr[i],
+//											async:true,
+//											success:function(){
+//												$('input:checked').parent().remove();
+//											}
+//										});
+//									};
+								}
+							})
+							//点击a链接 查看属性
+							$('li').on('click','a',function(){
+								var urla=$(this).attr('title');
+								//存一下that，that是点击的a
+								var that=this;
+								$('#show').css('display','block');
+								$.ajax({
+									type:"get",
+									url:urla,
+									async:true,
+									success:function(response){
+										$('#show input').each(function(index,elem){
+											if(index==0)
+											{
+												$(this).val(response.name);
+											};
+											if(index==1)
+											{
+												$(this).val(response.price);
+											};
+											if(index==2)
+											{
+												$(this).val(response.miaoshu);
+											};
+											if(index==3)
+											{
+												$(this).val(response.url1);
+											};
+										})
+									}
+								});
+								//input 改动时button可以用  并且点击修改 页面上的值改变；
+								$('#show div input').change(function(){
+									$('#show p button').prop('disabled',false);
+									$('#show p button').click(function(){
+										$.ajax({
+											url:urla,
+											type:'put',
+											data:{
+												name:$('#show div input').eq(0).val(),
+												price:$('#show div input').eq(1).val(),
+												miaoshu:$('#show div input').eq(2).val(),
+												url1:$('#show div input').eq(3).val()
+											},
+											success:function(response){
+												$(that).next().html($('#show div input').eq(0).val());
+												$(that).next().next().html($('#show div input').eq(1).val());
+												$(that).next().next().next().html($('#show div input').eq(2).val());
+												$(that).next().next().next().next().html($('#show div input').eq(3).val());
+											}
+										})
+									})
+								})
+								
+							})
+							//全选
+							$('#checkall').click(function(){
+								$('input[type=checkbox]').attr('checked',true);
+							})
+							//全不选
+							$('#uncheckall').click(function(){
+								$('input[type=checkbox]').attr('checked',false);
+							})
+							//反选
+							$('#checks').click(function(){
+								$('input[type=checkbox]').each(function(){
+									if($(this).prop('checked'))
+									{
+										$(this).prop('checked',false);
+									}
+									else
+									{
+										$(this).prop('checked',true);
+									}
+								});
+							})
+						}
+					})
+				});
+				
+				//上传数据
+				$('#btn1').click(function(){
+					$.ajax({
+						type:'post',
+						url:'http://localhost:5000/myshop',
+						data:{
+							name:$('input[name=name]').val(),
+							price:$('input[name=price]').val(),
+							miaoshu:$('input[name=miaoshu]').val(),
+							url1:$('input[name=url1]').val()
+						},
+					})
+				});
+				//弹窗关闭
+				$('#show img').click(function(){
+					$('#show').css('display','none');
+				});
+			})
+			
+		</script>
+	</head>
+	<body>
+		<h2>用户信息表</h2>
+		<div id="box">
+			<div id="show">
+				<div><input type="text"></div>
+				<div><input type="text"></div>
+				<div><input type="text"></div>
+				<div><input type="text"></div>
+				<p>
+					<button id="changge" disabled="true">修改</button>
+					<img src="img/close.png"/>
+				</p>
+			</div>
+			<div id="msg">
+				<form>
+					<ul>
+						<li>用户:<input type="text" name="name"></li>
+						<li>价格:<input type="text" name="price"></li>
+						<li>描述:<input type="text" name="miaoshu"></li>
+						<li>地址:<input type="text" name="url1"></li>
+					</ul>
+				</form>
+				<div id="msg_inner">
+					<ul id="msg_ul">
+						<li style="background: red;"><span style="margin-left: 60px;">姓名</span><span>价格</span><span>简介</span><span>网址</span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="allbtn">
+				<button id="btn1">提交</button>
+				<button id="btn">获取</button>
+				<button id="btn2">删除</button><br>
+				<button id="checkall">全选</button>
+				<button id="uncheckall">全不选</button>
+				<button id="checks">反选</button>
+			</div>
+		</div>
+	</body>
+</html>
