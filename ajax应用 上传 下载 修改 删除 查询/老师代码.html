@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>把服务器上数据都获取下来</title>
+    <script src="../js/lib/jquery-3.0.0.js"></script>
+    <style>
+        body{
+            width: 800px;
+            margin: 0 auto;
+        }
+        .content {
+            width: 600px;
+        }
+        .content span {
+            display: inline-block;
+            width: 200px;
+        }
+        .message {
+            display: none;
+            width: 400px;
+            height: 280px;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <div class="drow" >
+
+        </div>
+        <div class="drow" >
+
+        </div>
+    </div>
+    <div class="content">
+        <!--<div><a href="" >1</a><a href="">a</a></div>
+        <div><a href="">2</a><a href="">b</a></div>
+        <div><a href="">3</a><a href="">c</a></div>
+        <div><a href="">4</a><a href="">d</a></div>
+        <div><a href="">5</a><a href="">e</a></div>-->
+    </div>
+    <div class="data-single"></div>
+    <script>
+        /*$(".content div a:odd").each(function (index, elem) {
+            console.log($(this).text());
+        })*/
+        var url = "http://localhost:5500/products";
+        $(document).ready(function () {
+            $.get(url,function (data) {
+                for(var i = 0 ;i < data.length;i++){
+
+                    var v_div = $("<div><span class='did'><a href='#'title='"+url+"/"+data[i].id+
+                            "'>删除</a></span><span class='qid'><a href='#' title='"+url+"/"+ data[i].id+
+                            "'>查看</a></span></span><span>"+
+                            data[i].name+"</span><span>"+data[i].price+"</span></div>");
+                    v_div.appendTo(".content");
+                }
+                $(".content div:even").css("background-color","#666ccc");
+                $(".qid a").each(function (index) {
+                    //给选查看的a标签注册监听器
+                    $(this).click(function (e) {
+                        //console.log(index + $(this).attr("title"));
+                        tanchuang($(this).attr("title"));
+                        e.preventDefault();
+                    });
+                });
+                $(".did a").each(function (index) {
+                    //给选中删除a标签注册监听器
+                    $(this).click(function (e) {
+                        var that = this;
+                        $.ajax($(this).attr("title"),{
+                           type:"delete",
+                            success:function () {
+                               //把页面当中被删除的数据所对应行，从dom节点上删除
+                                console.log("start");
+                                console.log(this);
+                                console.log(that);
+                                $(that).parent().parent().remove();
+                                console.log("end");
+                            }
+                        });
+                        e.preventDefault();
+                    });
+                })
+
+            });
+            function tanchuang(url) {
+                //弹窗显示出来
+                var cssMap = {
+                    display:"block",
+                    //把弹窗浮动屏幕的中央
+                }
+                var tc = $(".message").css(cssMap);
+                //取数据
+                $.get(url, function (data) {
+                    //把数据添加到弹窗上
+                    tc.children().each(function (index) {
+                        $(this).html("")
+                        //弹窗中的index 对应的div
+                        if　(index == 0)
+                            $(this).append(data.name);
+                        else if (index == 1)
+                            $(this).append(data.price);
+                    });
+                });
+                //渲染到元素上
+            }
+
+        })
+    </script>
+</body>
+</html>
