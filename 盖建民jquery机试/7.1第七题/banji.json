@@ -1,0 +1,23 @@
+{
+  "users" : [
+    {
+      "name" : "ww",
+      "class" : "1班",
+      "score" : "122"
+    },
+    {
+      "name" : "zs",
+      "class" : "2班",
+      "score" : "32"
+    },
+    {
+      "name" : "ls",
+      "class" : "3班",
+      "score" : "55"
+    },
+    {
+      "name" : "zl",
+      "class" : "4班",
+      "score" : "89"
+    }]
+}

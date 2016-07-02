@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			
+				   var lowerCount = 0;
+			    	var numberCount = 0;
+			var str = "fsdfm6knkslk2klnkln099b3bbss"
+			    for(var i=0;i<str.length;i++){
+			    	var c =  str.charAt(i);
+
+			    	if(c>='a'&&c<='z'){
+			    		lowerCount++
+			    	}else if(c>=0&&c<=9){
+			    		numberCount++
+			    	}
+			    }
+			    
+			 var result="字母的个数为："+lowerCount++ +"数字的个数为："+numberCount++			 
+			 alert(result)
+
+			
+			
+		</script>
+	    
+	</body>
+</html>

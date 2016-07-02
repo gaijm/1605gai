@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="ajax.js" ></script>
+	<script type="text/javascript" src="jqury/jquery-3.0.0.min.js" ></script>
+	<body>
+	<div id="d1"></div>
+	<div><button>点击获取json数据</button></div>
+	<div><button>排序</button></div>
+	</body>
+	<script>
+	$('button:first').click(function(){
+		function successFunc(text){
+		var sNum=JSON.parse(text);
+		var div=document.getElementById("d1");
+	for (var i=0;i<sNum.length;i++) {
+			var table=document.createElement("table");
+				var tr=document.createElement("tr");
+			for(var j=0;j<1;j++){
+				var td=document.createElement("td");
+				td.innerHTML=sNum[i].score;
+				td.style.width="30px";
+				td.style.height="30px";
+				td.style.background="greenyellow";
+				tr.appendChild(td);}	
+				table.appendChild(tr);	
+				div.appendChild(table);	
+			}	
+	}		
+ajax("get","my.json",true,successFunc,null);
+})
+</script>
+</html>

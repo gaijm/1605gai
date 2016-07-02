@@ -1,0 +1,52 @@
+{
+	
+	"studentArray" : [
+		  {
+		 
+	        "studentName" : "丁环宇",
+			"class" : "H5-1604",
+	       "score" : "85"
+	      },
+	      {
+	      
+	        "studentName" : "武戈",
+	        "class" : "H5-1604",
+	        "score" : "81"
+	      },
+	      {
+	       
+	        "studentName" : "严帅",
+	         "class" : "H5-1604",
+	        "score" : "83"
+	        
+	      },
+	      {
+	      
+	        "studentName" : "马丹丹",
+	         "class" : "H5-1604",
+	        "score" : "76"
+	      },
+	      {
+	      
+	        "studentName" : "卢欢",
+	         "class" : "H5-1604",
+	        "score" : "58"
+	      },
+	      {
+	       
+	        "studentName" : "段俊岩",
+	          "class" : "H5-1604",
+	        "score" : "68"
+	        
+	      },
+	      {
+	      
+	        "studentName" : "吴贤青",
+	        "class" : "H5-1604",
+	        "score" : "90"
+	        
+	      }
+	]
+	
+	
+}

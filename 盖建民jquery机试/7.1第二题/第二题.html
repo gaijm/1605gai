@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html> -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 600px;
+				margin: 100px auto;
+			}
+			ul {
+				margin: 0 auto;
+				height: 300px;
+				width: 1000px;
+				border: 1px solid white;
+			}
+			
+			ul li {
+				width: 60px;
+				float: left;
+				height: 300px;
+				text-align: center;
+				list-style: inside;
+				border-right: 1px solid black;
+				list-style: none;
+			}
+			ul li p{
+				width: 200px;
+				display: none;
+			}
+			span{
+				width: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul>
+				<!--<li>菜单1<p>这是一段文字</p><p>这是一段文字</p><p>这是一段文字</p></li>
+				<li>菜单2<p>这是一段文字</p><p>这是一段文字</p><p>这是一段文字</p></li>
+				<li>菜单3<p>这是一段文字</p><p>这是一段文字</p><p>这是一段文字</p></li>
+				<li>菜单4<p>这是一段文字</p><p>这是一段文字</p><p>这是一段文字</p></li>
+				<li>菜单5<p>这是一段文字</p><p>这是一段文字</p><p>这是一段文字</p></li>-->
+				<li><span>菜单1</span></li>
+				<li><span>菜单2</span></li>
+				<li><span>菜单3</span></li>
+				<li><span>菜单4</span></li>
+				<li><span>菜单5</span></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('li').css('background','blue');
+				$('li').append('<p></p><p></p><p></p>');
+				$('p').html('这是一段文字');
+				$('li').mouseover(function() {
+					$(this).siblings().stop().animate({width: '60px',}, 1300);
+					$(this).stop().animate({width: '200px',}, 1300).children('p').show().css('color','white');
+					$('li span').css('color','black');
+					$(this).children('span').css('color','white');
+				}).mouseout(function(){
+					$(this).stop().animate({width: '60px',},1300).children('p').hide().children('span');
+					$('li span').css('color','black');
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

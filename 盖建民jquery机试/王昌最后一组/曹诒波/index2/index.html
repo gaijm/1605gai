@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)file:///D:/Documents/Tencent%20Files/506450820/FileRecv/js_SmallTest.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>第二题</title>
+    <style>
+        .test{
+            display: block;
+            float: left;
+            width: 50px;
+            height: 100px;
+            border: 2px solid black ;
+            overflow: hidden;
+            background: blue;
+        }
+        .current{
+            width: 100px;
+            color: #ffffff;
+            display: block;
+            float: left;
+            height: 100px;
+            border: 2px solid black ;
+            overflow: hidden;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div class="test"><h2>菜单1</h2><p>AAAAAAAAAA</p><p>BBBBBBBBBBBBBB</p></div>
+    <div class="current"><h2>菜单2</h2><p>AAAAAAAAAA</p><p>BBBBBBBBBBBBBB</p></div>
+    <div class="test"><h2>菜单3</h2><p>AAAAAAAAAA</p><p>BBBBBBBBBBBBBB</p></div>
+    <div class="test"><h2>菜单4</h2><p>AAAAAAAAAA</p><p>BBBBBBBBBBBBBB</p></div>
+</div>
+<script>
+    window.onload = function () {
+        var oDiv=document.getElementById("outer").getElementsByTagName("div");
+        for(var i =0; i<=oDiv.length ; i++ ){
+            oDiv[i].index=i;
+            oDiv[i].onmouseover=function () {
+                this.className="current";
+            }
+            oDiv[i].onmouseout=function () {
+                this.className="test";
+            }
+        }
+    }
+</script>
+
+</body></html>

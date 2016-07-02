@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-3.0.0.js" ></script>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+		ul{
+			width:1000px;
+			height:300px;
+			margin:0 auto;
+		}
+		li{
+			list-style: none;
+			background:cornflowerblue;
+			float:left;
+			width:118px;
+			border-left:1px solid black;
+			height: 300px;
+			text-align: center;
+			cursor: default;
+		}
+		p{
+			margin-bottom: 30px;
+			margin-top: 30px;
+			text-align: center;
+			color:cornflowerblue;
+			
+		}
+	</style>
+	<body>
+		<ul>
+			<li>
+				<div>菜单一</div>
+				<p>描述关于菜单</p>
+				<p>描述关于</p>
+			</li>
+			<li>
+				<div>菜单二</div>
+				<p>描述关于菜单</p>
+				<p>描述关于菜单</p>
+			</li>
+			<li>
+				<div>菜单三</div>
+				<p>描述关于菜单</p>
+				<p>描述关于菜单</p>
+			</li>
+			<li>
+				<div>菜单四</div>
+				<p>描述关于菜单</p>
+				<p>描述关于菜单</p>
+			</li>
+			<li>
+				<div>菜单五</div>
+				<p>描述关于菜单</p>
+				<p>描述关于菜单</p>
+			</li>
+		</ul>
+		<script>
+			$("li").each(function(index,elem){
+				//当鼠标放上去的时候的动作
+				$(this).mouseover(function(){
+					$("li").css("width","118px")
+			
+					$(this).animate({
+						width:'300px',
+					},1000)
+					$(this).css("color","white")
+					$("p").css("color","white")
+				})
+				//鼠标离开时的动作
+				$(this).mouseout(function(){
+					$(this).animate({
+						width:'118px',
+					},1000)
+					//回归至本来的状态
+					$(this).css("color","black")
+					$("p").css("color","cornflowerblue")
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var arr=new Array(10);//放值的数组
+		for(i=0;i<10;i++){
+			var ran=parseInt(Math.random()*20);
+			arr[i]=ran;//产生的随机数  赋值
+//			判断产生的随机数是否重复
+			for(j=0;j<i;j++){
+				if(arr[j]==arr[i]){
+					i--;
+					break;
+					}
+				}
+			}
+		document.write("排序前："+arr+"<br/>")
+		//对数组进行升序排序   冒泡排序
+		for (i=0;i<arr.length-1;i++) {
+			for (j=0;j<arr.length-1-i;j++) {
+				//判断 
+				if(arr[j+1]>arr[j]){
+					//声明临时变量    相当于容器
+					var temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+		document.write("排序后："+arr+",")
+	</script>
+	</body>
+</html>

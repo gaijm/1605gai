@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二级联动</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arrProvince={
+				provinces:[
+				  {
+				  	name:"北京",
+				  	code:100,
+				  	cities:[
+				  	 {
+				  	 	cityName:"昌平区",
+				  	 	cityCode:101
+				  	 },
+				  	  {
+				  	 	cityName:"海淀区",
+				  	 	cityCode:102
+				  	 },
+				  	  {
+				  	 	cityName:"朝阳区",
+				  	 	cityCode:103
+				  	 },
+				  	  {
+				  	 	cityName:"西城区",
+				  	 	cityCode:104
+				  	 }, {
+				  	 	cityName:"东城区",
+				  	 	cityCode:105
+				  	 }
+				  	]
+				  },{
+				  	name:"河北",
+				  	code:101,
+				  	cities:[
+				  	  {
+				  	  	cityName:"石家庄",
+				  	  	cityCode:101
+				  	  },
+				  	  {
+				  	  	cityName:"邯郸",
+				  	  	cityCode:102
+				  	  },
+				  	  {
+				  	  	cityName:"张家口",
+				  	  	cityCode:103
+				  	  },
+				  	  {
+				  	  	cityName:"邢台",
+				  	  	cityCode:104
+				  	  },
+				  	  {
+				  	  	cityName:"保定",
+				  	  	cityCode:105
+				  	  }
+				  	]
+				  },{
+				  	name:"河南",
+				  	code:102,
+				  	cities:[
+				  	  {
+				  	  	cityName:"郑州",
+				  	  	cityCode:101
+				  	  },
+				  	  {
+				  	  	cityName:"洛阳",
+				  	  	cityCode:102
+				  	  },
+				  	  {
+				  	  	cityName:"开封",
+				  	  	cityCode:103
+				  	  },
+				  	  {
+				  	  	cityName:"驻马店",
+				  	  	cityCode:104
+				  	  },
+				  	  {
+				  	  	cityName:"信阳",
+				  	  	cityCode:105
+				  	  }
+				  	]
+				  }
+				
+				]
+			}
+			
+			//假设数据从服务器获取
+			window.onload=function(){
+				
+				//读取所有省的名字
+				var provinces =arrProvince.provinces;
+				//获取省的下拉列表对象
+				var selectProvince=document.getElementById("province");
+				for(var i=0;i<provinces.length;i++){
+					//创建option节点
+					var option=document.createElement("option");
+					option.innerHTML=provinces[i].name;
+					//添加到select
+					selectProvince.appendChild(option);
+				}
+			}
+			
+			//定义onchange事件
+			function changeCity(obj){
+//				alert(obj.value)
+               var selectCity=document.getElementById("cities");
+               var provinces =arrProvince.provinces;
+               //清除上一次选中内容
+//             var arrOption=selectCity.getElementsByTagName("option");
+               while(selectCity.options.length>1){
+               	 selectCity.removeChild(selectCity.lastChild);
+               }
+               for(var pro in provinces){
+               	//获取省名字
+               	   var proName=provinces[pro].name;
+               	 //当前选中省名字
+               	   var selectName=obj.value;
+               	   //两者比较判断
+               	   if(selectName==proName){
+               	   	  //取出所有省下城市
+               	   	 var arrCity= provinces[pro].cities;
+               	   	 //循环
+               	   	 for(var i in arrCity){
+               	   	 	var option=document.createElement("option");
+               	   	 	option.innerHTML=arrCity[i].cityName;
+               	   	 	//添加到select标签中
+               	   	 	selectCity.appendChild(option);
+               	   	 }
+               	   }
+               }
+			}
+		</script>
+		<select id="province" onchange="changeCity(this)">
+			<option value="0">请选择</option>
+		</select>
+		
+		<select id="cities">
+			<option value="0">请选择</option>
+		</select>
+		
+	</body>
+</html>

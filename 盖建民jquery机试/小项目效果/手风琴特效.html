@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 735px;
+				height: 120px;
+				margin: 200px auto;
+				position: relative;
+			}
+			li{
+				width: 100px;
+				height: 120px;
+				float: left;
+				list-style: none;
+				overflow: hidden;
+				position: relative;
+				
+			}
+			.active{
+				width: 130px;
+				height: 120px;
+				position: relative;
+				overflow: hidden;
+				
+			}
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.img1{
+				position: absolute;
+				top: 0;
+				left: -100px;
+			}
+			.last{
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li class="active"><img class="img1" src="img/001.jpg"/></li>
+				<li><img src="img/002.jpg"/></li>
+				<li><img src="img/003.jpg"/></li>
+				<li><img src="img/004.jpg"/></li>
+				<li><img src="img/005.jpg"/></li>
+				<li><img src="img/006.jpg"/></li>
+				<li class="last"><img src="img/007.jpg"/></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('#box ul li').mouseover(function(){
+					$(this).animate({
+						"width":"130px"
+					},200);
+					$(this).siblings().animate({
+						"width":"100px"
+					},200);
+					$(this).find("img").animate({
+						"left":"-100px"
+					},200);
+					$(this).siblings().find("img").animate({
+						"left":"0"
+					},200)
+				});
+			});
+		</script>
+	</body>
+</html>

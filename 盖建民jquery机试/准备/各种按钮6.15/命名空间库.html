@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>命名空间</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var config={
+//				front: {},
+//				after:{
+//					data:{},
+//					module:{
+//						color:{},
+//						image:{},
+//						search:{}
+//					}
+//				}
+//			};
+//			
+        //命名空间生成  namespace.config.after.module.images=""
+        //div.style["backgoundColor"]="red"
+        /*
+         * namespace.config
+         * namespace.after
+         */
+        var namespace={
+        	create:function(s){
+        		var arr=s.split("."); 
+        		for(var i=0;i<arr.length;i++){
+        			 if(typeof namespace[arr[i]]=='undefined')
+        			 {
+        			 	namespace[arr[i]]={};  //namespace.config
+        			 }
+        			 namespace=namespace[arr[i]];
+        		}
+        	},
+        	
+        };
+        
+        namespace.create('config.aftera.module.color');
+        namespace.changeColor=function(color){
+        	document.body.style.backgroundColor=color;
+        };
+			
+			namespace.changeColor("pink");
+		</script>
+	</body>
+</html>

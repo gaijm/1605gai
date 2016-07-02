@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var arr=[];
+		var num=0;
+			for(var i=0;i<10;i++){
+				var num=parseInt(Math.random())
+				//循环判断 获取的数字 每个之间都不相同
+				for(var j=0;j<i;j++){
+					//如果 最大索引值的数值 与每个的都不相同 那么这个数字是合格的
+					if(arr[j]==arr[i]){
+					i--;
+					//从新进行获取
+					break;
+				}		
+				}
+				arr[i]=num;
+			}
+			//判断 大小顺序 冒泡法  从小到大排列
+			
+			for(var m=0;m<10;m++){
+				for(var n=0;n<m;n++)
+				{	
+					if(arr[n]<arr[n+1]){
+						//较小的率先进入新数组
+						var count=0;
+						var count=arr[n]
+						arr[n]=arr[n+1]
+						arr[n+1]=count;
+					}
+					
+					}
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#img {
+				width: 700px;
+				margin: 100px auto;
+				position: relative;
+			}
+			
+			img {
+				width: 700px;
+				height: 220px;
+			}
+			
+			ul {
+				position: absolute;
+				bottom: 10px;
+				left: 300px;
+			}
+			
+			li {
+				list-style: none;
+				width: 15px;
+				height: 15px;
+				border-radius: 15px;
+				background: #ccc;
+				float: left;
+				margin-left: 5px;
+			}
+			
+			.active {
+				background: #2EA536;
+			}
+			
+			input {
+				height: 220px;
+				width: 100px;
+				background: rgba(100, 100, 100, .3);
+				position: absolute;
+				bottom: 3px;
+				border: 0;
+				font-size: 50px;
+				color: #38414C;
+			}
+			
+			#next {
+				position: absolute;
+				right: 0;
+			}
+		</style>
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				/*-------定义变量---------  */
+				//定义全局变量用来控制图片
+				var count=1;
+				//用来存储定时器
+				var timer=null;
+				//获取图片对象
+				var oImg=$("#changImg");
+				//获取所有的li
+				var aLi=$("#img>ul").find("li");
+				//获取上一张按钮
+				var preBtn=$("#prior");
+				//获取下一张按钮
+				var nextBtn=$("#next");
+				/*--------定义函数或事件------*/
+				//上一张点击事件
+				preBtn.click(preImg);
+				//下一张点击事件
+				nextBtn.click(move)
+				//li点击事件
+				aLi.click(liClick);
+				//鼠标hover
+				oImg.hover(function(){
+					clearInterval(timer);
+				},function(){
+					timer=setInterval(move,3000);
+				})
+				//创建定时器
+				timer=setInterval(move,3000);
+				//定义move函数
+				function move(){
+					aLi.attr("class","");
+					count++;
+					if (count == 6) {
+						count = 1;
+					}
+					var src='img/0' + count + '.jpg';
+					aLi.eq(count-1).attr("class","active");
+					oImg.attr("src",src);
+				};
+				//上一张函数
+				function preImg(){
+					aLi.attr("class","");
+					count--;
+					if(count==0)
+					{
+						count=5;
+					}
+					aLi.eq(count-1).attr("class","active");
+					var src='img/0' + count + '.jpg';
+					oImg.attr("src",src);
+				};
+				//li点击函数
+				function liClick(){
+					aLi.attr("class","");
+					aLi.eq($(this).index()).attr("class","active");
+					var src='img/0'+($(this).index()+1)+'.jpg';
+					oImg.attr("src",src);
+				};
+			})
+		</script>
+	</head>
+	<body>
+		<div id="img">
+			<img id="changImg" src="img/01.jpg" />
+			<ul>
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<input type="button" name="next" id="next" value="&gt;" />
+			<input type="button" name="prior" id="prior" value="&lt;" />
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 602px;
+				border: 1px solid black;
+				height: 300px;
+				margin: 0 auto;
+			}
+			ul{
+				width: 602px;
+				height: 100px;
+				border-bottom: 1px solid black;
+				list-style: none;
+			}
+			li{
+				width: 200px;
+				height: 100px;
+				font-size: 50px;
+				line-height: 100px;
+				text-align: center;
+				color: red;
+				float: left;
+			}
+			.first{
+				background: yellow;
+			}
+			#box div{
+				display: none;
+				font-size: 30px;
+				font-weight: bold;
+				text-align: left;
+				line-height: 30px;
+			}
+			#box .active{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="ul1">
+				<li class="first"><a href="#">A</a></li>
+				<li><a href="#">B</a></li>
+				<li><a href="#">C</a></li>
+			</ul>
+			<div class="active">
+				<p>手机覅都是积分的搜房的伤口都是覅几点睡觉都是的数据发送
+				看电视剧飞四季都是啥都看佛山卡佛打开都说了端口发多少块</p>
+			</div>
+			<div>
+				<p>爱速度就的伤口尼克斯的开口机房水井坊的司法局都是佛都说
+				的手机覅都是发到手机付款的刷卡缴费电视费口舌开发的伤口</p>
+			</div>
+			<div>
+				<p>丝巾犯iOS的司机见佛你倒是的数据库if都是富帝丝家纺订单
+				的数据放到手机发的方是否对的端口看到的伤口身上扣多少都</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$("#ul1 li").each(function(index){
+					$(this).click(function(e){
+						$("#ul1 li").removeClass("first");
+						$(this).addClass("first");
+						$("#box div").removeClass("active");
+						$("#box div:eq("+index+")").addClass("active");
+					})
+				});		
+			});
+		</script>
+	</body>
+</html>

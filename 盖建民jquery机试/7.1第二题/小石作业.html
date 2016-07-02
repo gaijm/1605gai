@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				margin: 100px auto;
+				height: 300px;
+				width: 1000px;
+				
+			}
+			
+			ul li {
+				width: 60px;
+				float: left;
+				height: 300px;
+				text-align: center;
+				list-style: none;
+				
+			}
+			p{	
+				line-height: 30px;
+				width: 220px;
+				margin-bottom: 20px;
+				display: none;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li><h3>菜单1</h3></li>
+			<li><h3>菜单2</h3></li>
+			<li><h3>菜单3</h3></li>
+			<li><h3>菜单4</h3></li>
+			<li><h3>菜单5</h3></li>
+			
+		</ul>
+		<script type="text/javascript">
+			$(function() {
+				$('li').css('background','blue').css('border-right','1px solid black');
+				
+				$("<p></p><p></p><p></p>").appendTo("li")
+				$("p").html("一段文字描述一段文字描述一段文字描述")
+				$('li').mouseover(function() {
+					$(this).siblings().stop().animate({width: '60px'}, 1500);
+					$(this).stop().animate({width: '200px'}, 1500);
+					$(this).children("h3").css("color","white")
+					$(this).siblings().children("h3").css("color","black")
+					$(this).children("p").show()
+					$(this).siblings().children("p").hide()
+				})
+				
+				
+				$("li").mouseout(function(){
+					$(this).stop().animate({width: '60px'}, 1500)
+					$(this).children("p").hide()
+					$(this).children("h3").css("color","black")
+				})
+			})
+		</script>
+	</body>
+
+</html>

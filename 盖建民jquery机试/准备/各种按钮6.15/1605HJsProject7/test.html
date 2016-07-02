@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function aa(){
+			this.name="bbbb";
+			this.age=20;
+			this.tt={
+				yy:"123355",
+				xx:"llll"
+			}
+		}
+		
+		var a=new aa();
+		delete a.tt.yy;
+		alert(a.tt.xx);
+//		var t=new a.tt();
+//		alert(t.yy)
+		
+		</script>
+		
+	</body>
+</html>
