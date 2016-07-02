@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+	#div2{
+		width:600px;
+		margin:0 auto;
+	}
+		#div1{
+			width:600px;
+			font:14px/40px "宋体";
+			color: cornflowerblue;
+			border-bottom:1px solid blue;
+		}
+		span{padding-left:4px ;padding-right:4px ;}
+		.active{
+			background:blue;
+			color:white;
+		}
+		.noActive{
+			
+		}
+	</style>
+	<body>
+		<div id="div2">
+		<div id="div1">
+			<span>今日特惠</span>
+			<span>特惠门票</span>
+			<span>特惠住宿</span>
+		</div>
+		<img id="img1" src="" />
+		</div>
+		
+		<script>
+		//分别获取不同的 对象
+			var arr=["img/1.gif","img/2.gif","img/3.gif"]
+			var aSpan=document.getElementsByTagName("span")
+			var oImg=document.getElementById("img1")
+			//循环遍历 让img标签中的src对应数组中的不同路径
+			for(var i=0;i<aSpan.length;i++){
+				aSpan[i].index=i;
+				aSpan[i].onclick=function(){
+					//循环去掉开始时候的样式
+					for(var i=0;i<aSpan.length;i++){
+						aSpan[i].className="";
+					}
+					// 在点击某一对象的时候产生某值
+					this.className="active";
+					oImg.src=arr[this.index]
+				}
+			}
+		</script>
+	</body>
+</html>

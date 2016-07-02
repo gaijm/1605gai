@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}	
+			#box{
+				width: 260px;
+				height: 330px;
+				margin: 0 auto;
+				border: 1px solid black;
+			}
+			ul{
+				height: 30px;
+			}
+			li{
+				list-style: none;
+				float: left;
+				margin: 5px;
+				color: blue;
+			}
+			#img{
+				width: 200px;
+				height: 278px;
+			}
+			#img div{
+				width: 200px;
+				height: 278px;
+				display: none;
+			}
+			#img .active{
+				display: block;
+			}
+			.bg{
+				background: blue;
+				color: white;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<script>
+			$(function(){
+				$('#img div').each(function(index,elem){
+					$(this).css('background','url(img/'+index+'.png)');
+				});
+				$('ul li').click(function(){
+					$('ul li').removeAttr('class');
+					$(this).attr('class','bg');
+					var num=$(this).index();
+					$('#img div').css('display','none');
+					$('#img div').eq(num).css('display','block');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>今日特惠</li>
+				<li>特惠门票</li>
+				<li>特惠住宿</li>
+			</ul>
+			<hr />
+			<div id="img">
+				<div class="active"></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

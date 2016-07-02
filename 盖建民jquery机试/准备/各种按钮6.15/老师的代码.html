@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>左右添加删除</title>
+		<script type="text/javascript" src="js/AjaxUtil.js"></script>
+		<script type="text/javascript" src="js/EventUtil.js"></script>
+		<script type="text/javascript" src="js/addevent.js" ></script>
+		<style>
+			#box {
+				width: 610px;
+				height: 510px;
+				margin: 0 auto;
+				overflow: hidden;
+				border: 1px solid red;
+			}
+			
+			#leftDiv,
+			#centerDiv,
+			#rightDiv {
+				border: 1px solid green;
+				float: left;
+			}
+			
+			#leftDiv,
+			#rightDiv {
+				width: 250px;
+				height: 500px;
+			}
+			
+			#centerDiv {
+				width: 100px;
+				height: 500px;
+			}
+			
+			#leftSpan,
+			#rightSpan {
+				width: 100%;
+				height: 5%;
+				display: block;
+				border: 1px blue solid;
+			}
+			
+			#leftSelect,
+			#rightSelect {
+				width: 100%;
+				height: 95%;
+				border: 1px yellow solid;
+			}
+			
+			button {
+				margin-top: 50px;
+			}
+			
+			#leftSelect option {
+				color: crimson;
+				font-size: 16px;
+			}
+			
+			#RightSelect option {
+				color: darkslategrey;
+				font-weight: bold;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script>
+			addEvent(window, "load", initFunc);
+
+			function initFunc() {
+				//声明数组存放的是所有解析到人名
+				var arrLeft = new Array();
+				var arrRight = new Array();
+				//获取左右select对象
+				var leftSelect = document.getElementById("leftSelect");
+				var rightSelect = document.getElementById("rightSelect");
+				ajaxFn("GET", "jsonUserList.json", true, successFunc, failFunc, null);
+				//定义成功方法
+				function successFunc(text) {
+					var usersArr = JSON.parse(text).users;
+					for (var i = 0; i < usersArr.length; i++) {
+						//数组中添加
+						arrLeft.push(usersArr[i].username);
+						//相当于创建节点option
+						resetSelect(leftSelect, usersArr[i].username);
+						//span也要发生改变
+						changeSpan();
+					}
+				}
+				//失败函数
+				function failFunc(text) {
+					alert(text);
+				}
+				//向左侧的select中添加option对象
+				function resetSelect(selectObj, optionValue) {
+					var option = document.createElement("option");
+					option.innerHTML = optionValue;
+					selectObj.appendChild(option);
+				}
+				//创建一个改变左侧标签方法
+				function changeSpan() {
+					var leftSpan = document.getElementById("leftSpan");
+					leftSpan.innerHTML = arrLeft.length;
+					var rightSpan = document.getElementById("rightSpan");
+					rightSpan.innerHTML = arrRight.length;
+				}
+				//给option添加一个双击动作
+				addEvent(leftSelect, "dblclick", function() {
+					//右侧数组中就会添加当前项  属性selectedIndex
+					arrRight.push(arrLeft[this.selectedIndex]);
+					//将删除或者减少后的元素重新设置select
+					//先更改右侧然后再左侧
+					resetSelect(rightSelect, arrLeft[this.selectedIndex]);
+					//左侧select中项减少当前项
+					arrLeft.splice(this.selectedIndex, 1);
+					leftSelect.removeChild(this.options[this.selectedIndex]);
+					//两个span的值发生改变
+					changeSpan();
+				});
+				//给按钮添加单击事件  添加
+				var addBtn = document.getElementById("addBtn");
+				addEvent(addBtn, "click", function() {
+					//可以实现多选
+					for (var i = 0; i < leftSelect.options.length; i++) {
+						//找出被选中option
+						if (leftSelect.options[i].selected) {
+							//被选中
+							arrRight.push(arrLeft[i]);
+							//在右侧的select中添加了一个option
+							resetSelect(rightSelect, arrLeft[i]);
+							//数组移除
+							arrLeft.splice(i, 1);
+							leftSelect.removeChild(leftSelect.options[i]);
+							//
+							i--;
+						}
+					}
+					//改变span
+					changeSpan();
+				});
+				//按钮的全部添加操作
+				var addAllBtn = document.getElementById("addAllBtn");
+				addEvent(addAllBtn, "click", function() {
+					for (var i = 0; i < leftSelect.options.length; i++) {
+						
+						arrRight.push(arrLeft[i]);
+						resetSelect(rightSelect, arrLeft[i]);
+						//操作左侧
+						arrLeft.splice(i, 1);
+						leftSelect.removeChild(leftSelect.options[i]);
+						//--
+						i--;
+					}
+					//改变span
+					changeSpan();
+				});
+				
+				//删除
+				
+				var removeBtn=document.getElementById('removeBtn');
+				addEvent(removeBtn,'click',function()
+				{
+					for(var i=0;i<rightSelect.options.length;i++)
+					{
+						if(rightSelect.options[i].selected)
+						{
+//							alert('aaa');
+							arrLeft.push(arrRight[i]);
+							resetSelect(leftSelect,arrRight[i]);
+							
+							rightSelect.removeChild(rightSelect.options[i]);
+							arrRight.splice(i,1);
+							i--;
+						}
+					}
+					
+					changeSpan();
+				});
+				
+				var removeAllBtn=document.getElementById('removeAllBtn');
+				addEvent(removeAllBtn,'click',function()
+				{
+					for(var i=0;i<rightSelect.options.length;i++)
+					{
+						arrLeft.push(arrRight[i]);
+						resetSelect(leftSelect,arrRight[i]);
+						
+						rightSelect.removeChild(rightSelect.options[i]);
+						arrRight.splice(i,1);
+						i--;
+					}
+					changeSpan();
+				});
+				
+				addEvent(rightSelect,'dblclick',function()
+				{
+					arrLeft.push(arrRight[this.selectedIndex]);
+					resetSelect(leftSelect,arrRight[this.selectedIndex]);
+					
+					rightSelect.removeChild(rightSelect.options[this.selectedIndex]);					
+					arrRight.splice(this.selectedIndex,1);
+					changeSpan();
+				})
+			}
+		</script>
+		<div id="box">
+			<div id="leftDiv">
+				<span id="leftSpan">0</span>
+				<select id="leftSelect" multiple="multiple">
+
+			    </select>
+			</div>
+
+			<div id="centerDiv">
+				<button id="addBtn">添加</button>
+				<br />
+				<button id="removeBtn">删除</button>
+				<br />
+				<button id="addAllBtn">全部添加</button>
+				<br />
+				<button id="removeAllBtn">全部删除</button>
+			</div>
+
+			<div id="rightDiv">
+				<span id="rightSpan">0</span>
+				<select id="rightSelect" multiple="multiple">
+			
+			</select>
+			</div>
+		</div>
+	</body>
+
+</html>

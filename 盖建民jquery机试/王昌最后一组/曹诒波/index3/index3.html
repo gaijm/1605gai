@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>产生10个随机数存入数组中，使用冒泡排序</title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+var arr = new Array();
+for (var i=0;i<10;i++) {	
+	var n1=parseInt(Math.random()*10+1);
+	arr[i]=n1;	
+}
+//document.write(arr[2]);
+//document.write(arr[1]);
+document.write("长度:"+arr.length+"<br />");
+//document.write("随机："+arr.sort());
+
+		for (i=0 ;i<arr.length-1;i++){
+				for(j=0;j<arr.length-i;j++){
+					if(arr[j+1]<arr[j]){
+						var temp=arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=temp;
+					}
+				}
+			}
+			document.write(arr);
+
+	</script>
+</html>

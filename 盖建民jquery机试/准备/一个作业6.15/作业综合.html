@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/addevent.js" ></script>
+		<script type="text/javascript" src="js/ajax库.js" ></script>
+		<style>
+			#box{
+				width: 600px;
+				margin: 20px 100px;
+			}
+			#left{
+				margin-left: 200px;
+				border: 1px solid red;
+				float: left;
+			}
+			#rightBox{
+				width: 300px;
+				border: 1px solid red;
+				margin-left: 20px;
+				position: absolute;
+				right: 400px;
+			}
+			#right{
+				display: none;
+			}
+			img{
+				display: block;
+				width: 230px;
+			}
+			.inner{
+				vertical-align: middle;
+				border: 1px solid darkgrey;
+				padding: 5px;
+			}
+			button{
+				width: 60px;
+				height: 30px;
+			}
+			span{
+				display: block;
+				width: 100%;
+				height: 30px;
+				border: 1px solid darkgrey;
+				text-align: center;
+			}
+		</style>
+		<script>
+			addEvent(window,'load',function()
+			{
+				var count;
+				//右侧的数组
+				var arrRTitle=[];
+				//左侧的数组分别是标题、图片、地址
+				var arrTitle=[];
+				var arrPicpath=[];
+				var arrUrl=[];
+				//获取解析文件
+				ajax('GET','data.json',true,succfn,failfn,null);
+				//成功时
+				function succfn(str)
+				{
+					var arrJson=JSON.parse(str).addDatas.resultlist;
+					for(var i=0;i<arrJson.length;i++)
+					{
+						arrTitle.push(arrJson[i].title);
+						arrPicpath.push(arrJson[i].picPath);
+						arrUrl.push(arrJson[i].url);
+						var oLeftDiv=document.getElementById('left');
+						//加载创建封装SETDIV
+						setDiv(oLeftDiv,arrPicpath[i],arrUrl[i],arrTitle[i]);
+					}
+				}
+				//失败的
+				function failfn(str1)
+				{
+					alert(str1);
+				}
+				//设置div的函数
+				function setDiv(obj,imgValue,aValue,titleValue)
+				{
+					//获取左侧div
+					var oLeftDiv=document.getElementById('left');
+					//创建子dIV
+					var oDiv=document.createElement('div');
+					oDiv.className='inner';
+					//创建img
+					var oImg=document.createElement('img');
+					oImg.src=imgValue;
+					//创建a链接
+					var oA=document.createElement('a');
+					oA.href=aValue;
+					oA.innerHTML=titleValue;
+					//创建button
+					var oBtn=document.createElement('button');
+					oBtn.innerHTML='点击';
+					//各种添加
+					oDiv.appendChild(oA);
+					oDiv.appendChild(oImg);
+					oDiv.appendChild(oBtn);
+					obj.appendChild(oDiv);
+					//点击按钮
+					var oLeftDiv=document.getElementById('left');
+					var oRightDiv=document.getElementById('right');
+					var aBtn=document.getElementsByTagName('button');
+					for(var i=0;i<aBtn.length;i++)
+					{
+						aBtn[i].index=i;
+						aBtn[i].onclick=function()
+						{
+//							var _this=this;
+//							for(var j=0;j<arrRTitle.length;j++)
+//							{
+//								alert(arrRTitle)
+//								if(arrRTitle[j]==arrTitle)
+//								{
+//									throw new Error('aaaa');
+//								}
+//							}
+							if(count==this.index){return};
+							count=this.index;
+							arrRTitle.push(arrTitle[i]);
+							arrTitle.splice(i,1);
+							setDiv(oRightDiv,arrPicpath[this.index],arrUrl[this.index],arrTitle[this.index]);
+							//调用span显示数量函数
+							changespan();
+						}
+					}
+				}
+				//点击时 数量变化
+				function changespan()
+				{
+					var oSpan=document.getElementById('num');
+					oSpan.innerHTML='我的收藏:'+arrRTitle.length;
+				}
+				//移动上去显示搜藏的东西
+				var oRightBox=document.getElementById('rightBox');
+				var oRightDiv=document.getElementById('right');
+				addEvent(oRightBox,'mouseover',function()
+				{
+					oRightDiv.style.display='block';
+				})
+				//移动出隐藏搜藏的东西
+				addEvent(oRightBox,'mouseout',function()
+				{
+					oRightDiv.style.display='none';
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="left"></div>
+			<div id="rightBox">
+				<span id='num'>我的收藏</span>
+				<div id="right"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>7、自己编写一段json数据，格式为：
+			[
+			{“name”:”ls”,”class”:”1”,”score”:”98”},
+			]
+			
+			1、页面显示一个 获取数据的按钮，点击 按钮，获取 json数据，生成表格。
+			2、显示一个排序按钮，点击按钮，使数据按分数score排序
+		</title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<style>
+			#box{
+				width: 500px;
+				margin: 0 auto;
+			}
+			table{
+				/*border: 1px solid black;*/
+				border-collapse: collapse;
+				width: 300px;
+				height: 30px;
+			}
+			th,td{
+				border: 1px solid black;
+				text-align: center;
+			}
+		</style>
+		<script>
+			$(function(){
+				var arr=[];
+				$('#get').click(function(){
+					$.ajax({
+						type:"get",
+						url:'banji.json',
+						async:true,
+						success:function(response){
+//							alert(typeof response)
+//							console.log(str);
+							
+							var tb=$('<table></table>');
+							var th=$('<thead></thead>').append('<th>姓名</th>').append('<th>班级</th>').append('<th>成绩</th>');
+							tb.append(th);
+							var tbd=$('<tbody></tbody>');
+							for(var i=0;i<response.users.length;i++){
+								var row=$('<tr></tr>').
+								append('<td>'+response.users[i].name+'</td>').
+								append('<td>'+response.users[i].class+'</td>').
+								append('<td>'+response.users[i].score+'</td>');
+								tbd.append(row);
+								tb.append(tbd);
+								$('#box').append(tb);
+							};
+							
+							
+						}
+					});
+				});
+				
+				$('#score').click(function(){
+					for(var i=0;i<$('tbody tr').length;i++){
+						arr[i]=$('tr')[i];
+					};
+//					console.log($(arr[0]).children('td').eq(2).html());
+					arr.sort(function(tr1,tr2){
+						var t1=parseInt($(tr1).children('td').eq(2).html());
+						var t2=parseInt($(tr2).children('td').eq(2).html());
+						return t1-t2;
+					});
+					console.log(arr)
+					for(var i=0;i<arr.length;i++){
+						$('tbody').append($(arr[i]))
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<button id="get">获取数据（在网页直接打开无法获得数据 测试从在Hbulider打开可以）</button>
+			<button id="score">排序</button>
+		</div>
+	</body>
+</html>

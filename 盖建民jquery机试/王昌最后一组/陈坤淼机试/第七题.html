@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.table {
+				width: 600px;
+				height: auto;
+				border: solid 1px red;
+			}
+			
+			td {
+				width: 198px;
+				border: solid 1px black;
+				font:bold 23px "微软雅黑";
+			}
+			
+			div{
+				margin-top: 20px;
+				width: 300px;
+				height: 70px;
+				font-size: 30px;
+				color: blue;
+			}
+		</style>
+		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/AjaxUtil.js"></script>
+		<script type="text/javascript" src="js/EventUtil.js"></script>
+	</head>
+
+	<body>
+		<!--
+			1、页面显示一个 获取数据的按钮，点击 按钮，获取 json数据，生成表格。
+			2、显示一个排序按钮，点击按钮，使数据按分数score排序
+		-->
+		<button id="inpu" >生成表格</button>
+		<button id="compare" >排序</button>
+		<div id="num"></div>
+		<script type="text/javascript">
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			} else { // code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			//打开服务器连接 
+			xmlhttp.open("GET", "student.json", true);
+			//3.发送请求
+			xmlhttp.send();
+			//获取响应结果
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+					//获取数据
+					var text = xmlhttp.responseText;
+					//获取到整个json数据
+					//	console.log(text);  //text 是一个字符串 --》对象
+					var obj = JSON.parse(text);
+					var students = obj.studentArray;
+
+					var btn = document.getElementById("inpu");
+					btn.onclick = function() {
+						var table = document.createElement("table");
+						document.body.appendChild(table);
+						table.style.borderCollapse = "collapse"; //需要加引号，
+						for (var i = 0; i < students.length; i++) {
+							//	var tr=document.createElement("tr");
+							var tr = document.createElement("tr");
+							table.appendChild(tr);
+							tr.style.border = "1px solid black";
+							//td需要创建三个，也就是三列
+							//  var td1=document.createElement("td");
+							var td1 = document.createElement("td");
+							var td2 = document.createElement("td");
+							var td3 = document.createElement("td");
+							//把students[i],realname 分别赋值给td
+							td1.innerHTML = students[i].studentName;						
+							td2.innerHTML = students[i].class;
+							td3.innerHTML = students[i].score;
+							tr.appendChild(td1);
+							tr.appendChild(td2);
+							tr.appendChild(td3);
+
+						}
+					}
+					var compare = document.getElementById("compare") ;
+					
+					compare.onclick = function(){
+					
+						var oDiv = document.getElementById("num") ;
+						var arr = [];
+						var str = "";
+						for (var i = 0; i < students.length; i++) {
+							str += students[i].score+",";
+							arr = str.split(",")	
+						    arr = arr.sort()
+						}
+						oDiv.innerHTML = arr;
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

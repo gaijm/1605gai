@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button>获取数据</button>
+		<script type="text/javascript">
+			var arr=[
+				{
+					"name":"1s",
+					"class":"1",
+					"score":"98"
+				},{
+					"name":"2s",
+					"class":"1",
+					"score":"97"
+				},{
+					"name":"3s",
+					"class":"1",
+					"score":"96"
+				}
+			]
+		$("button").click(function(){
+			for (var i=0,i<arr.length;i++) {
+				var tr=$("<td>"+arr[i].name+"</td><td>"+arr[i].class+"</td><td>"+
+				arr[i].score+"</td>")
+				body.append($("<table></table>").append($("<tr></tr>")).append(td))
+			}
+			})
+			
+//		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>找出字符串 var str = “fsdfm6knkslk2klnkln099b3bbss” 字字母和数字的个数</title>
+		<script>
+			var str='fsdfm6knkslk2klnkln099b3bbss';
+			var count=0;
+			var countNum=0;
+			for(var i=0;i<str.length;i++){
+				if(str.charCodeAt(i)>=97&&str.charCodeAt(i)<=122){
+					count++;
+				}
+				if(str.charAt(i)>=0&&str.charAt(i)<=9){
+					countNum++;
+				}
+			}
+			document.write('字母的个数为：'+count+'<br>数字的个数为:'+countNum);
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//	随机产生1-100的10个随机数
+			var arr= new Array();
+			for(var i=0;i<10;i++){
+				var num=parseInt(Math.random()*100+1);
+				 arr[i]=num;	
+				 //判断产生的随机数是否重复
+				 for(j=0;j<i;j++){
+				 	if(arr[i]==arr[j]){
+				 		i--;
+				 		break;
+				 	}
+				 }
+        
+			}
+			for (i=0 ;i<arr.length-1;i++){
+				for(j=0;j<arr.length-i;j++){
+					//判断   小于号< 为升序    ，大于号> 为降序。
+					if(arr[j+1]<arr[j]){
+						//实现交换
+						//声明临时变量  容器
+						var temp=arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=temp;
+					}
+				}
+			}
+			document.write(arr);
+			
+
+		</script>
+	</body>
+</html>

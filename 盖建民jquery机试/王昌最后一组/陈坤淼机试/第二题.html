@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.0.0.js"></script>
+		<style>
+			#all> div {
+		 	 color: white;
+			width: 40px;
+			height: 250px;
+			border: 1px solid black;
+			background:blueviolet;
+			float: left;
+			text-align: center;
+			font-size: 14px;
+			font-weight: bold;
+			box-shadow: 2px 2px 3px darkgoldenrod;
+		 }
+		 #all{
+		 margin-left:650px;
+		 }
+		#one{
+			border-radius:10px 0 0 10px ;
+		}
+		#five{
+			border-radius:0  10px 10px 0;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			
+			<div id="one">菜单1
+				<p id="p1"></p>
+			</div>
+			<div id="two">菜单2
+				<p id="p2"></p>
+			</div>
+			<div id="three">菜单3
+				<p id="p3"></p>
+			</div>
+			<div id="four">菜单4
+				<p id="p4"></p>
+			</div>
+			<div id="five">菜单5
+				<p id="p5"></p>
+			</div>
+			
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		   $('#one').mouseover(function(){
+		   	 $('#one').css('width','350px')
+		   	 $('#p1').html('我是菜单一')
+		   	 $('#p1').css('color','yellow')
+		   }).mouseout(function(){
+		   	$('#one').css('width','40px')
+		   	  $('#p1').removeAttr('style')
+		   	 
+		   });
+		   //第二个
+		     $('#two').mouseover(function(){
+		   	 $('#two').css('width','350px')
+		   	  $('#p2').html('我是菜单二')
+		   	 $('#p2').css('color','yellow')
+		   }).mouseout(function(){
+		   	$('#two').css('width','40px')
+		   	 $('#p2').removeAttr('style')
+		   });
+		   //第三个
+		       $('#three').mouseover(function(){
+		   	 $('#three').css('width','350px')
+		   	  $('#p3').html('我是菜单三')
+		   	 $('#p3').css('color','yellow')
+		   }).mouseout(function(){
+		   	$('#three').css('width','40px')
+		   	 $('#p3').removeAttr('style')
+		   });
+		   //第四个
+		       $('#four').mouseover(function(){
+		   	 $('#four').css('width','350px')
+		   	  $('#p4').html('我是菜单四')
+		   	 $('#p4').css('color','yellow')
+		   }).mouseout(function(){
+		   	$('#four').css('width','40px')
+		   		 $('#p4').removeAttr('style')
+		   });
+		   //第五个
+		      $('#five').mouseover(function(){
+		   	 $('#five').css('width','350px')
+		   	   $('#p5').html('我是菜单五')
+		   	 $('#p5').css('color','yellow')
+		   }).mouseout(function(){
+		   	$('#five').css('width','40px')
+		   	 $('#p5').removeAttr('style')
+		   });
+		   
+	</script>
+</html>

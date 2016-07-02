@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第一题</title>
+	</head>
+	<style>
+		a{
+			text-decoration: none;
+		}
+		#d1{
+			background-image: url(img/img_01.gif);
+			width:282px;height: 158px;float: left;display: none;
+		}
+		#d2{
+			background-image:url(img/img_02.gif) ;
+			width: 158px;height: 165px;float: left;display: none;
+		}
+		#d3{
+			background-image:url(img/img_03.gif) ;
+			width: 160px;height: 158px;float: left;display: none;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<a href="#" id="a1">今日特惠</a>
+			<a href="#" id="a2">特惠门票</a>
+			<a href="#" id="a3">特惠住宿</a>
+		<div>
+		<div class="d1" id="d1"></div>
+		<div class="d1" id="d2"></div>
+		<div class="d1" id="d3"></div>
+		</div>
+		</div>
+	</body>
+	<script>
+//	var aS=document.getElementsByTagName('a');
+//	var divS=document.getElementsByClassName('d1');
+//	for (var i=0;i<aS.length;i++) {
+//		aS[i].index=i;
+//		aS[i].onclick=function(){
+//			this.style.backgroundColor="red";
+//		}
+//		
+//	}
+		var a1=document.getElementById('a1');
+		var a1=document.getElementById('a2');
+		var a1=document.getElementById('a3');
+		var d1=document.getElementById('d1');
+		var d2=document.getElementById('d2');
+		var d3=document.getElementById('d3');
+		a1.onclick=function(){
+			d1.style.display="block";
+			d2.style.display="none";
+			d3.style.display="none";
+			this.style.backgroundColor="red";
+		}
+		a2.onclick=function(){
+			d1.style.display="none";
+			d3.style.display="none";
+			d2.style.display="block";
+		}
+		a3.onclick=function(){
+			d1.style.display="none";
+			d2.style.display="none";
+			d3.style.display="block";
+		}
+	
+	</script>
+</html>

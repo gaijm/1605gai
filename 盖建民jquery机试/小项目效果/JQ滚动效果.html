@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: navajowhite;
+			}
+			
+			#div1 {
+				width: 800px;
+				height: 420px;
+				border: 1px solid black;
+				margin: 200px auto;
+			}
+			
+			.left {
+				width: 100px;
+				height: 420px;
+				float: left;
+				background: pink;
+			}
+			
+			.left a {
+				display: block;
+				width: 100px;
+				height: 70px;
+				text-align: center;
+				line-height: 70px;
+				text-decoration: none;
+				color: black;
+			}
+			
+			.left .active {
+				color: red;
+				background: green;
+			}
+			
+			#box {
+				width: 700px;
+				height: 420px;
+				float: left;
+				position: relative;
+				overflow: hidden;
+				background: yellow;
+			}
+			
+			.con {
+				width: 700px;
+				height: 420px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.main {
+				width: 700px;
+				height: 420px;
+			}
+			
+			img {
+				width: 700px;
+				height: 370px;
+			}
+			
+			h2 {
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<div class="left">
+				<a class="active" href="#">第一页</a>
+				<a href="#">第二页</a>
+				<a href="#">第三页</a>
+				<a href="#">第四页</a>
+				<a href="#">第五页</a>
+				<a href="#">第六页</a>
+			</div>
+			<div id="box">
+				<div class="con">
+					<div class="main">
+						<h2>第一页</h2>
+						<img src="img/008.jpg" />
+					</div>
+					<div class="main">
+						<h2>第二页</h2>
+						<img src="img/009.jpg" />
+					</div>
+					<div class="main">
+						<h2>第三页</h2>
+						<img src="img/010.jpg" />
+					</div>
+					<div class="main">
+						<h2>第四页</h2>
+						<img src="img/011.jpg" />
+					</div>
+					<div class="main">
+						<h2>第五页</h2>
+						<img src="img/012.jpg" />
+					</div>
+					<div class="main">
+						<h2>第六页</h2>
+						<img src="img/013.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var $height = $('.main').height();
+				$(".left a").each(function(index) {
+					$(this).mouseover(function(e) {
+						$(this).addClass('active');
+						$(this).siblings().removeClass('active');
+						$('.con').animate({
+							"top": index * -$height + "px"
+						}, 500)
+					});
+					
+				});
+			});
+		</script>
+	</body>
+
+</html>

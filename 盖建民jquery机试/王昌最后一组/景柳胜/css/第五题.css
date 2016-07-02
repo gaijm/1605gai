@@ -1,0 +1,11 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#two{
+	position: absolute;
+	left: 10px;
+	top: 270px;
+	display: none;
+}

@@ -1,0 +1,18 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+div{
+	width: 49px;
+	height: 200px;
+	border-right: 1px solid black;
+	float: left;
+	text-align: center;
+	background-color: blue;
+}
+div p{
+	display: none;
+	color: white;
+	margin-top: 30px;
+}

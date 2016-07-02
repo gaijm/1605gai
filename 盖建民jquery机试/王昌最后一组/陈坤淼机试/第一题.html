@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		*{margin: 0 ;padding: 0;}
+		#box{
+			width: 300px;
+			height: 250px;
+			margin: 50px auto;
+		}
+			img{
+				width: 300px;
+				height: 200px;
+			}
+			span{
+				display: inline-block;
+				width: 90px;
+				height: 45px;
+				line-height: 45px;
+				font-size: 20px;
+				/*border: 1px solid;*/
+				border-radius:10px ;
+				background: pink;
+			}
+			.im{display: none}
+		</style>
+	
+	</head>
+	<body>
+		<div id="box">
+			<div id="header">
+				<span>今日特惠</span>
+				<span>特惠门票</span>
+				<span>特惠住宿</span>
+			</div>
+			<div class="im">
+				<img src="img/1.png"/>
+			</div>
+			<div class="im">
+				<img src="img/2_05.png"/>
+			</div>
+			<div class="im">
+				<img src="img/3_07.png"/>
+			</div>
+		</div>
+		<script type="text/javascript">
+		onload = function(){
+			var spans = document.getElementsByTagName("span");
+			var imgs = document.getElementsByClassName("im");
+			for(var j=0;j<imgs.length;j++){
+				imgs[0].style.display = "block";
+				spans[0].style.background ="blueviolet";
+			}
+			for(var i =0;i<spans.length;i++){
+				spans[i].index = i;
+				spans[i].onclick=function(){
+					
+					for(var j=0;j<imgs.length;j++){
+						imgs[j].style.display = "none";
+						spans[j].style.background ="pink";
+					}
+					imgs[this.index].style.display = "block";
+					spans[this.index].style.background ="blueviolet";
+				}
+			}
+		}
+			
+		 
+			
+		</script>
+	</body>
+</html

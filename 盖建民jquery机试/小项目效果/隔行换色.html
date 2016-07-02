@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+			
+			li {
+				width: 600px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="box">
+			<ul>
+				<li>都是快捷方式</li>
+				<li>付款时打发</li>
+				<li>都是浪费的速度快</li>
+				<li>澳网前为人文</li>
+				<li>物而为我问我怕</li>
+				<li>谢雯雯姐我</li>
+				<li>十二级我人文二位</li>
+				<li>脾气排球网我饿</li>
+				<li>欧IE微风我饿饿哦</li>
+				<li>泡温泉了平稳二位</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$("ul li:even").css("background-color", "chartreuse");
+				$("ul li:odd").css("background-color", "#8A2BE2");
+				$("ul li").each(function(index) {
+					$(this).mouseover(function() {
+						$(this).css({"background-color":"brown","color":"white"});
+					});
+					$(this).mouseout(function() {
+						$("ul li:even").css({"background-color": "chartreuse","color":"black"});
+						$("ul li:odd").css({"background-color": "#8A2BE2","color":"black"});
+					})
+				})
+			});
+		</script>
+	</body>
+
+</html>

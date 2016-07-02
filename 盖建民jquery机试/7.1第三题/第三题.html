@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			window.onload=function(){
+				var arr=[];
+//			var sum=0;
+			for(var i=0;i<10;i++)
+			{
+				var ran=parseInt(Math.random()*100);
+				arr[i]=ran;
+				for(var x=0;x<arr.length-1;x++)
+				{
+					for(var y=0;y<arr.length-1-x;y++)
+					{
+						var bond=0;
+						if(arr[y]>arr[y+1])
+						{
+							bond=arr[y+1];
+							arr[y+1]=arr[y];
+							arr[y]=bond;
+						}
+					}
+				}
+			}
+			document.write(arr);
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function()
+		{
+				var oAjax;
+				
+		}
+			function getAjax()
+			{
+				if(window.XMLHttpRequest)
+				{
+					oAjax=new XMLHttpRequest();
+				}
+				else
+				{
+					oAjax=new ActiveXObject("Microsoft XMLHTTP");
+				}
+			}
+			
+			function checkName()
+			{
+				var userName=document.getElementById('username').value;
+				getAjax();
+//				alert(oAjax)
+				var url="http://10.0.161.235:8080/MyAjaxProject/RegisterServlet?timeStamp="+new Date().getTime();
+				oAjax.open('POST',url,true);
+				//因为是onblur触发 没有用到submit按钮  所以form里的表单执行时的类型 不存在，要手动设置 请求头信息；
+				oAjax.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+				oAjax.send('username='+userName);
+				oAjax.onreadystatechange=function()
+				{
+					if(oAjax.readyState===4&&oAjax.status===200)
+					{
+						var sresult=oAjax.responseText;
+						var nameSpan=document.getElementById('getResult');
+						nameSpan.innerHTML=sresult;
+					}
+				}
+			}
+			
+			function checkPwd()
+			{
+				getAjax();
+				var pwdvalue=document.getElementById('pwdname').value;
+				var url="http://10.0.161.235:8080/MyAjaxProject/PwdCheckServlet?timeStamp="+new Date().getTime();
+				oAjax.open('POST',url,true);
+				oAjax.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+				oAjax.send('pwd='+pwdvalue);
+				oAjax.onreadystatechange=function()
+				{
+					if(oAjax.readyState===4&&oAjax.status===200)
+					{
+						var pswResult=oAjax.responseText;
+						var pwdSpan=document.getElementById('getPwdResult');
+						pwdSpan.innerHTML=pswResult;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form method="get" enctype="application/x-www-form-urlencoded">
+			用户名：<input type="text" id="username" onblur="checkName()" /><span id="getResult"></span>
+			<br>
+			密&nbsp;码：<input type="password" id="pwdname" onblur="checkPwd()" /><span id="getPwdResult"></span>
+			<br>
+			<input type="submit" id="btn1" value="提交">
+		</form>
+	</body>
+</html>

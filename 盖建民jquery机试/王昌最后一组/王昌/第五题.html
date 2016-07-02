@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.0.0.js" ></script>
+		<style>
+			div{
+				width:200px;
+				height:6
+				background:red;
+				height:80px;
+				margin:0 auto;
+				/*border:1px solid red;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/4.gif">
+			<img src="img/5.gif">
+			<img src="img/6.gif">
+		</div>
+		<script>
+			$("img:eq(2)").css("display","none");
+			$("div").mouseenter(function(){
+				$("img:eq(1)").hide(1000)
+				$("img:eq(2)").slideDown(1000)
+			})
+			$("div").mouseout(function(){
+				$("img:eq(1)").show(1000)
+				$("img:eq(2)").slideUp(1000)
+			})
+			
+		</script>
+		<script>
+			var 
+		</script>
+	</body>
+</html>

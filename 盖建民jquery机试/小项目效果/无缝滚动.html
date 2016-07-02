@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			#div1 {
+				width: 730px;
+				height: 454px;
+				margin: 200px auto;
+				position: relative;
+			}
+			
+			#img {
+				width: 730px;
+				height: 454px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#img img {
+				position: absolute;
+				top: 0;
+				left: 730px;
+			}
+			
+			#img img.first {
+				left: 0;
+			}
+			
+			#div2 {
+				width: 300px;
+				height: 40px;
+				background: palegoldenrod;
+				position: absolute;
+				text-align: center;
+				left: 200px;
+				bottom: 20px;
+				border-radius: 20px;
+				opacity: .4;
+			}
+			
+			#div2 span {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				background-color: gray;
+				text-align: center;
+				margin: 10px 0;
+			}
+			
+			#div2 span.btnFirst {
+				background-color: firebrick;
+			}
+			
+			#div2 span:hover {
+				color: white;
+				background-color: firebrick;
+			}
+			
+			.next {
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: black;
+				opacity: .3;
+				position: absolute;
+				top: 170px;
+				right: -50px;
+				z-index: 10;
+				color: white;
+				font-size: 60px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 100px;
+				/*display: none;*/
+			}
+			
+			.next:hover {
+				background: pink;
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				opacity: .3;
+				position: absolute;
+				top: 170px;
+				right: -50px;
+				z-index: 10;
+				color: white;
+				font-size: 60px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 100px;
+			}
+			
+			.prve {
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: black;
+				opacity: .3;
+				position: absolute;
+				top: 170px;
+				left: -50px;
+				z-index: 10;
+				color: white;
+				font-size: 60px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 100px;
+				/*display: none;*/
+			}
+			
+			.prve:hover {
+				background: pink;
+				color: chartreuse;
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				opacity: .3;
+				position: absolute;
+				top: 170px;
+				left: -50px;
+				z-index: 10;
+				color: white;
+				font-size: 60px;
+				font-weight: bold;
+				text-align: center;
+				line-height: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+			$(function() {
+				var $index = 0;
+				var $Pindex = 0;
+				var timer = setInterval(play1, 2000);
+
+				function play1() {
+					$index++
+					$('#div2>span').eq($index).addClass('btnFirst').siblings().removeClass('btnFirst');
+					if ($index > 7) {
+						$index = 0;
+						$Pindex = 7;
+					}
+					play2();
+					$Pindex = $index;
+				}
+
+				$('#div2>span').click(function() {
+					clearInterval(timer);
+					$index = $(this).index();
+					$(this).addClass('btnFirst').siblings().removeClass('btnFirst');
+					play2();
+					$Pindex = $index;
+					timer = setInterval(play1, 2000);
+				});
+
+				function play2() {
+					$('#div2>span').eq($index).addClass('btnFirst').siblings().removeClass('btnFirst');
+					if ($index == 7 && $Pindex == 0) {
+						prve();
+					} else if ($index == 0 && $Pindex == 7) {
+						nxt();
+					} else if ($Pindex > $index) {
+						prve();
+					} else if ($Pindex < $index) {
+						next();
+					}
+				}
+
+				function prve() {
+					$('#img>img').eq($Pindex).stop().animate({
+						'left': '730px'
+					});
+					$('#img>img').eq($index).css('left', '-730px').stop().animate({
+						'left': 0
+					});
+				}
+
+				function next() {
+					$('#img>img').eq($Pindex).stop().animate({
+						'left': '-730px'
+					});
+					$('#img>img').eq($index).css('left', '730px').stop().animate({
+						'left': 0
+					});
+				}
+
+				$('.next').click(function() {
+					clearInterval(timer);
+					$index++;
+					if ($index > 7) {
+						$index = 0;
+						$Pindex = 7;
+					}
+					play2();
+					$Pindex = $index;
+					timer = setInterval(play1, 2000);
+				});
+				$('.prve').click(function() {
+					clearInterval(timer);
+					$index--;
+					if ($index < 0) {
+						$index = 7;
+						$Pindex = 0;
+					}
+					play2();
+					$Pindex = $index;
+					timer = setInterval(play1, 2000);
+				});
+				$('#div1').hover(function() {
+					$('.prve,.next').fadeIn();
+					clearInterval(timer)
+				}, function() {
+					$('.prve,.next').fadeOut();
+					timer = setInterval(play1, 2000)
+				});
+			});
+		</script>
+
+		<div id="div1">
+			<a class="next" href="#"> >> </a>
+			<a class="prve" href="#">
+				<< </a>
+					<div id="img">
+						<img class="first" src="img/008.jpg" />
+						<img src="img/009.jpg" />
+						<img src="img/010.jpg" />
+						<img src="img/011.jpg" />
+						<img src="img/012.jpg" />
+						<img src="img/013.jpg" />
+						<img src="img/014.jpg" />
+						<img src="img/015.jpg" />
+					</div>
+					<div id="div2">
+						<span class="btnFirst">1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+						<span>5</span>
+						<span>6</span>
+						<span>7</span>
+						<span>8</span>
+					</div>
+		</div>
+	</body>
+
+</html>

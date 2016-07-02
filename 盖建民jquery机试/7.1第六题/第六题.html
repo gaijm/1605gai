@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#box{
+				width: 700px;
+				height: 100px;
+				margin: 100px auto;
+				position: relative;
+			}
+			#small{
+				width: 50px;
+				height: 41px;
+				position: absolute;
+				left: 0;
+				background-image: url(img/4.png);
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<script>
+			$(function(){
+				var count=0;
+				var countDiv=0;
+				setInterval(function(){
+					count+=50;
+					countDiv+=1;
+					if(countDiv>=5)
+					{
+						countDiv=0;
+					}
+					if(count>=566){
+						count=0;
+					}
+					$('#small').css('left',count+countDiv).css('background-position',count);
+				},800)
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="small"></div>
+		</div>
+	</body>
+</html>

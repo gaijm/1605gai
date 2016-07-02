@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str="fsdfm6knkslk2klnkln099b3bbss"
+			//定义计数器
+			var count=0;
+			var num=0;
+			//将字符串分割成数组
+			var arr=str.split('')
+			//通过循环 使用定则进行判断 数字的话 count+1 否则是字母则 num+1
+			for(var i=0;i<arr.length;i++){
+				var reg=new RegExp(/[^\d+&]/)
+				var str1=arr[i]
+				if(reg.test(str1)){
+					count++
+					continue;
+				}
+				else{
+					num++;
+					continue;
+				}	
+			}
+			console.log(count+"-----"+num)
+		</script>
+	</body>
+</html>

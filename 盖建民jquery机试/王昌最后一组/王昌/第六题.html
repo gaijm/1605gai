@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		td{
+			border:1px solid black;
+			text-align: center;
+			width:100px;
+			height:40px;
+			font:14px/40px "宋体";
+		}
+		table{
+		
+			border-collapse: collapse;
+		}
+	</style>
+	<body>
+		<button id="btn">生成表格</button>
+		<button id="btn1">排列顺序</button>
+		<script>
+			var gol=[		
+{name:"ls",class:"1",score:"89"},
+{name:"ls",class:"1",score:"98"},
+{name:"ls",class:"1",score:"64"},
+{name:"ls",class:"1",score:"34"},
+]
+		var arr=gol;
+		var table=document.createElement("table")
+		document.body.appendChild(table)
+		var btn=document.getElementById("btn")
+		var btn1=document.getElementById("btn1")
+		btn.onclick=function(){
+			this.disabled="disabled";
+			for(var i=0;i<arr.length;i++){
+				//每循环一次 创建一个tr 三个 td 并且在td中放入 对应的数据 
+			var tr=document.createElement("tr");
+			var td1=document.createElement("td");
+			td1.innerText=arr[i].name;
+			var td2=document.createElement("td");
+			td2.innerText=arr[i].class;
+			var td3=document.createElement("td");
+			td3.innerText=arr[i].score;
+//			把td分别放在tr上 把tr放在table中
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			table.appendChild(tr)
+			}
+			}
+		var  arrNew=[];
+		btn1.onclick=function(){
+			for(var i=0;i<arr.length;i++){
+				//获取 各个分数
+			var arrNew=arr[i].score;
+			//冒泡法排序
+			for(var j=0;j<i;j++){
+				if(arrNew[j]<arrNew[j+1]){
+				var tamb=0;
+				tamb=arrNew[j]
+				arrNew[j]=arrNew[j+1];
+				arrNew[j+1]=tabm
+			}
+				//打印即可获取 每个分数
+			console.log(arrNew)
+			
+			}
+		}
+		}
+		
+		</script>
+	</body>
+</html>
