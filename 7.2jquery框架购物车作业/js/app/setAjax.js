@@ -1,0 +1,14 @@
+define(['jquery','../app/config'],function($,config){
+	return{
+		getData:function(fn1){
+			$.ajax({
+				type:"get",
+				url:config.baseUrl,
+				async:true,
+				success:function(response){
+					fn1(response);
+				}
+			});
+		},
+	}
+})

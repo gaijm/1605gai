@@ -1,0 +1,30 @@
+define(['jquery'],function($){
+	return{
+		chakan:function(){
+			//定义查看input的类名为content（创建时就生成）
+			$('.content').click(function(){
+				//查看的div先显示出来
+				$('#chakan').css('display','block');
+				//启动ajax
+				$.ajax({
+					type:"get",
+					//地址为点击的属性c
+					url:$(this).attr('c'),
+					async:true,
+					//渲染弹出的div
+					success:function(response){
+						$('#chakan').children('p').eq(0).html(response.name);
+						$('#chakan').children('p').eq(1).html(response.point);
+						$('#chakan').children('p').eq(2).html(response.markPrice);
+						$('#chakan').children('p').eq(3).html(response.ddPrice);
+						$('#chakan').children('p').eq(4).html(response.number);
+					}
+				});
+			});
+			//图片按钮  关闭
+			$('#chakan img').click(function(){
+				$('#chakan').css('display','none');
+			})
+		}
+	}
+})

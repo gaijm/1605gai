@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>框架购物车</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<script type="text/javascript" src="js/lib/require.min.js" data-main="main.js"></script>
+	</head>
+	<script>
+	</script>
+	<body>
+		<div id="father">
+			<form>
+				名称:<input type="text" name="name" id="name"/>
+				价格:<input type="text" name="name" id="name"/>
+				市场价:<input type="text" name="name" id="name"/>
+				当当价:<input type="text" name="name" id="name"/>
+				数量:<input type="text" name="name" id="name"/>
+				<button id="post">上传数据</button>
+			</form>
+			<h2>您已选购以下商品:</h2>
+			<div id="box">
+				<div id="top">
+					<div id="show">
+						<p></p>
+						<button id="closeShow">确定</button>
+					</div>
+					<div id="chakan">
+						<p></p>
+						<p></p>
+						<p></p>
+						<p></p>
+						<p></p>
+						<img src="images/close.png" />
+					</div>
+					<!--<form>-->
+						<div id="clearShow">
+							您还没有选购商品<span>，去挑选看看>></span>
+						</div>
+						<table id="table">
+							<thead>
+								<tr>
+									<td class="wid">商品名</td>
+									<td>单品积分</td>
+									<td>市场价</td>
+									<td>当当价</td>
+									<td>数量</td>
+									<td>删除</td>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					<!--</form>-->
+				</div>
+				<div id="bottom">
+					<div id="bottom_top"><p id='clearall'>清空购物车</p></div>
+					<div id="bottom_btm">
+						<div id="bottom_btm_left">
+							<div id="bottom_btm_left_inner">
+								<p><span>您共节省金额:￥</span><span id="savemoney"></span></p>
+								<p><span>可获得积分为:</span><span id="getpoint"></span></p>
+							</div>
+						</div>	
+						<div id="bottom_btm_right">
+							<span>商品金额总计:￥</span><span id="summoney"></span><button>结算</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

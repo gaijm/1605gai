@@ -1,0 +1,23 @@
+define(['jquery','../app/config'],function($,config){
+	return{
+		postData:function(){
+			//上传数据 点击按钮上传
+			$('#post').click(function(){
+				//启动ajax
+				$.ajax({
+					type:"post",
+					url:config.baseUrl,
+					async:true,
+					//上传数据为
+					data:{
+						'name':$('form').children('input').eq(0).val(),
+						'point':$('form').children('input').eq(1).val(),
+						'markPrice':$('form').children('input').eq(2).val(),
+						'ddPrice':$('form').children('input').eq(3).val(),
+						'number':$('form').children('input').eq(4).val()
+					}
+				});
+			})
+		}
+	}
+})

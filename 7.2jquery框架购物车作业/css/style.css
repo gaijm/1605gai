@@ -1,0 +1,152 @@
+#father{
+	width: 800px;
+	margin: 50px auto;
+}
+#box{
+	width: 100%;
+	height: 600px;
+	border: 1px solid black;
+}
+#top{
+	width: 100%;
+	height: 500px;
+	border-bottom: 1px solid black;
+	overflow-y: auto;
+	position: relative;
+}
+table{
+	border-collapse: collapse;
+}
+tr{
+	height: 30px;
+	width: 100%;
+	border-bottom: 1px solid yellow;
+	margin: 0;
+	padding: 0;
+}
+td{
+	width: 100px;
+	height: 30px;
+	border: 1px solid yellow;
+	text-align: center;
+}
+.wid{
+	width: 300px;
+}
+#bottom{
+	width: 100%;
+	height: 100px;
+}
+#bottom *{
+		margin: 0;
+		padding: 0;
+}
+#bottom_top{
+	height: 20px;
+	padding: 5px 0;
+}
+#bottom_top p{
+	width: 100px;
+	cursor: pointer;
+	color: #688C9E;
+}
+#bottom_btm{
+	width: 100%;
+	height: 60px;
+}
+#bottom_btm_left{
+	width: 55%;
+	float: left;
+}
+#bottom_btm_left_inner{
+	height: 60px;
+	float: right;
+}
+#bottom_btm_left_inner p{
+	height: 30px;
+}
+#bottom_btm_right{
+	width: 45%;
+	float: left;
+}
+span{
+	display: inline-block;
+	height: 30px;
+	width: 120px;
+	/*border: 1px solid black;*/
+}
+button{
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+}
+#clearShow{
+	line-height: 400px;
+	text-align: center;
+	background:#D3D3D3;
+	height: 470px;
+	width:100%;
+	position: absolute;
+	top: 30px;
+	left: 0px;
+	display: none;
+}
+#clearShow span{
+	color: #4E73AC;
+}
+#show{
+	width:300px;
+	height:150px;
+	position:absolute;
+	top:100px;
+	left:30%;
+	background:white;
+	display: none;
+}
+#show p{
+	 height:80px;
+	 background:#666;
+	 line-height:40px;
+	 color:white
+}
+#show #closeShow{
+	margin:0px 0px 0px 100px;
+}
+/*form表单设置*/
+form{
+	position: absolute;
+	top: 100px;
+	left: 180px;
+}
+form input{
+	display: block;
+	margin: 5px 0px;
+}
+#summoney,#getpoint,#savemoney{
+	color: #B24602;
+}
+/*查看弹出窗口设置*/
+#chakan{
+	width: 500px;
+	height: 155px;
+	border: 1px solid blueviolet;
+	position: absolute;
+	background: white;
+	left: 20%;
+	top: 100px;
+	display: none;
+}
+#chakan img{
+	position: absolute;
+	right: 0;
+	top: 0px;
+}
+#chakan p{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid royalblue;
+	line-height: 30px;
+	text-align: center;
+}

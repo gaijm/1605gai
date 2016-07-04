@@ -1,0 +1,34 @@
+define(['jquery','../app/bg','../app/sumMoney','../app/getPoint','../app/saveMoney'],function($,bg,sumMoney,getPoint,saveMoney){
+	return{
+		deleteData:function(){
+			$('a').each(function(){
+				//删除数据
+				$(this).click(function(){
+					//存一下丹前的a
+					var that=$(this);
+					//判断是否要删除
+					var result=confirm('是否删除数据');
+					if(result){
+						//启动ajax
+							$.ajax({
+							type:"delete",
+							url:$(this).attr('title'),
+							success:function(){
+								//删除这个A的父
+								that.parent().remove();
+								//背景颜色变
+								bg.togglebg();
+								//最底下的总价改变
+								$('#summoney').html(sumMoney.sumMoney());
+								//总积分改变
+								$('#getpoint').html(getPoint.getPoint());
+								//节省的钱数
+								$('#savemoney').html(saveMoney.saveMoney());
+							}
+						});
+					}
+				})
+			})
+		}
+	}
+})
