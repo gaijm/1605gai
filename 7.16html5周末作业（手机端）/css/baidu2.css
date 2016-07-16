@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*body{
+	width: 16.0rem;
+}*/
+html{
+}
+.box{
+	width: 15.15rem;
+	height:14.0rem;
+	margin: 0.0rem auto;
+	background: red;
+}
