@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script>
+			document.documentElement.style.fontSize=innerWidth/3+'px';
+				window.onresize=function(){
+					document.documentElement.style.fontSize=innerWidth/3+'px';
+				};
+		</script>
+		<style>
+			.picDiv{
+				width: 1.0rem;
+				height: 1.0rem;
+				/*background: url(img/16.jpg) no-repeat;*/
+				background-size: contain;
+				position: relative;
+				-webkit-perspective: 8rem;
+				-moz-perspective: 8rem;
+				-o-perspective: 8rem;
+				perspective: 8rem;
+			}
+			.picDiv div{
+				width: 0.05rem;
+				height: 1.0rem;
+				background: url(img/16.jpg) no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left:0.05rem;
+				-wekit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-o-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				transition: all 0.5s;
+				-webkit-transform-origin: left 0.8rem;
+				-moz-transform-origin: left 0.8rem;
+				transform-origin: left 0.8rem;
+			}
+			.picDiv>div{
+				left: 0;
+			}
+			.picDiv div.show{
+				-webkit-transform: rotateY(-60deg);
+				-moz-transform: rotateY(-60deg);
+				-o-transform: rotateY(-60deg);
+				transform: rotateY(-60deg) rotateX(5deg);
+			}
+			.picDiv>div.show{
+				-webkit-transform: rotateY(-60deg);
+				-moz-transform: rotateY(-60deg);
+				-o-transform: rotateY(-60deg);
+				transform: rotateY(-60deg) rotateX(5deg);
+				transform: translateX(0.5rem);
+			}
+			.picDiv div{
+				animation:move 4s linear infinite;
+			}
+			.picDiv>div{
+				animation:move2 4s linear infinite;
+			}
+			@keyframes move{
+				0%{
+					
+				}
+				50%{
+					-webkit-transform: rotateY(-60deg);
+					-moz-transform: rotateY(-60deg);
+					-o-transform: rotateY(-60deg);
+					transform: rotateY(-60deg) rotateX(5deg);
+				}
+				100%{
+					
+				}
+			}
+			@keyframes move2{
+				0%{
+					
+				}
+				50%{
+					-webkit-transform: rotateY(-60deg);
+					-moz-transform: rotateY(-60deg);
+					-o-transform: rotateY(-60deg);
+					transform: rotateY(-60deg) rotateX(5deg);
+					transform: translateX(0.5rem);
+				}
+				100%{
+					
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="picDiv">
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+												<div >
+													<div >
+														<div >
+															<div >
+																<div >
+																	<div >
+																		<div >
+																			<div>
+																				<div >
+																					<div>
+																						<div ></div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+				
+				
+				var picDiv=document.getElementsByClassName('picDiv')[0];
+				var aDiv=picDiv.getElementsByTagName('div');
+				for(var i=0;i<aDiv.length;i++){
+					aDiv[i].style.backgroundPositionX="-"+(i*0.05)+"rem";
+				};
+				
+				function close(obj){
+					var aDiv=obj.getElementsByTagName('div');
+					for(var i=0;i<aDiv.length;i++){
+						aDiv[i].className="show";
+						aDiv[i].style.transition='1s';
+					}
+				};
+				function open(obj){
+					var aDiv=obj.getElementsByTagName('div');
+					for(var i=0;i<aDiv.length;i++){
+						aDiv[i].className="";
+						aDiv[i].style.transition='1s';
+					}
+				};
+//				setInterval(function(){close(picDiv)},2000);
+//				setInterval(function(){open(picDiv)},4000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="with=device-width,user-scalable=no,target-densitydpi=medium-dpi">-->	
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			body{font-size:0.15rem;font-family: "宋体";overflow: hidden;}
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			li{
+				list-style: none;
+			}
+			article{
+				margin: 0 auto;
+			}
+			header{
+				width: 100%;
+				height: 0.45rem;
+				background: -webkit-linear-gradient(top,gray,black);
+				background: -moz-linear-gradient(top,gray,black);
+				background: -ms-linear-gradient(top,gray,black);
+				background: linear-gradient(top,gray,black);
+				text-align: center;
+				line-height: 0.45rem;
+			}
+			.btn{
+				display: inline-block;
+				width: 0.5rem;
+				height:0.25rem;
+				border: 0.02rem solid #0d0d0d;
+				border-radius: 0.05rem;
+				line-height: 0.25rem;
+				box-shadow:0 0 0.03rem #0d0d0d, 0 0 0.02rem #232323 inset;
+			}
+			header a:nth-of-type(1){
+				position: absolute;
+				top: 0.08rem;
+				left: 0.2rem;
+				display: none;
+			}
+			header a:nth-of-type(2){
+				position: absolute;
+				top: 0.08rem;
+				right: 0.2rem;
+			}
+			footer{
+				width: 100%;
+				height: 0.55rem;
+				background: -webkit-linear-gradient(top,gray,black);
+				background: -moz-linear-gradient(top,gray,black);
+				background: -ms-linear-gradient(top,gray,black);
+				background: linear-gradient(top,gray,black);
+				position: absolute;
+				bottom: 0.0rem;
+				/*text-align: center;*/
+				line-height: 0.55rem;
+			}
+			footer a{
+				float: left;
+				width: 50%;
+				text-align: center;
+			}
+			footer a:nth-of-type(1){
+				border-right: 1px solid #222222;
+				box-sizing:border-box;
+			}
+			footer a:nth-of-type(2){
+				border-left: 1px solid #222222;
+				box-sizing:border-box;
+			}
+			section{
+				position: absolute;
+				width: 100%;
+				/*background: red;*/
+				top: 0.45rem;
+				bottom: 0.55rem;
+				overflow: auto;
+			}
+			section li{
+				/*float: left;*/
+				position: absolute;
+				width: 1.0rem;
+				height: 1.0rem;
+				background: url(img/1.jpg) no-repeat;
+				background-size: contain;
+				box-sizing: border-box;
+				border: 1px solid #000;
+				/*transition:left 0.5s,top 0.5s;*/
+				transition: all 0.5s;
+			}
+			.recycle{
+				width: 1.0rem;
+				height: 1.0rem;
+				background: url(img/recycle.png) no-repeat;
+				background-size: contain;
+				position: absolute;
+				top:100%;
+				left: calc(50% - 0.5rem);
+			}
+			.recycle:nth-of-type(2){
+				background-image: url(img/recycle2.png);
+			}
+		</style>
+	</head>
+	<body>
+		<article class="page">
+			<header>
+				<a class="btn" href="javascript:">确定</a>
+				<span>手机相册</span>
+				<a class="btn" href="javascript:">选择</a>
+			</header>
+			<section>
+				<ul id="picList">
+				</ul>
+			</section>
+			<footer>
+				<a>手机相册</a>
+				<a>全部相册</a>
+			</footer>
+			<span class="recycle"></span>
+			<span class="recycle"></span>
+		</article>
+		<script>
+			document.documentElement.style.fontSize=innerWidth/3+'px';
+			window.onresize=function(){
+				document.documentElement.style.fontSize=innerWidth/3+'px';
+			}
+			
+			var aData=[];
+			for(var i=1;i<=16;i++){
+				aData[i-1]="img/"+(i)+".jpg"
+			}
+			
+			var oList=document.getElementById('picList');
+			var sHtml='';
+			for(var i=0;i<aData.length;i++){
+				sHtml+="<li style='background-image:url("+aData[i]+")'></li>"
+			}
+			oList.innerHTML=sHtml;
+			
+			
+			
+			
+			var oPage=document.getElementsByClassName('page')[0];
+			var aLi=oList.getElementsByTagName('li');
+			var aBtns=oPage.getElementsByClassName('btn');
+			var flag=true;
+			aBtns[1].addEventListener('touchend',fnEnd,false);
+			
+			function fnEnd(){
+				if(flag){
+					aBtns[1].innerHTML="取消";
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].index=i;
+						aLi[i].addEventListener('touchend',fnSelected,false);
+					}
+				}
+				else{
+					aBtns[1].innerHTML="选择";
+					aBtns[0].style.display='none';
+					aRemove=[];
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].style.opacity=1;
+						aLi[i].removeEventListener('touchend',fnSelected,false);
+					}
+				}
+				flag=!flag;
+//				alert(flag)
+			};
+			var aRemove=[];
+			function fnSelected(){
+				aRemove.push(this.index);
+				this.style.opacity=0.1;
+				aBtns[0].style.display="block";
+			}
+			
+			aBtns[0].addEventListener('touchend',fnRemove,false);
+			
+			function fnRemove (){
+				aRemove=aRemove.sort(function(a,b){return a-b});
+				while(aRemove.length){
+					var numRemove=aRemove.pop();
+					oList.removeChild(aLi[numRemove]);
+				}
+//				flag=false;
+				fnEnd();
+				toposition();
+				
+			}
+			
+			
+//			计算position位置
+			function toposition(){
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].style.left=i%3+'rem';
+					aLi[i].style.top=parseInt(i/3)+'rem';
+				}
+			};
+//			调用函数 给每个li设置left top
+			toposition();
+		</script>
+	</body>
+</html>

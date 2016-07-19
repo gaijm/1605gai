@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="with=device-width,user-scalable=no,target-densitydpi=medium-dpi">-->	
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			body{font-size:0.15rem;font-family: "宋体";overflow: hidden;}
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			li{
+				list-style: none;
+			}
+			article{
+				margin: 0 auto;
+			}
+			header{
+				width: 100%;
+				height: 0.45rem;
+				background: -webkit-linear-gradient(top,gray,black);
+				background: -moz-linear-gradient(top,gray,black);
+				background: -ms-linear-gradient(top,gray,black);
+				background: linear-gradient(top,gray,black);
+				text-align: center;
+				line-height: 0.45rem;
+			}
+			.btn{
+				display: inline-block;
+				width: 0.5rem;
+				height:0.25rem;
+				border: 0.02rem solid #0d0d0d;
+				border-radius: 0.05rem;
+				line-height: 0.25rem;
+				box-shadow:0 0 0.03rem #0d0d0d, 0 0 0.02rem #232323 inset;
+			}
+			header a:nth-of-type(1){
+				position: absolute;
+				top: 0.08rem;
+				left: 0.2rem;
+				display: none;
+			}
+			header a:nth-of-type(2){
+				position: absolute;
+				top: 0.08rem;
+				right: 0.2rem;
+			}
+			footer{
+				width: 100%;
+				height: 0.55rem;
+				background: -webkit-linear-gradient(top,gray,black);
+				background: -moz-linear-gradient(top,gray,black);
+				background: -ms-linear-gradient(top,gray,black);
+				background: linear-gradient(top,gray,black);
+				position: absolute;
+				bottom: 0.0rem;
+				/*text-align: center;*/
+				line-height: 0.55rem;
+			}
+			footer a{
+				float: left;
+				width: 50%;
+				text-align: center;
+			}
+			footer a:nth-of-type(1){
+				border-right: 1px solid #222222;
+				box-sizing:border-box;
+			}
+			footer a:nth-of-type(2){
+				border-left: 1px solid #222222;
+				box-sizing:border-box;
+			}
+			section{
+				position: absolute;
+				width: 100%;
+				/*background: red;*/
+				top: 0.45rem;
+				bottom: 0.55rem;
+				overflow: auto;
+			}
+			section li{
+				/*float: left;*/
+				position: absolute;
+				width: 1.0rem;
+				height: 1.0rem;
+				background: url(img/1.jpg) no-repeat;
+				background-size: contain;
+				box-sizing: border-box;
+				border: 1px solid #000;
+				/*transition:left 0.5s,top 0.5s;*/
+				transition: all 0.5s;
+			}
+			.recycle{
+				width: 1.0rem;
+				height: 1.0rem;
+				background: url(img/recycle.png) no-repeat;
+				background-size: contain;
+				position: absolute;
+				top:100%;
+				left: calc(50% - 0.5rem);
+				z-index: 3;
+				transition: all 0.5s;
+			}
+			.recycle:nth-of-type(2){
+				background-image: url(img/recycle2.png);
+				z-index: 1;
+			}
+			
+			/*3d效果*/
+			.picBox{
+				width: 1.0rem;
+				height: 1.0rem;
+				background-size: contain;
+				background:no-repeat -1000px 0px;
+				/*overflow: hidden;*/
+				position: absolute;
+				-webkit-perspective: 8rem;
+				-moz-perspective: 8rem;
+				-o-perspective: 8rem;
+				perspective: 8rem;
+				z-index:2;
+			}
+			.picBox div{
+				width: 0.05rem;
+				height: 1.0rem;
+				background-repeat:no-repeat;
+				background-image:inherit;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left:0.05rem;
+				-wekit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-o-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				transition: all 0.5s;
+				-webkit-transform-origin: left 0.8rem;
+				-moz-transform-origin: left 0.8rem;
+				transform-origin: left 0.8rem;
+			}
+			.picBox>div{
+				left: 0;
+			}
+			.picBox div.show{
+				-webkit-transform: rotateY(-60deg);
+				-moz-transform: rotateY(-60deg);
+				-o-transform: rotateY(-60deg);
+				transform: rotateY(-60deg) rotateX(5deg);
+			}
+			.picBox>div.show{
+				-webkit-transform: rotateY(-60deg);
+				-moz-transform: rotateY(-60deg);
+				-o-transform: rotateY(-60deg);
+				transform: rotateY(-60deg) rotateX(5deg);
+				transform: translateX(0.5rem);
+			}
+			.picBox div{
+				animation:move 4s linear infinite;
+			}
+			.picBox>div{
+				animation:move2 4s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<article class="page">
+			<header>
+				<a class="btn" href="javascript:">确定</a>
+				<span>手机相册</span>
+				<a class="btn" href="javascript:">选择</a>
+			</header>
+			<section>
+				<ul id="picList">
+				</ul>
+			</section>
+			<footer>
+				<a>手机相册</a>
+				<a>全部相册</a>
+			</footer>
+			<span class="recycle"></span>
+			<span class="recycle"></span>
+		</article>
+		<script>
+		//创建rem标准  自适应
+			document.documentElement.style.fontSize=innerWidth/3+'px';
+			window.onresize=function(){
+				document.documentElement.style.fontSize=innerWidth/3+'px';
+			}
+//			加载背景图
+			var aData=[];
+			for(var i=1;i<=16;i++){
+				aData[i-1]="img/"+(i)+".jpg"
+			}
+//			用假数据渲染页面
+			var oList=document.getElementById('picList');
+			var sHtml='';
+			for(var i=0;i<aData.length;i++){
+				sHtml+="<li style='background-image:url("+aData[i]+")'></li>"
+			}
+			oList.innerHTML=sHtml;
+//			获取元素及 定义flag旗帜 控制每次删除完 恢复到 初始状态
+			var oPage=document.getElementsByClassName('page')[0];
+			var aLi=oList.getElementsByTagName('li');
+			var aBtns=oPage.getElementsByClassName('btn');
+			var flag=true;
+			var aPicBox=oPage.getElementsByClassName('picBox')
+			var arecycle=document.getElementsByClassName('recycle');
+//			选择按钮 触摸事件结束  触发函数  可以选择li(图片)
+			aBtns[1].addEventListener('touchend',fnEnd,false);
+//			触屏事件结束的函数 里面有每个li的选择事件 
+//			每次先执行true  然后变成false 当执行了删除事件后,因为删除事件中有fnEnd事件,又会执行flag,但这时flag是false,会执行else选项,
+//			还原初始状态,然后又将flag又变成了true;完美
+			
+//			定义空数组 存放外衣
+			var cansole=[];
+			
+			function fnEnd(){
+				if(flag){
+					aBtns[1].innerHTML="取消";
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].index=i;
+						aLi[i].addEventListener('touchend',fnSelected,false);
+					}
+				}
+				else{
+					aBtns[1].innerHTML="选择";
+					aBtns[0].style.display='none';
+					aRemove=[];
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].style.opacity=1;
+						aLi[i].removeEventListener('touchend',fnSelected,false);
+					}
+//					alert(aPicBox.length)
+//					aPicBox.sort(function(a,b){return b-a});
+					for(var i=0;i<aPicBox.length;i++){
+					cansole[i]=aPicBox[i];
+					console.log(cansole);
+					};
+					//取消时 删除外衣 原画透明度为1变成原来的图
+					cansole=cansole.sort(function(a,b){return a-b});
+					while(cansole.length){
+						var n=cansole.pop(i);
+						oPage.removeChild(n);
+					};
+				}
+				flag=!flag;
+			};
+//			定义空数组 接收选中的li的下标
+			var aRemove=[];
+//			选择事件 选择事件又加上3D外层  这个3D外衣是套上一个div，这个div中有多个小DIV一层套一层，背景图片为当前选择的li的背景图，位置为当前li的位置 覆盖上面。
+//			点击时 让原li的图变成透明,再将新div外衣设成卷纸效果
+			function fnSelected(){
+				aRemove.push(this.index);
+				this.style.opacity=0;
+				aBtns[0].style.display="block";
+//				函数创建3D外衣
+				create3d(this);
+				//垃圾桶上移
+				arecycle[0].style.top=arecycle[1].style.top="calc(100% - 0.6rem)";
+			}
+			function create3d(oLi){
+				var oDiv=document.createElement('div');
+				oDiv.className="picBox";
+				oDiv.style.backgroundImage=oLi.style.backgroundImage;
+				oPage.appendChild(oDiv);
+				oDiv.innerHTML='<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>';
+				var oXy=getoffset(oLi);
+				oDiv.style.left=oXy.L+'px';
+				oDiv.style.top=oXy.T+'px';
+				var picBox=document.getElementsByClassName('picBox')[0];
+				var aDiv=oDiv.getElementsByTagName('div');
+				for(var i=0;i<aDiv.length;i++){
+					aDiv[i].style.backgroundPositionX="-"+(i*0.05)+"rem";
+				};
+//				开始动画效果
+				setTimeout(function(){
+					close(oDiv);
+				},30);
+			};
+			
+//			获取外衣div的位置
+			function getoffset(obj){
+				var L=0;
+				var T=0;
+				while(obj){
+					L+=obj.offsetLeft;
+					T+=obj.offsetTop;
+					obj=obj.offsetParent;
+				};
+				return {L:L,T:T};
+			}
+			
+			
+//			删除事件
+			aBtns[0].addEventListener('touchend',fnRemove,false);
+			function fnRemove (){
+				aRemove=aRemove.sort(function(a,b){return a-b});
+				while(aRemove.length){
+					var numRemove=aRemove.pop();
+					oList.removeChild(aLi[numRemove]);
+				}
+				//定义删除时外衣移动效果，先获取所有外衣，
+				for(var i=0;i<aPicBox.length;i++){
+					cansole[i]=aPicBox[i];
+					console.log(cansole);
+					};
+//				排序存外衣的数组 
+				cansole=cansole.sort(function(a,b){return a-b});
+				//循环外衣数组所有元素   每个元素都执行函数selectedPicBox
+				for(var i=0;i<cansole.length;i++){
+					selectedPicBox(cansole[i]);
+				}
+				//删除之后  将第一个按钮变成“选择”
+				aBtns[1].innerHTML="选择";
+//				第一个按钮隐藏
+				aBtns[0].style.display='none';
+//				清空存放点中li的  数组
+				aRemove=[];
+				//清除选择事件  让li不能选
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].style.opacity=1;
+					aLi[i].removeEventListener('touchend',fnSelected,false);
+				};
+//				将flag改为真
+				flag=true;
+				//计算位置
+				toposition();
+				//垃圾桶延迟下移 当图片落入桶内 大约要2s
+				setTimeout(function(){
+					arecycle[0].style.top=arecycle[1].style.top="100%";
+				},2000)
+			}
+			//外衣移动函数 每个外衣都要从大到校的顺序 先居中  后往下走 进入底部消失;
+			function selectedPicBox(obj){
+				obj.style.transition="0.5s left,2s 0.5s top";
+				obj.style.left="calc(50% - 0.5rem)";
+				obj.style.top='100%';
+			}
+			
+//			计算position位置
+			function toposition(){
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].style.left=i%3+'rem';
+					aLi[i].style.top=parseInt(i/3)+'rem';
+				}
+			};
+//			调用函数 给每个li设置left top
+			toposition();
+			
+//			3D效果
+			function close(obj){
+				var aDiv=obj.getElementsByTagName('div');
+				for(var i=0;i<aDiv.length;i++){
+					aDiv[i].className="show";
+					aDiv[i].style.transition='1s';
+				}
+			};
+			function open(obj,oLi){
+				var aDiv=obj.getElementsByTagName('div');
+				for(var i=0;i<aDiv.length;i++){
+					aDiv[i].className="";
+					aDiv[i].style.transition='1s';
+				}
+			};
+		</script>
+	</body>
+</html>
