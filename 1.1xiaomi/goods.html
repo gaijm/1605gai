@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/flex.css" />
+		<link rel="stylesheet" href="mycss/goods.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>
+		<script type="text/javascript" src="myjs/new_file.js" ></script>
+		<script type="text/javascript" src="js/swiper-3.3.1.min.js" ></script>
+	</head>
+	<body>
+		<div class="box">
+			<!--头部-->
+			<div class="header">
+				<div class="prev">
+					<a href="#" class="glyphicon glyphicon-chevron-left"></a>
+				</div>
+				<div class="fangfa">
+					<a href="#" class="glyphicon glyphicon-search"></a>
+				</div>
+			</div>
+			<!--大图-->
+			<div class="banner">
+				<img src="img/good.jpg" />
+			</div>
+			<div class="content">
+				<div class="content-t">
+					<div class="content-t-l">
+						<p class="bold">小米Max全网通版 </p>
+						<p class="origen">1499元</p>
+					</div>
+					<div class="content-t-r">
+						<a href="#"></a>
+					</div>
+				</div>
+				<div class="content-c">
+					<p>
+						6.44"大屏黄金尺寸 / 32GB 容量 / 3GB内存 / 4850mAh 大电量 / 骁龙650处理器 / 金属机身 / 指纹识别 / 2.5D玻璃
+					</p>
+				</div>
+				<div class="content-b">
+					<div class="content-b-1">
+						<ul>
+							<li class="active">银色</li>
+							<li>金色</li>
+						</ul>
+					</div>
+					<div class="content-b-2">
+						<div class="active">32GB</div>
+					</div>
+				</div>
+			</div>
+			<!--为您推荐-->
+			<div class="tuijian">
+				<h3>为您推荐</h3>
+				<ul class="moveUl" id="mover">
+					<li></li>
+					<li class="lbg2"></li>
+					<li class="lbg3"></li>
+					<li class="lbg4"></li>
+					<li class="lbg5"></li>
+					<li class="lbg6"></li>
+				</ul>
+			</div>
+			<!--产品详细-->
+			<div class="xiangxi">
+				<ul>
+					<li><a href="#" class="xiangxi-a">商品详细</a></li>
+					<li><a href="#">参数</a></li>
+					<li><a href="#" class="xiangxi-alast">意外保</a></li>
+				</ul>
+			</div>
+			<div class="showImg">
+				<div class="show-img1">
+					<a href="#"></a>
+				</div>
+				<div class="show-img1">
+					<a href="#" style="background-image: url(img/big2.jpg);"></a>
+				</div>
+				<div class="show-img1">
+					<a href="#" style="background-image: url(img/big3.jpg);"></a>
+				</div>
+			</div>
+			<!--页脚-->
+			<div class="footer">
+				<div class="footer-left">
+					<a href="#"></a>
+				</div>
+				<div class="footer-center">
+					立即购买
+				</div>
+				<div class="footer-right">
+					<a href="#"></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	var iScroll=0;
+	var startX;
+	var dx;
+	var iNow=0;
+	var startScroll=0
+	var moveUl=document.getElementById('mover');
+	var aLi=moveUl.getElementsByTagName('li');
+	moveUl.addEventListener('touchstart',touchstart);
+	function touchstart(ev){
+		startX=ev.changedTouches[0].clientX;
+		startScroll=iScroll;
+	};
+	moveUl.addEventListener('touchmove',touchmove);
+	function touchmove(ev){
+		ev.preventDefault();
+		dx=ev.changedTouches[0].clientX-startX;
+		iScroll=startScroll+dx;
+		moveUl.style.transform='translateX('+iScroll/100+'rem)';
+		moveUl.style.transition='0.3s';
+	}
+	moveUl.addEventListener('touchend',touchend);
+	function touchend(ev){
+		dx=ev.changedTouches[0].pageX-startX;
+		iScroll=startScroll+dx;
+		iNow=-iScroll/90;
+		console.log(iScroll);
+		if(iNow<0){
+			iNow=0;
+			iScroll=-iNow*90;
+		}
+		if(iNow>aLi.length-1){
+			iNow=aLi.length-1;
+			iScroll=-iNow*90+220;
+		};
+		moveUl.style.transform='translateX('+iScroll/100+'rem)';
+	}
+	
+</script>
