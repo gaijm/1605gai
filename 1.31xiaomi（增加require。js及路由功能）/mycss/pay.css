@@ -1,0 +1,220 @@
+*{
+	/*font-family: Arial,Verdana,Sans-serif;*/
+	font-family: "微软雅黑";
+	font-size: 0.12rem;
+}
+a{
+	text-decoration: none;
+	color: #9D9D9D;
+}
+ul,ol{
+	list-style: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+figcaption,
+figure,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+	margin: 0;
+	padding: 0
+}
+.box{
+	width: 100%;
+}
+.header{
+	width: 100%;
+	height: 0.36rem;
+	line-height: 0.36rem;
+	background: #F2F2F2;
+	display: flex;
+	justify-content:space-between;
+	
+}
+.prev,.fangda{
+	margin: 0 0.1rem;
+	font-size: 0.14rem;
+}
+.title a{
+	color: #666666;
+	font-size: 0.13rem;
+}
+/*中间*/
+.content{
+	height: 0.8rem;
+	background: #FF6B00;
+	border-top: 0.001px solid #FF6B00;
+}
+.content-top{
+	margin-top: 0.1rem;
+}
+.content-top p{
+	height: 0.28rem;
+	line-height: 0.28rem;
+	text-align: center;
+	margin:0rem 0rem 0rem 0.12rem;
+	padding-right: 0.1rem;
+}
+.content-top p a{
+	color: white;
+	font-size: 0.15rem;
+	font-weight: bold;
+	
+	/*letter-spacing: 0.03rem;*/
+}
+.yuan{
+	width: 0.68rem;
+	height: 0.68rem;
+	border-radius: 0.34rem;
+	text-align: center;
+	font-size: 0.36rem;
+	font-weight: bold;
+	color: white;
+	line-height: 0.68rem;
+	background: #FFD24D;
+	margin: 0 auto;
+}
+/*中间*/
+.content-center{
+	width: 100%;
+	height: 0.85rem;
+	margin-top: 0.1rem;
+}
+.content-center ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.content-center ul li{
+	width: 1rem;
+	height: 0.57rem;
+	border-right: 1px solid #C7c7c7;
+	text-align: center;
+}
+.content-center ul li dl{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.content-center ul dt{
+	width: 0.28rem;
+	height: 0.3rem;
+	background-image: url(../img/spr2.png);
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+}
+.content-center ul dd{
+	color: #333333;
+}
+.line{
+	height: 0.01rem;
+	width: 0.25rem;
+	border: 1px solid #E33F7B;
+}
+.line-green{
+	border: 1px solid #8BC34A;
+}
+/*列表*/
+.list{
+	width: 100%;
+	background: #F5F5F5;
+	height: 2.9rem;
+	padding-top: 0.1rem;
+}
+.list p{
+	height: 0.36rem;
+	line-height: 0.36rem;
+	background: white;
+	margin-bottom: 0.1rem;
+}
+.list p a{
+	font-size: 0.12rem;
+	color:black;
+}
+.list p i{
+	display: inline-block;
+	width: 0.14rem;
+	height: 0.14rem;
+	background-image: url(../images/spr3_02.png);
+	background-position:0rem -0.16rem;
+	background-repeat: no-repeat;
+	background-size:130%;
+	vertical-align: middle;
+	margin:0rem 0.1rem 0.05rem 0.1rem;
+}
+.list .margin-btm{
+	margin-bottom: 0.02rem;
+}
+/*页脚*/
+.footer{
+	border-top: 1px solid #CCCCCC;
+	margin-top:0.05rem ;
+	height: 0.42rem;
+	width: 3.2rem;
+	background: white;
+	position: fixed;
+	bottom: 0;
+}
+.footer ul{
+	display: flex;
+	justify-content: space-around;
+}
+.footer a{
+	display: block;
+	
+}
+.footer a dl{
+	height:0.42rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+.footer a dt{
+	width: 0.17rem;
+	height: 0.17rem;
+	background-image: url(../img/spr1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0.0rem -1.19rem;
+	margin: 0.02rem auto 0.01rem;
+}
+.footer a .position2{
+	background-position: 0.0rem -0.17rem;
+}
+.footer a .position3{
+	background-position: 0.0rem -0.51rem;
+}
+.footer a .position4{
+	background-position: 0.0rem -0.68rem;
+}
+.footer a dd{
+	font-size:0.1rem;
+	color:#999999;
+}
+.footer a .yellow{
+	color: #F56A00;
+}

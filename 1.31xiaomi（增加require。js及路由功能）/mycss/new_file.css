@@ -1,0 +1,278 @@
+*{
+	font-family: Arial,Verdana,Sans-serif;
+	font-size: 0.12rem;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+figcaption,
+figure,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+	margin: 0;
+	padding: 0
+}
+#slider{
+	width: 45%;
+	height: 92.2%;
+	position: absolute;
+	left: -45%;
+	top:0;
+	animation: 0.5s;
+	background: white;
+	border-right: 2px solid #C7C7C7;
+	box-shadow: 0px 2px 2px #CACACA;
+	z-index: 2;
+}
+.download-app{
+	background-image: url(../img/shou/header.png);
+	background-size: cover;
+	height: 0.47rem;
+	position: relative;
+}
+.download-app div{
+	width: 0.47rem;
+	height: 0.47rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.download-app a{
+	background: url(../images/close_03.png) no-repeat;
+	background-size: cover;
+	float: right;
+	width: 0.2rem;
+	height: 0.2rem;
+	margin-top: 0.15rem;
+	margin-right: 0.1rem;
+}
+.index-header{
+	height: 0.47rem;
+	padding: 0rem 0.1rem;
+}
+.index-header-t{
+	height: 0.29rem;
+	padding: 0.05rem 0rem 0rem 0.08rem;
+}
+.index-header-t i{
+	color:#DADADA;
+	display: inline-block;
+	height: 0.18rem;
+	width: 0.2rem;
+	line-height: 0.18rem;
+	
+}
+.index-header-t i a{
+	display: inline-block;
+	font-size: 0.17rem;
+	color:#DADADA ;
+}
+.index-header-t .text{
+	font-size: 0.14rem;
+	line-height:0.29rem ;
+	font-weight: bold;
+	color: #999999;
+}
+.index-header-b{
+	height: 0.07rem;
+	border: 1px solid #DADADA;
+	border-top: 0;
+}
+.slider{
+	background: #F5F5F5;
+}
+.slider ul{
+	width: 300%;
+}
+.slider ul li{
+	width: 33.33%;
+	height: 1.6rem;
+	float: left;
+}
+.slider ul li a{
+	float: left;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slider ul li .s2{
+	background-image: url(../images/2.jpg);
+}
+.slider ul li .s3{
+	background-image: url(../images/4.jpg);
+}
+/*商品列表*/
+.list{
+	width: 100%;
+	background: #F5F5F5;
+	margin-bottom: 0.46rem;
+}
+.section{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.section .items{
+	position: relative;
+	width: 1.04rem;
+	box-sizing: border-box;
+}
+.section .items:before{
+	content: '';
+	display: block;
+	padding-top: 139.99%;
+}
+.section .items a{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-size: cover;
+}
+.section .items2{
+	width: 100%;
+}
+.section .items2:before{
+	content: '';
+	display: block;
+	padding-top: 27.77%;
+}
+.marginT{
+	margin-top: 0.1rem;
+}
+/*商品列表*/
+.product{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background: #fff;
+	padding: 0.1rem 0rem;
+	margin-bottom: 0.02rem;
+}
+.product .product-l{
+	width: 1.14rem;
+	position: relative;
+}
+.product .product-l:before{
+	content: "";
+	display: block;
+	padding-top: 57.14%;
+}
+.product .product-l a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	background-position: center;
+}
+.product .product-r{
+	width: 1.92rem;
+	/*height: 0.76rem;*/
+	/*display: flex;
+	flex-direction: column;
+	justify-content: space-around;*/
+}
+.product .product-r h3{
+	font-size: 0.14rem;
+	font-weight: bold;
+	margin-bottom: 0.05rem;
+}
+.product .product-r .jianjie{
+	font-size: 0.12rem;
+	color:#CCCCCC;
+	line-height: 0.14rem;
+	margin-bottom: 0.05rem;
+}
+.origen{
+	color: #BF5834;
+}
+/*产品大图比例*/
+.product .product-big{
+	width: 1.14rem;
+}
+.product .product-big a{
+	background-size: contain;
+	background-position: center;
+}
+.footer{
+	border-top: 1px solid #CCCCCC;
+	margin-top:0.05rem ;
+	height: 0.42rem;
+	width: 3.2rem;
+	background: white;
+	position: fixed;
+	bottom: 0;
+}
+.footer ul{
+	display: flex;
+	justify-content: space-around;
+}
+.footer a{
+	display: block;
+	
+}
+.footer a dl{
+	height:0.42rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+.footer a dt{
+	width: 0.17rem;
+	height: 0.17rem;
+	background-image: url(../img/spr1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0.0rem -1.02rem;
+	margin: 0.02rem auto 0.01rem;
+}
+.footer a .position2{
+	background-position: 0.0rem -0.17rem;
+}
+.footer a .position3{
+	background-position: 0.0rem -0.51rem;
+}
+.footer a .position4{
+	background-position: 0.0rem -0.85rem;
+}
+.footer a dd{
+	font-size:0.1rem;
+	color:#999999;
+}
+.footer a .yellow{
+	color: #F56A00;
+}
