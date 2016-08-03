@@ -1,0 +1,115 @@
+.lexiangka-box{
+	width: 100%;
+	height: 11.36rem;
+	background: #EEEEEE;
+	padding-top: 0.001rem;
+	transition: all 1s linear;
+}
+.lexiangka-fenxiang{
+	width: 100%;
+	height: 2.82rem;
+	background: white;
+	margin-top: 0.28rem;
+	border-top: 0.0001rem solid white;
+}
+.myka{
+	text-align: center;
+	color: #888888;
+	font-weight: bold;
+	font-size: 0.3rem;
+}
+.jia{
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 1rem;
+	color: #888888;
+	margin-top: 0.9rem;
+	text-align: center;
+}
+.lexiangka-buy{
+	margin-top: 0.28rem;
+	width: 100%;
+	height: 4.2rem;
+	background: white;
+	border-top: 0.0001rem solid white;
+}
+.lexiangka-img{
+	margin-top: 0.5rem;
+}
+.lexiangka-img div{
+	width: 4.08rem;
+	height: 1.88rem;
+	margin: 0 auto;
+	background: url(images/7_03.png);
+	background-size: contain;
+}
+.aiya{
+	margin: 0.2rem 0rem;
+	font-size: 0.32rem;
+	color: #DADADA;
+	text-align: center;
+}
+.lexiangka-buy p:last-child{
+	text-align: center;
+}
+.lexiangka-buy p:last-child a{
+	text-decoration: underline;
+	color: #919191;
+	font-size: 0.32rem;
+}
+
+
+.footer dt{
+	width: 0.4rem;
+	height: 0.4rem;
+	background-image: url(images/footer1-1.JPG);
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: 0.05rem;
+}
+.footer dd{
+	color: #B1B1B1;
+}
+.footer .dt1{
+	color: #B1B1B1;
+}
+.footer .dt2{
+	background-image: url(images/footer2-1.png);
+}
+.footer .dt3{
+	background-image: url(images/footer3-2.png);
+}
+.footer .dt4{
+	background-image: url(images/footer4-1.png);
+	background-size: contain;
+}
+.footer .dt3~dd{
+	color: #D1747B;
+}
+/*侧边栏一如一处*/
+#lexiangka-align-button{
+	width: 1.6rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	font-size: 0.40rem;
+	text-align: center;
+	border: none;
+	background:rgba(255,255,255,0);
+	color: white;
+	text-shadow: 0 0 2px gray,
+				 0 0 4px #FFFFFF,
+				 0 0 6px #FF00ed,
+				 0 0 12px #FFffed,
+				 0 0 16px #FF0fed,
+				 0 0 26px #FFf0ed;
+}
+#lexiangka-align{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 3rem;
+	transform: translate3d(-3rem,0,0);
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	transition: all 1s linear;
+}

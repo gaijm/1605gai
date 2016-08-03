@@ -1,0 +1,177 @@
+.wode{
+	width: 100%;
+	background: #EEEEEE;
+	margin-bottom: 1.2rem;
+}
+.wode-log{
+	width: 100%;
+	height: 3rem;
+	border-top: 0.0001rem solid white;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+}
+.wode-log img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+.wode-log i{
+	display: block;
+	width: 0.52rem;
+	height: 0.52rem;
+	background-size: contain;
+	position: absolute;
+	right: 0.5rem;
+	top:1.52rem;
+	font-size: 0.5rem;
+	color: white;
+}
+.wode-log span{
+	display: block;
+	width: 0.52rem;
+	height: 0.52rem;
+	background-size: contain;
+	position: absolute;
+	right: 0rem;
+	top:1.52rem;
+	font-size: 0.5rem;
+	color: white;
+	font-weight: 200;
+}
+.wode-log-in{
+	background: url(images/user_03.png) no-repeat;
+	background-size: cover;
+	width: 1.7rem;
+	height: 1.7rem;
+	border-radius: 50%;
+	margin: 0.34rem auto;
+}
+.wode-list{
+	width: 100%;
+}
+.wode-list ul{
+	width: 100%;
+	height: 5.6rem;
+	margin-top:0.36rem;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-around;
+}
+.wode-list ul li{
+	width: 5.82rem;
+	height: 0.95rem;
+	margin: 0 auto;
+	line-height: 0.95rem;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #DEDEDE;
+}
+.wode-list ul li a{
+	font-size: 0.32rem;
+	color: #5C5C5C;
+}
+/*吐槽*/
+.mytucao{
+	width: 100%;
+}
+.mytucao-mengban{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: none;
+}
+.mytucao-liuyan{
+	padding: 0.3rem;
+	width:5.8rem;
+	height: 5.8rem;
+	position: fixed;
+	top: 2.14rem;
+	left: 0.3rem;
+	z-index: 10;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/*opacity: 0;*/
+	visibility: hidden;
+}
+.mytucao-content{
+	width: 5.15rem;
+	height: 3.0rem;
+	border: 1px solid #CCCCCC;
+	border-radius: 0.1rem;
+	padding: 0.2rem;
+	font-size: 0.34rem;
+	color: #CCCCCC;
+	box-shadow: 0px 2px 2px darkgray initial ;
+}
+.mytucao-tel{
+	height: 0.78rem;
+	width: 5.15rem;
+}
+.mytucao-tel input{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #CCCCCC;
+	border-radius: 0.1rem;
+	font-size: 0.34rem;
+	color: #CCCCCC;
+	box-shadow: 0px 2px 2px darkgray initial ;
+	padding-left: 0.2rem;
+}
+.mytucao-tijiao{
+	width: 100%;
+	height: 0.8rem;
+	display: flex;
+	justify-content: space-between;
+}
+.mytucao-tijiao button{
+	width: 2.4rem;
+	height: 0.8rem;
+	border-radius: 0.1rem;
+	background: #EC6D65;
+	color: white;
+	font-size: 0.34rem;
+	text-align: center;
+	line-height: 0.8rem;
+	border: none;
+}
+
+
+
+.footer dt{
+	width: 0.4rem;
+	height: 0.4rem;
+	background-image: url(images/footer1-1.JPG);
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-bottom: 0.05rem;
+}
+.footer dd{
+	color: #B1B1B1;
+}
+.footer .dt1{
+	color: #B1B1B1;
+}
+.footer .dt2{
+	background-image: url(images/footer2-1.png);
+}
+.footer .dt3{
+	background-image: url(images/footer3-1.png);
+}
+.footer .dt4{
+	background-image: url(images/footer4-2.png);
+	background-size: contain;
+}
+.footer .dt4~dd{
+	color: #D1747B;
+}

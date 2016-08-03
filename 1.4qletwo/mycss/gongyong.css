@@ -1,0 +1,40 @@
+*{
+	font-family: Arial,Verdana,Sans-serif;
+	font-size: 0.24rem;
+}
+a{
+	text-decoration: none;
+	color: #9D9D9D;
+}
+ul,ol{
+	list-style: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+figcaption,
+figure,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+	margin: 0;
+	padding: 0
+}

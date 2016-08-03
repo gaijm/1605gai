@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<div class="lexiangka-box">
+			<div id="lexiangka-align-button" data-status="1">展开</div>
+			<div class="lexiangka-fenxiang">
+				<div class="jia">
+					+
+				</div>
+				<p class="myka">分享自己的乐享卡</p>
+			</div>
+			<div class="lexiangka-buy">
+				<div class="lexiangka-img">
+					<div></div>
+				</div>
+				<p class="aiya">哎呀！您还没有购买乐享卡...</p>
+				<p><a href="#">马上去购买</a></p>
+			</div>
+		</div>
+		<div id="lexiangka-align">我是侧边栏
+		我是侧边栏我是侧边栏</div>
+	</body>
+</html>
+<script>
+	var $=function(id){
+		return document.querySelector(id);
+	}
+	var oBtn=$('#lexiangka-align-button');
+	oBtn.onclick=function(){
+//		alert('aaa');
+		var content=$('.lexiangka-box');
+		var panner=$('#lexiangka-align');
+		var status=this.getAttribute('data-status');
+		
+		if(status==1){
+			this.innerHTML='折叠';
+			content.style.transform='translate3d(3rem,0rem,0rem)';
+			panner.style.transform='translate3d(0rem,0rem,0rem)';
+			this.setAttribute('data-status','0');
+		}else{
+			this.innerHTML='展开';
+			content.style.transform='translate3d(0rem,0rem,0rem)';
+			panner.style.transform='translate3d(-3rem,0rem,0rem)';
+			this.setAttribute('data-status','1');
+		}
+	}
+</script>

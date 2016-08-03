@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<div class="leyuan-box">
+			<div class="leyuan-nav">
+				<ul>
+					<li>
+						<a href="script:">分类</a>
+					</li>
+					<li>
+						<a href="script:">全城</a>
+					</li>
+					<li>
+						<a href="script:">排序</a>
+					</li>
+				</ul>
+				<div class="xuanxiangka">
+				</div>
+					<ol>
+						<li>
+							<a href="#">全部</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">西城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">全部</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">西城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+						<li>
+							<a href="#">东城区</a>
+						</li>
+					</ol>
+			</div>
+			<div class="leyuan-container" id="leyuan-container"></div>
+			<script id="leyuan-dataJS" type="text/html">
+				<%for(var i=0;i<data.length;i++){%>
+					<div class="container-content">
+						<a href="#" style="background: url(<%=data[i].img%>) no-repeat;"></a>
+						<div class="lexiang">
+							<img src="images/red_03.png" />
+						</div>
+						<div class="img-disc">
+							<div class="img-disc-left">
+								<p><%=data[i].name%></p>
+								<span><%=data[i].address%></span>
+							</div>
+							<div class="img-disc-right">
+								<dl>
+									<dt>
+									</dt>
+									<dd><span><%=data[i].dist%></span>公里</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				<%}%>
+			</script>
+				
+			
+			
+			
+			
+		</div>
+	</body>
+</html>

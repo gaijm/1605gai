@@ -1,0 +1,63 @@
+define(['backbone','jquery'],function(Backbone,$){
+	var Router=Backbone.Router.extend({
+		routes:{
+			'':'home',
+			'home':'home',
+			'leyuan':'leyuan',
+			'fenxiangka':'fenxiangka',
+			'wode':'wode',
+			'myzhanghao':'myzhanghao',
+			'tijiaodingdan':'tijiaodingdan',
+			'page1':'page1',
+			'*actions':'defaulAction'
+		},
+		defaulAction:function(){
+			location.hash='';
+		},
+		home:function(){
+			require(['model/home.js','myjs/myshikou.js'],function(home,myshikou){
+				myshikou.myshikou();
+				home.render();
+			})
+		},
+		leyuan:function(){
+			require(['model/leyuan.js','myjs/myshikou.js'],function(leyuan,myshikou){
+				myshikou.myshikou();
+				leyuan.render();
+			})
+		},
+		fenxiangka:function(){
+			require(['model/lexiangka.js','myjs/myshikou.js'],function(lexiangka,myshikou){
+				myshikou.myshikou();
+				lexiangka.render();
+			})
+		},
+		wode:function(){
+			require(['model/wode.js','myjs/myshikou.js'],function(wode,myshikou){
+				myshikou.myshikou();
+				wode.render();
+			})
+		},
+		myzhanghao:function(){
+			require(['model/myzhanghao.js','myjs/myshikou.js'],function(myzhanghao,myshikou){
+				myshikou.myshikou();
+				myzhanghao.render();
+			})
+		},
+		tijiaodingdan:function(){
+			require(['model/tijiaodingdan.js','myjs/myshikou.js'],function(tijiaodingdan,myshikou){
+				myshikou.myshikou();
+				tijiaodingdan.render();
+			})
+		},
+		page1:function(){
+			require(['model/page1.js','myjs/myshikou.js'],function(page1,myshikou){
+				myshikou.myshikou();
+				page1.render();
+			})
+		}
+	});
+	
+	var router=new Router();
+	return router;
+})

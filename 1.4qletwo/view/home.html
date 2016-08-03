@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<div class="home-box">
+			<div class="home-slider swiper-container">
+				<ul class="swiper-wrapper" id="home-slider">
+					<li class="swiper-slide"><a href="#"></a></li>
+				</ul>
+			</div>
+			
+			<div class="swiper-pagination"></div>
+			<div class="home-main" id="home-main"></div>
+			<script id="home-templateJS" type="text/html">
+					<%for(var i=0;i<arealist.length;i++){%>
+						<div class="home-red" style="background-image: url(<%=arealist[i].img%>);"></div>
+					<%}%>
+			</script>
+			
+			<div class="jingcai">
+				<h2>
+					精彩推荐
+				</h2>
+			</div>
+			<div class="tuijian" id="tuijian"></div>
+			<script id="tuijianJS" type="text/html">
+			<%for(var i=0;i<reclist.length;i++){%>
+				<div class="tuijian-section">
+					<a href="#" style="background-image: url(<%=reclist[i].img%>);"></a>
+				</div>
+			<%}%>
+			</script>
+			
+		</div>
+	</body>
+</html>
+
+

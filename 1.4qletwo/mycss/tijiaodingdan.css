@@ -1,0 +1,87 @@
+body{
+	background:#EEEEEE ;
+}
+.myindent{
+	width:100%;
+	background: white;
+}
+.myindent-box{
+	width: 100%;
+	height: 4.5rem;
+	padding: 0rem 0.24rem;
+}
+h1{
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.32rem;
+	padding: 0rem 0.2rem;
+	color:#AEACAC;
+}
+.myindent-list{
+	height: 3.3rem;
+	width: 100%;
+}
+.myindent-list ul{
+	height: 3.3rem;
+	width: 100%;
+}
+.myindent-list ul li{
+	height: 0.84rem;
+	width: 6rem;
+	line-height: 0.84rem;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #E5E5E5;
+	padding-right: 0.5rem;
+}
+.myindent-list ul li span,.myindent-list ul li label,.myindent-list ul li i{
+	font-size: 0.32rem;
+	color: #AEACAC;
+}
+.labellast{
+	margin-right: 0.5rem;
+}
+
+
+.myindent-list ul:last-child{
+	padding-right: 1.5rem
+}
+.myindent-list-i{
+	display: inline-block;
+	width: 0.45rem;
+	height: 0.45rem;
+	border-radius: 50%;
+	border: 2px solid #E5E5E5;
+	position: absolute;
+	bottom: 0.15rem;
+	right: 0.5rem;
+}
+.myindent-list ul li:last-child{
+	position: relative;
+	border-bottom: none;
+}
+.myindent-footer{
+	position: fixed;
+	display: flex;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+}
+.myindent-footer a{
+	float: left;
+	width: 50%;
+	height: 1rem;
+	text-align: center;
+	line-height: 1rem;
+	font-size: 0.36rem;
+}
+.myindent-footer a:first-child{
+	background: #E6E6E6;
+}
+.myindent-footer a:first-child span{
+	font-size: 0.36rem;
+}
+.myindent-footer a:last-child{
+	background: #EC6D65;
+	color: white;
+}

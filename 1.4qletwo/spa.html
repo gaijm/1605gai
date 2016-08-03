@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="mycss/gongyong.css" />
+		<script type="text/javascript" src="lib/swiper-3.3.1.min.js" ></script>
+		<link rel="stylesheet" href="mycss/spa.css" />
+		<title></title>
+	</head>
+	<script>
+		document.documentElement.style.fontSize=innerWidth/6.4+'px';
+		window.onresize=function(){
+			document.documentElement.style.fontSize=innerWidth/6.4+'px';
+		};
+	</script>
+	<style id="style">
+		
+	</style>
+	<body>
+		<div class="header"></div>
+		<div class="page1-box" id="page1-box">
+			<div class="page1-log"></div>
+			<div class="page1-radius"><img src="images/position_03.png"/></div>
+			<p>定位中...</p>
+			<div class="page1-img"></div>
+		</div>
+		<div class="container" id="container">
+		</div>
+		<div class="footer" id="footer">
+			<ul>
+				<li>
+					<a href="#/home">
+						<dl>
+							<dt></dt>
+							<dd class="dt1">首页</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#/leyuan">
+						<dl>
+							<dt class="dt2"></dt>
+							<dd>乐园</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#/fenxiangka">
+						<dl>
+							<dt class="dt3"></dt>
+							<dd>乐享卡</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="#/wode">
+						<dl>
+							<dt class="dt4"></dt>
+							<dd>我的</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+		<script data-main="main.js" src="lib/require.js"></script>
+<script>
+	setTimeout(function(){
+		$('#page1-box').css('display','none');
+		$('.home-box').css('display','block');
+		$('#footer a').click(function(){
+		$(this).css('text-decoration','none');
+	});
+	},2000);
+</script>
