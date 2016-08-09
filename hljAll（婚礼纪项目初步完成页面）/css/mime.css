@@ -1,0 +1,141 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,div { margin:0; padding:0; } 
+fieldset, img { border:none; } 
+body{font-size: 0.6rem;}
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; } 
+ul, ol { list-style:none; } 
+a { color:black; text-decoration:none; font-size: 0.6rem;} 
+a:visited { color:black; text-decoration: none;} 
+a:hover, a:active, a:focus { color:black;text-decoration: none;} 
+
+html,body{
+	background: #f4f4f4;
+}
+#header{
+	width: 100%;
+	height: 2.24rem;
+	border-bottom: 2px solid #e5e5e5;
+	background: #fff;
+}
+#hdList{
+	width: 14.5rem;
+	background: #fff;
+	margin: 0 auto;
+	display: flex;
+	
+}
+#hdList li{
+	width: 33.33%;
+	height: 1rem;
+	color: #f40;
+	margin-top: 0.6rem;
+	font-size: 1rem;
+	text-align: center;
+}
+#hdList li img{
+	width: 1rem;
+	height: 1rem;
+}
+.imgLeft{
+	float: left;
+}
+.imgRight{
+	float: right;
+}
+#user{
+	width: 100%;
+	height: 4.1rem;
+	background: #fff;
+	padding-top: 0.8rem;
+}
+#userCon{
+	width: 14.5rem;
+	height: 2.45rem;
+	margin: 0 0.65rem;
+}
+.userImg{
+	width: 2.45rem;
+	height: 2.45rem;
+	float: left;
+}
+.userImg img{
+	width: 100%;
+	height: 100%;
+}
+.userName{
+	width: 5.2rem;
+	height: 2.45rem;
+	float: left;
+	margin: 0 0.4rem;
+}
+.userName h5{
+	margin: 0.4rem 0;	
+}
+.userRight{
+	width: 1rem;
+	height: 2.45rem;
+	float: right;
+	line-height: 2.45rem;
+}
+#nav{
+	width: 100%;
+	height: 3.25rem;
+	border-top: 1px solid #ccc;
+	background: #fff;
+	/*margin-bottom: 0.5rem;*/
+}
+#navList{
+	width: 100%;
+	height: 1.95rem;
+	display: flex;
+}
+#navList li{
+	width: 25%;
+	height: 100%;
+	border-right: 1px solid #ccc;
+	text-align: center;
+	margin: 0.7rem 0;
+}
+#navList li:last-child{
+	border: none;
+}
+#navList li img{
+	width: 1rem;
+	height: 0.9rem;
+	display: block;
+	margin: 0 auto;
+}
+#navList li p{
+	padding-top: 0.3rem;
+}
+#mainList{
+	width: 100%;
+	background: #fff;
+	margin: 0.5rem 0 1.25rem 0;
+}
+#mainList li{
+	width: 14.5rem;
+	height: 2.15rem;
+	background: #fff;
+	line-height: 2.15rem;
+	margin-left: 0.65rem;
+	border-bottom: 1px solid #ccc;
+}
+#mainList li:last-child{
+	border: none;
+}
+#mainList li img{
+	width: 0.9rem;
+	height: 0.9rem;
+}
+#mainList li span{
+	float: right;
+	color: #ccc;
+}
+#mainList li b{
+	padding-left: 0.5rem;
+}
+#mainList li i{
+	padding-left: 0.2rem;
+}
+
+

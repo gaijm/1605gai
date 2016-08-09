@@ -1,0 +1,331 @@
+.gai-wrap{
+	background: #F4F4F3;
+}
+.clear{
+	zoom: :1;
+}	
+.clear:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+header{
+	position: fixed;
+	height: 2.2rem;
+	border: 0.0001rem solid white;
+	background: white;
+	z-index: 10;
+	width: 100%;
+}
+#wrapper{
+	position: relative;
+	top: 2.2rem;
+}
+.gai-header-grap{
+	height: 1.4rem;
+	line-height:1.4rem;
+	margin-top: 0.4rem;
+	display: flex;
+}
+.gai-header-dis{
+	width: 2.2rem;
+	height: 1.4rem;
+	margin-left: 0.5rem;
+}
+.gai-header-dis a{
+	background:url(../img/images/gaih_03.png) no-repeat;
+	background-size: contain;
+	color: #FF7A6A;
+	background-position: right;
+	padding-right: 0.8rem;
+	font-size: 0.7rem;
+}
+.gai-header-input{
+	width: 8.7rem;
+	position: relative;
+	height: 1.4rem;
+	
+}
+.gai-header-input input{
+	width: 100%;
+	height: 100%;
+	padding-left: 0.5rem;
+	background:#F4F4F3;
+	border-radius: 1rem;
+	font-size: 0.7rem;
+	outline: none;
+	border: none;
+}
+.gai-header-input i{
+	display: inline-block;
+	width: 1rem;
+	height:1rem;
+	background: url(../img/images/gaih_05.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 0rem;
+	top:0.4rem
+}
+.gai-header-other{
+	width: 3.2rem;
+	height: 100%;
+	margin-left: 0.5rem;
+}
+.gai-header-other a{
+	float: left;
+	width: 1rem;
+	height: 1rem;
+	margin: 0.3rem;
+}
+.gai-header-other a:nth-of-type(1){
+	background: url(../img/images/o_1ad87koeiml078q1dgq1acqt5ic.png) no-repeat;
+	background-size: contain;
+}
+.gai-header-other a:nth-of-type(2){
+	background: url(../img/images/o_1ad87kvsc5itf12a631pikgdsh.png) no-repeat;
+	background-size: contain;
+}
+/*轮播*/
+.gai-home-slider{
+	width: 100%;
+	height: 8rem;
+}
+#gai-ul-slider{
+	position: absolute;
+	width: 400%;
+	height: 100%;
+}
+#gai-home-slider li{
+	float: left;
+	width: 16rem;
+	height: 100%;
+}
+#gai-home-slider li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+}
+/*中间的四个圆圈*/
+.gai-nav1{
+	width: 100%;
+	height: 4.5rem;
+	display: flex;
+	justify-content: space-around;
+	background: white;
+	margin-bottom: 0.5rem;
+}
+.gai-nav1 dl{
+	width: 2.8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.gai-nav1 dd{
+	color:#999999;
+}
+.gai-nav1 dt{
+	margin-bottom: 0.3rem;
+}
+/*第一部分*/
+.gai-section1{
+	width: 15rem;
+	height: 6rem;
+	padding: 0.5rem;
+	background: white;
+	margin-bottom: 0.5rem;
+}
+.gai-section1 div{
+	width: 7.5rem;
+	height:6.5rem;
+	float: left;
+	box-sizing: border-box;
+	margin-bottom: 0.5rem;
+}
+.gai-section1 div:nth-of-type(1){
+	background: url(../img/images/o_1ad9vj41g1b5d1npfdh111clcna7.png);
+	border-right: 1px solid #F2F2F2;
+	background-size: contain;
+}
+.gai-section1 div:nth-of-type(2){
+	background: url(../img/images/o_1ad9vjed99c517e0169v1175a7sc.png);
+	background-size: contain;
+}
+/*第二部分*/
+.gai-section2{
+	width: 15rem;
+	height: 4rem;
+	padding:0rem 0.5rem;
+	background: white;
+}
+.gai-section2 div{
+	width: 7.5rem;
+	height: 100%;
+	box-sizing: border-box;
+	float: left;
+}
+.gai-section2 div:nth-of-type(1){
+	background: url(../img/images/mm2_03.png) no-repeat;
+	border-right: 1px solid #F2F2F2;
+	background-size: contain;
+}
+.gai-section2 div:nth-of-type(2){
+	background: url(../img/images/mm2_04.png) no-repeat;
+	background-size: contain;
+}
+/*第三部分*/
+.gai-section3{
+	height: 5.5rem;
+	width: 15rem;
+	padding:0.5rem;
+	background: white;
+	margin-top: 0.5rem;
+	overflow: hidden;  /*设置超出隐藏*/
+}
+.gai-section3-head{
+	height: 1rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+.gai-section3-head a{
+	display: inline-block;
+	color:#999999;
+}
+.gai-section3-head h3{
+	font-size: 0.8rem;
+	color: #747474;
+}
+.gai-section3-wiper{
+	width: 200%;
+	height: 4rem;
+}
+.gai-section3-wiper li{
+	width: 6.3rem;
+	height: 4rem;
+	float: left;
+	margin-right:1rem;
+}
+.gai-section3-wiper li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+	background: url(../img/images/lia_03.png) no-repeat;
+	background-size: contain;
+}
+/*第四部分*/
+.gai-section4{
+	width: 15rem;
+	height:7.5rem;
+	padding: 0.5rem;
+	margin-top: 0.5rem;
+	background: white;
+}
+.gai-section4 img{
+	width: 15rem;
+	height: 7.5rem;
+}
+/*第五部分*/
+.gai-section5{
+	width: 16rem;
+	height: 17rem;
+	background: white;
+	margin-top: 0.5rem;
+	border-top: 0.0001px  solid white;
+}
+.gai-section5-head{
+	width: 15rem;
+	height: 2.4rem;
+	margin: 0.5rem auto;
+}
+.gai-section5-head>div{
+	float: left;
+}
+.gai-section5-head>div:nth-of-type(1){
+	width: 2.2rem;
+	height: 2.2rem;
+	background: url(../img/images/f5_03.png) no-repeat;
+	border-radius: 50%;
+}
+.gai-section5-head>div:nth-of-type(2){
+	width: 9.5rem;
+	height: 2.2rem;
+	margin-left: 0.5rem;
+}
+.gai-section5-head>div:nth-of-type(2) strong{
+	line-height: 1rem;
+	font-size: 0.8rem;
+}
+.gai-section5-head>div:nth-of-type(2) p{
+	color: #C2C2C2;
+	line-height: 1rem;
+}
+.gai-section5-head>div:nth-of-type(3){
+	width: 2rem;
+	height: 2.2rem;
+}
+.gai-section5-head>div:nth-of-type(3) a{
+	display: block;
+	width: 2rem;
+	height: 1rem;
+	border: 1px solid #F9836A;
+	border-radius: 0.3rem;
+	color: #F9836A;
+	line-height: 1rem;
+	margin-top:0.5rem;
+	text-align: center;
+}
+.gai-section5-img{
+	width: 100%;
+	height: 10rem;
+	background: url(../img/images/s1_02.png) no-repeat;
+	background-size: contain;
+}
+.gai-section5-foot{
+	width: 15rem;
+	height: 3.5rem;
+	padding: 0.5rem;
+}
+.gai-section5-foot h4{
+	color:#393939;
+	height: 1rem;
+	line-height: 1rem;
+}
+.gai-section5-foot>div{
+	height: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+.gai-section5-foot-span span{
+	display: inline-block;
+	width: 2rem;
+	height: 1rem;
+	line-height: 1rem;
+	background: #F3F3F3;
+	color: #393939;
+	text-align: center;
+}
+.gai-section5-foot-star img{
+	vertical-align: top;
+}
+.gai-section5-foot-star span{
+	color:#979797;
+	display: inline-block;
+	font-size: 0.8rem;
+}
+/*固定定位回到顶部*/
+#toTop{
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	background: url(../img/images/totp_03.png) no-repeat;
+	opacity: 0.8;
+	background-size: contain;
+	position: fixed;
+	bottom: 3.5rem;
+	right: 1.1rem;
+	z-index: 12;
+}

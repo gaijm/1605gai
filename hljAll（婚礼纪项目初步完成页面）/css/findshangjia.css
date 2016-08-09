@@ -1,0 +1,282 @@
+.gai-find-wrap{
+	width: 16rem;
+	/*margin:0 auto;*/
+	background: #F4F4F4;
+}
+.gai-find-header{
+	height: 2.2rem;
+	width: 100%;
+	background: white;
+}
+.gai-find-header>div{
+	margin-top: 0.5rem;
+	float: left;
+}
+.gai-find-header>div:nth-of-type(1){
+	width: 0.8rem;
+	height: 1.1rem;
+}
+.gai-find-header>div:nth-of-type(1) a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: url(../img/images/right_03.png) no-repeat;
+	background-size: contain;
+	margin-left: 0.5rem;
+}
+.gai-find-header>div:nth-of-type(2){
+	height: 1.3rem;
+	width: 11rem;
+}
+.gai-find-header>div:nth-of-type(2) input{
+	width: 10rem;
+	height: 100%;
+	background-color: #F4F4F4;
+	border-radius: 0.5rem;
+	/*background-image: url(../img/images/fangdajing_03.png);
+	background-size: contain;*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: 0.5rem center;*/
+	border: none;
+	outline: none;
+	margin-left: 2rem;
+	padding-left: 2rem;
+	font-size: 0.7rem;
+}
+.gai-find-search-fangda{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background:url(../img/images/fangdajing_03.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0.7rem;
+	left: 3.3rem;
+}
+/*原型列表*/
+.gai-find-list{
+	width: 100%;
+	height: 8.3rem;
+	margin-top: 0.2rem;
+	background: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	margin-bottom: 0.5rem;
+}
+.gai-find-list dl{
+	width: 25%;
+	height: 3.2rem;
+}
+.gai-find-list dt{
+	width:100% ;
+	height: 2rem;
+	background: url(../img/images/find1_03.png) no-repeat center;
+	background-size: contain;
+	margin-bottom: 0.5rem;
+}
+.gai-find-list dd{
+	width:100% ;
+	text-align: center;
+}
+/*导航*/
+.gai-find-nav{
+	width: 100%;
+	height:2.2rem;
+	position: relative;
+	background: white;
+	border-top: 0.0001px solid white;
+	border-bottom: 0.4rem solid #F4F4F4;
+}
+.gai-find-nav-ul{
+	margin-top: 0.5rem;
+	height: 1.1rem;
+}
+.gai-find-nav-ul li{
+	float: left;
+	line-height: 1.1rem;
+	width:4.3rem;
+	text-align: center;
+	border-left: 1px solid #999999;
+	box-sizing: border-box;
+}
+.gai-find-nav-ul li:nth-of-type(4){
+	width: 3rem;
+}
+.gai-find-nav li i{
+	font-size: 0.6rem;
+	color: #999999;
+}
+.gai-find-nav li a{
+	color: #808080;
+}
+
+/*导航的下拉*/
+#gai-nav-list{
+	width:100%;
+	height: 17.6rem;
+	position: absolute;
+	top:1.9rem;
+	left: 0;
+	/*display: none;*/
+}
+#gai-nav-list ol{
+	width: 100%;
+	height: 100%;
+}
+#gai-nav-list ol>li{
+	width:16rem ;
+	height: 100%;
+	display: none;
+}
+.gai-ol-li-lists{
+	width: 4.3rem;
+	height: 100%;
+	float: left;
+}
+.gai-ol-li-lists ul{
+	width: 4.3rem;
+	height: 100%
+}
+.gai-ol-li-lists ul li{
+	width: 4.3rem;
+	height: 2.2rem;
+	text-align: center;
+	line-height: 2.2rem;
+	background: #F4F4F4;
+	color: black;
+	box-sizing: border-box;
+	border-bottom: 1px solid #C2C2C2;
+}
+.gai-ol-li-content{
+	width: 11.7rem;
+	height:17.6rem;
+	float: left;
+	background: white;
+}
+.gai-ol-li-content>div{
+	width: 11.7rem;
+	height: 17.6rem;
+	float: left;
+	display: none;
+}
+#gai-nav-list .active{
+	display: block;
+}
+.gai-ol-li-content>div p{
+	height: 2.2rem;
+	line-height: 2.2rem;
+	margin-left: 0.5rem;
+}
+.gai-two{
+	height: 17.6rem;
+	overflow: auto;
+	background: white;
+}
+.gai-two p{
+	height: 2.2rem;
+	line-height: 2.2rem;
+	margin-left: 0.5rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #C0C0C0;
+}
+.gai-thr{
+	height: 17.6rem;
+	background: white;
+}
+.gai-thr p{
+	height: 2.2rem;
+	line-height: 2.2rem;
+	margin-left: 0.5rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #C0C0C0;
+}
+.gai-for{
+	height: 17.6rem;
+	background: white;
+}
+.gai-for p{
+	height: 2.2rem;
+	line-height: 2.2rem;
+	margin-left: 0.5rem;
+	box-sizing: border-box;
+}
+#gai-baozheng{
+	width: 50%;
+	height: 4rem;
+	background: #F4F4F4;
+	text-align: center;
+}
+#gai-baozheng h2{
+	font: 0.8rem/2rem "微软雅黑";
+}
+#gai-baozheng span{
+	font: 0.6rem/2rem "微软雅黑";
+}
+/*内容*/
+.gai-find-content{
+	width: 100%;
+	margin: 0.3rem 0rem;
+	background: white;
+	border: 0.001px solid white;
+}
+.gai-find-contentmodule{
+	margin-left: 0.5rem;
+	width: 15.5rem;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #F4F4F4;
+}
+.gai-find-content-top{
+	width: 100%;
+	height: 3.5rem;
+	display: flex;
+	margin-top: 0.5rem;
+	justify-content:flex-start
+}
+.gai-find-content-top-main{
+	width: 3.2rem;
+	height: 3.2rem;
+	background: url(../img/images/fc1_03.png) no-repeat;
+	background-size: contain;
+	margin-right: 0.5rem;
+}
+.gai-find-content-top-silder{
+	height: 3.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.gai-find-content-top-silder p:nth-of-type(2){
+	width: 7.5rem;
+	height: 0.9rem;
+	background: url(../img/images/fc1_06.png) no-repeat;
+	background-size: contain;
+}
+.gai-find-content-top-silder-p3{
+	width: 11rem;
+	display: flex;
+	justify-content: space-between;
+	color: 	#A4A4A4;
+}
+.gai-find-content-top-silder-p3 i{
+	font-style: normal;
+	color: #A4A4A4;
+}
+.gai-find-content-center{
+	width: 100%;
+	height: 1.4rem;
+	line-height: 1.4rem;
+}
+.gai-find-content-center span:nth-of-type(1){
+	display: inline-block;
+	width: 2.4rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	color: #E79A99;
+	border-radius: 0.2rem;
+	border: 1px solid #E79A99;
+	font-size: 0.6rem;
+	text-align: center;
+	margin-right: 0.5rem;
+}

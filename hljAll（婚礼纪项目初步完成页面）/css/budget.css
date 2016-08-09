@@ -1,0 +1,151 @@
+.budget-1{
+	background: url(../img/images/jisuanqi.png) no-repeat;
+	background-size: cover;
+	font-size: 0.75rem;
+	color: #FFFFFF;
+}
+.budget-1-hd{
+	line-height: 2.25rem;
+	text-align: center;
+}
+.budget-1-bd{
+	width: 100%;
+	text-align: center;
+}
+.budget-1-bd img{
+	width: 100%;
+	height: 29.75rem;
+}
+.budget-1-bd input:first-child{
+	margin-top: 14.5rem;
+	width: 10rem;
+	height: 2rem;
+	border: 1px solid #f96460;
+	border-radius:1rem;
+	padding: 0px 1rem;
+	outline: none;
+}
+.budget-1-bd input:last-child{
+	margin-top: 2rem;
+	width: 9.5rem;
+	height: 2rem;
+	border-radius:1rem;
+	background: #ff705f;
+	border: none;
+	outline: none;
+}
+/*budget-2样式*/
+.budget-2{
+	background: #f4f4f4;
+}
+.budget-2-hd{
+	height: 7.75rem;
+	background: url(../img/images/budget-bg_01.png) no-repeat;
+	background-size: cover;
+}
+.budget-2-hd .container-fluid{
+	line-height: 2.25rem;
+	font-size: 0.75rem;
+	color: #FFFFFF;
+}
+.budget-percent{
+	position: relative;
+}
+.budget-percent img{
+	width: 100%;
+	height: 13rem;
+}
+.budget-2-ranking{
+	text-align: center;
+	color: #FFFFFF;
+	line-height: 2.25rem;
+}
+.budget-2-ranking #total{
+	font-size: 1.25rem;
+}
+.budget-2-ranking #ranking{
+	font-size: 0.77rem;
+}
+.budget-percent p{
+	position: absolute;
+	left: 3rem;
+	bottom: 1rem;
+}
+.budget-percent p input{
+	border: none;
+	outline: none;
+	width: 4.75rem;
+	height: 1.5rem;
+	border-radius: 1rem;
+}
+.budget-percent p input:first-child{
+	color: #ff6e5d;
+	background: #FFFFFF;
+	margin-right: 0.5rem;
+}
+.budget-percent p input:last-child{
+	color: #FFFFFF;
+	background: #ff6e5d;
+}
+.budget-list li{
+	background: #FFFFFF;
+}
+.budget-list li:first-child{
+	margin-bottom: 0.5rem;
+}
+.budget-list li:last-child{
+	margin-top: 0.5rem;
+}
+.budget-list li>p{
+	padding: 0.5rem 0.6rem;
+	color: #646464;
+}
+.budget-list li>div{
+	padding: 0.5rem 0.78rem;
+	color: #3a3a3a;
+}
+.budget-list li img{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right:  0.5rem;
+}
+.budget-list li input{
+	border: none;
+	outline: none;
+	text-align: center;
+	color: #ff705f;
+}
+.budget-footer div{
+	display: flex;
+	justify-content:space-around;
+}
+.budget-footer p{
+	text-align: center;
+	color: #bbbbbb;
+}
+.budget-footer div p{
+	line-height: 2.5rem;
+	color: #FFFFFF;
+	width: 7.4rem;
+	border-radius: 0.25rem;
+	font-size: 0.8rem;
+	margin: 1rem 0;
+}
+.budget-footer div strong{
+	font-weight: 400;
+}
+.budget-footer div p:first-child{
+	background: #fd6d53;
+}
+.budget-footer div p:last-child{
+	background: #fea722;
+}
+
+
+
+
+
+
+
+
+

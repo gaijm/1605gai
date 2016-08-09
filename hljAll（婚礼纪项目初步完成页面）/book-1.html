@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/book.css" />
+
+	</head>
+
+	<body class="book-1">
+		<header class="book-header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2"><span class="glyphicon glyphicon-menu-left"></span></div>
+					<div class="col-xs-8">礼金记账本</div>
+					<div class="col-xs-2"></div>
+				</div>
+			</div>
+		</header>
+		<section class="book-1-bd">
+			<p>您还未添加礼金记录</p>
+			<div>立即添加</div>
+		</section>
+	</body>
+
+</html>
+<script type="text/javascript">
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			clientWidth,
+			recalc = function() {
+				clientWidth = docEl.clientWidth;
+				if(!clientWidth) return;
+				docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			};
+		if(!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>

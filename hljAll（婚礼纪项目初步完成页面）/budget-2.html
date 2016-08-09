@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/budget.css" />
+
+	</head>
+
+	<body class="budget-2">
+		<header class="budget-2-hd">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2"><span class="glyphicon glyphicon-menu-left"></span></div>
+					<div class="col-xs-8"></div>
+					<div class="col-xs-2"><span class="glyphicon glyphicon-share"></span></div>
+				</div>
+			</div>
+			<div class="budget-2-ranking"
+				<p>预算总额<span id="total">0</span>元</p>
+				<p>超过了<span id="ranking">0%</span>的新人</p>
+			</div>
+		</header>
+		<section class="budget-2-bd">
+			<section class="budget-percent">
+				<img src="img/images/yuanhuan_02.png"/>
+				<p>
+					<input type="button"  value="修改预算" />
+					<input type="button"  value="重置预算" />
+				</p>
+			</section>
+			<section class="budget-list">
+				<ul>
+					<li>
+						<p>婚前消费</p>
+						<div>
+							<p>
+								<span><img src="img/images/qian1_03.png"/>珠宝首饰</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<p>婚礼消费</p>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_03.png"/>婚礼跟妆</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_06.png"/>婚礼摄像</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_08.png"/>婚礼摄影</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_10.png"/>婚礼司仪</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_12.png"/>婚礼租赁</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_14.png"/>婚礼策划</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<p>婚后消费</p>
+						<div>
+							<p>
+								<span><img src="img/images/hun2_16.png"/>蜜月旅行</span>
+								<input type="text"  />
+								<span><img src="img/images/bi_03.png"/></span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<footer class="budget-footer">
+			<div>
+				<p class="optimize"><span class="glyphicon glyphicon-menu-left"></span><strong>优化预算</strong></p>
+				<p class="lendMoney"><strong>轻松借钱</strong><span class="glyphicon glyphicon-menu-right"></span></p>
+			</div>
+			<p>
+				为了方便您查看，显示的数值小数<br />自动东四舍五入了哦
+			</p>
+		</footer>
+	</body>
+
+</html>
+<script type="text/javascript">
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			clientWidth,
+			recalc = function() {
+				clientWidth = docEl.clientWidth;
+				if(!clientWidth) return;
+				docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			};
+		if(!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>

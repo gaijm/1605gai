@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script type="text/javascript" src="../js/zishiying.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/shangjia.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+		<script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="header">
+			<img src="../img/images/我的关注_03.jpg"/>
+			<span>
+				我是商家
+			</span>
+		</div>
+		<div id="main">
+			<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../img/1.jpg" /></div>
+						<div class="swiper-slide"><img src="../img/2.jpg" /></div>
+						<div class="swiper-slide"><img src="../img/3.jpg" /></div>
+						<div class="swiper-slide"><img src="../img/4.jpg" /></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<script>
+				var mySwiper = new Swiper('.swiper-container', {
+					autoplay: 3000, //可选选项，自动滑动
+					autoplayDisableOnInteraction:false,
+					pagination:'.swiper-pagination',
+					loop:true
+				})
+			</script>
+		</div>
+		<div id="bottom">
+			<a href="#">立即入住</a>
+		</div>
+	</body>
+</html>

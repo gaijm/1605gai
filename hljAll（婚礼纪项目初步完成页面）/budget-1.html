@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/budget.css" />
+
+	</head>
+
+	<body class="budget-1">
+		<header class="budget-1-hd">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-2"><span class="glyphicon glyphicon-menu-left"></span></div>
+					<div class="col-xs-8">结婚预算</div>
+					<div class="col-xs-2"></div>
+				</div>
+			</div>
+		</header>
+		<section class="budget-1-bd">
+			<input type="text" placeholder="请输入您的预算总额"/>
+			<input type="button" value="开始计算" />
+		</section>
+	</body>
+
+</html>
+<script type="text/javascript">
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			clientWidth,
+			recalc = function() {
+				clientWidth = docEl.clientWidth;
+				if(!clientWidth) return;
+				docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			};
+		if(!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>

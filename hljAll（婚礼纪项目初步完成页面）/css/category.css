@@ -1,0 +1,112 @@
+.categoryBox{
+	width: 16rem;
+	margin: 0 auto;
+	background: #f4f4f4;
+}
+.categoryBox header{
+	width: 100%;
+	margin: 0 auto;
+	height: 2.2rem;
+	border-bottom: 1px solid #e6e6e6;
+	overflow: hidden;
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.categoryBox header a{
+	color: #c3c3c5;
+}
+.categoryBox header .search{
+	width: 11rem;
+	height: 1.45rem;
+	background: #f4f4f4;
+	line-height: 1.45rem;
+	padding-left:0.625rem;
+	margin-left: 0.875rem;
+	margin-top: 0.3rem;
+	border-radius: 0.7rem;
+	display: inline-block;
+}
+.categoryBox header img{
+	width: 0.8rem;
+	height: 1rem;
+	margin-left: 0.65rem;
+}
+.weddingService{
+	width: 100%;
+	background: white;
+}
+.weddingService .weddingService-top,.weddingTheme .weddingTheme-top,.weddingPurchase-top{
+	height: 2.25rem;
+	line-height: 2.25rem;
+	padding-left: 0.625rem;
+}
+.weddingService-bottom{
+	flex-wrap: wrap;
+}
+.weddingService-bottom a{
+	display: block;
+	width: 25%;
+	height: 4.2rem;
+}
+.weddingService-bottom div{
+	width: 100%;
+	height: 4.2rem;
+	text-align: center;
+}
+.weddingService-bottom div img{
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 3px;
+}
+.weddingTheme{
+	height: 6.4rem;
+	margin-top: 0.5rem;
+	background: white;
+	overflow: hidden;
+}
+.weddingTheme .weddingTheme-bottom{
+	width: 600%;
+	height: 3.925rem;
+	
+}
+.weddingTheme .weddingTheme-bottom img{
+	width: 6.275rem;
+	height: 3.925rem;
+	margin-left: 0.4rem;
+}
+.weddingTheme .weddingTheme-top .more{
+	display: inline-block;
+	float: right;
+	color: #bcbcbc;
+	margin-right: 0.6rem;
+}
+#wrapper{
+	margin-top: 2.2rem;
+}
+.weddingPurchase{
+	background: white;
+	margin-top: 0.5rem;
+}
+.weddingPurchase-bottom{
+	width: 100%;
+	flex-wrap: wrap;
+}
+.weddingPurchase-bottom a{
+	display: block;
+	width: 25%;
+	height: 5rem;
+}
+.weddingPurchase-bottom div{
+	text-align: center;
+}
+.weddingPurchase-bottom div img{
+	width: 2.5rem;
+	height: 2.1rem;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,142 @@
+header{
+	width: 16rem;
+	height: 4rem;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: white;
+	
+}
+
+header .title a{
+	color: #ff705e;
+	display: inline-block;
+}
+header .title{
+	height: 2rem;
+	/*line-height: 2rem;*/
+	border-bottom: 1px solid #e6e6e6;
+}
+header .header-back{
+	margin-left: 0.6rem;
+}
+header .header-title{
+	color: #ff705e;
+	display: inline-block;
+	margin-left: 4.35rem;
+	line-height: 2rem;
+	font-size: 1rem;
+}
+header .glyphicon{
+	font-size: 0.8rem;
+}
+header .header-search{
+	margin-left: 1.8rem;
+}
+header .header-shopcar{
+	margin-left: 1.15rem;
+}
+header .nav{
+	height: 1.5rem;
+}
+header .nav .glyphicon{
+	font-size: 0.3rem;
+	
+}
+header .nav ul li{
+	width: 50%;
+	height: 1rem;
+	text-align: center;
+	line-height: 1rem;
+	margin-top: 0.325rem;
+
+}
+header .nav ul .firstnav{
+	border-right: 1px solid #e6e6e6;
+	
+}
+.firstnav-ol{
+	background: white;
+	width: 16rem;
+	height: 12rem;
+	overflow-y: scroll;
+	display: none;
+}
+
+.secondnav-ol{
+	background: white;
+	width: 16rem;
+	display: none;
+	
+}
+/*.secondnav-ol li{
+	width: 16rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: left;
+}*/
+.secondnav-ol a:nth-child(1){
+	color: #ff705e;
+}
+/*.secondnav-ol a:nth-child(2){
+	color: #696969;
+}*/
+
+header .nav ol a:nth-child(1) li{
+	border-top: 1px solid #e6e6e6;
+	height: 1.7rem;
+}
+.firstnav-ol a:nth-child(2){
+	color: #ff705e;
+}
+.selected{
+	float: right;
+	padding-right: 1rem;
+}
+header .nav ol li{
+	width: 16rem;
+	height: 1.5rem;
+	text-align: left;
+	padding-left: 10px;
+	line-height: 1.5rem;
+	border-bottom: 1px solid #e6e6e6;
+	
+}
+.shop-box{
+	width: 16rem;
+	margin-top: 4rem;
+}
+.shop-box ul li{
+	width: 7.4rem;
+	margin-left: 0.375rem;
+}
+.shop-img{
+	width: 100%;
+	padding-bottom: 0.7rem;
+}
+.shop-img img{
+	width: 100%;
+	height: 7.45rem;
+}
+.shop-img .shop-describe{
+	width: 5.925rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 1.3rem;
+}
+.shop-img .shop-price{
+	font-family: "微软雅黑";
+	line-height: 0.7rem;
+}
+.shop-img .shop-price span:nth-child(1),
+.shop-img .shop-price span:nth-child(2)
+{
+	color: #ff705e;
+}
+.shop-img .shop-price span:nth-child(3),
+.shop-img .shop-price span:nth-child(4){
+	float: right;
+	z-index: -1;
+}
