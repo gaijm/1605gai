@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="css/flex.css">
+<link rel="stylesheet" href="css/category.css">
+<div class="categoryBox">
+			<header>
+				<a href="javascript:;">
+					<div class="search">
+						<span class="glyphicon glyphicon-search"></span>搜索商家、套餐、话题
+					</div>
+				</a>
+				<a href="javascript:;"><img src="img/images/categor-bell.png"></a>
+				<a href="javascript:;"><img src="img/images/category-car.png"></a>
+			</header>
+			
+			
+			<div id="fenlei-wrapper">
+				<div id="scroller"><!--下拉刷新-->
+					<div id="pullDown"><span class="pullDownIcon"></span><span class="pullDownLabel"><!--下拉刷新--></span>
+		   		
+				
+			<!--angular第一次加载数据-->
+			<div class="weddingService">
+				<div class="weddingService-top">婚礼服务</div>
+				<div class="weddingService-bottom tcf-flex tcf-justify-start">
+						<a href="javascript:;" ng-repeat="item in categoryData.data">
+							<div>
+								<img lazy-src="{{item.icon}}" animate-viseble='true' animate-speed='2s'>
+								{{item.title}}
+							</div>
+						</a>
+				</div>
+			</div>
+			<!--angula第二次加载数据-->
+			<div class="weddingTheme">
+				<div class="weddingTheme-top">婚礼专题<a href="javascript:;" class="more">更多></a></div>
+				<div id="huadDiv">
+					<div class="weddingTheme-bottom tcf-flex tcf-justify-start">
+						<a href="javascript:;" ng-repeat="item in categoryTdata.data.list">
+							<img lazy-src="{{item.img_title}}" animate-viseble='true' animate-speed='2s'>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--angular第三次加载-->
+			<div class="weddingPurchase">
+				<div class="weddingPurchase-top">婚礼采购</div>
+				<div class="weddingPurchase-bottom tcf-flex tcf-justify-start">
+					<a href="#/weddingshoes" ng-repeat="item in categoryPdata.data.list" >
+						<div>
+							<img lazy-src="{{item.cover_image}}" animate-viseble='true' animate-speed='2s'>
+							{{item.name}}
+						</div>
+					</a>
+				</div>
+				
+			</div>
+			
+			<div id="pullup"><span class="pullUpIcon"></span><span class="pullUpLabel"><!--上拉刷新--></span>
+			</div> <!--scroller-end-->
+		<div> <!-- warp-end-->
+		  
+
+		
+		</div> <!-- categoryBox-end-->

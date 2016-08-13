@@ -1,0 +1,146 @@
+		<link rel="stylesheet" href="css/findshangjia.css" />
+		<!--<script type="text/javascript" src="js/jquery-3.0.0.js" ></script>-->
+		<script type="text/javascript" src="js/zhaoshangjia.js" ></script>
+		<div class="gai-find-wrap">
+			<div class="gai-find-header clear">
+				<div>
+					<a href="#/home" class="gai-find-img"></a>
+				</div>
+				<div>
+					<i class="gai-find-search-fangda"></i>
+					<input placeholder="搜索商家类型或商家名" class="gaifind-header-search"/>
+				</div>
+			</div>
+			<!--原型列表-->
+			<div class="gai-find-list">
+				<dl ng-repeat="item in zhaoshangjiaiconData.data">
+					<dt>
+						<img lazy-src="{{item.icon}}" animate-viseble='true' animate-speed='2s'/>
+					</dt>
+					<dd>{{item.title}}</dd>
+				</dl>
+			</div>
+			<!--导航-->
+			<div class="gai-find-nav clear">
+				<ul class="clear gai-find-nav-ul">
+					<li style="border: none;">
+						<a href="javascript:">婚礼策划</a><i class="glyphicon glyphicon-triangle-bottom"></i>
+					</li>
+					<li>
+						<a href="javascript:">婚礼策划</a><i class="glyphicon glyphicon-triangle-bottom"></i>
+					</li>
+					<li>
+						<a href="javascript:">婚礼策划</a><i class="glyphicon glyphicon-triangle-bottom"></i>
+					</li>
+					<li>
+						<a href="javascript:">筛选</a><i class="glyphicon glyphicon-triangle-bottom"></i>
+					</li>
+				</ul>
+				<div id="gai-nav-list">
+					<div id="gai-mengban">
+						
+					</div>
+					<ol id="gai-zhaoshangjia-show">
+						<li>
+							<div class="gai-ol-li-lists">
+								<ul>
+									<li>婚礼策划</li>
+									<li>婚纱摄影</li>
+									<li>婚纱礼服</li>
+									<li>婚纱摄影</li>
+									<li>婚纱摄像</li>
+									<li>婚礼跟妆</li>
+									<li>婚礼司仪</li>
+									<li>婚宴酒店</li>
+								</ul>
+							</div>
+							<div class="gai-ol-li-content">
+								<div class="active activezindex">
+									<p>全部</p>
+									<p>省心优选</p>
+									<p>高端定制</p>
+								</div>
+								<div>
+									<p>全部</p>
+									<p>影楼</p>
+									<p>工作室</p>
+									<p>独立摄影师</p>
+								</div>
+								<div>
+									<p>全部</p>
+									<p>女士婚纱</p>
+									<p>男士礼服</p>
+								</div>
+								<div>
+									<p>全部</p>
+									<p>女士婚纱</p>
+									<p>男士礼服</p>
+								</div>
+							</div>
+						</li>
+						<li class="gai-two">
+								<p>全程</p>
+								<p>西城区</p>
+								<p>东城区</p>
+								<p>朝阳区</p>
+								<p>丰台区</p>
+								<p>石景山区</p>
+								<p>海定区</p>
+								<p>门头沟区</p>
+								<p>房山区</p>
+								<p>通走区</p>
+								<p>顺义区</p>
+								<p>昌平区</p>
+								<p>大兴区</p>
+								<p>怀柔区</p>
+								<p>平谷区</p>
+								<p>密云县</p>
+								<p>延庆县</p>
+						</li>
+						<li class="gai-thr">
+							<p>默认排序</p>
+							<p>喜欢最多</p>
+							<p>作品最多</p>
+						</li>
+						<li class="gai-for">
+							<p>服务器与保障</p>
+							<div id="gai-baozheng">
+								<h2>保证金商家</h2>
+								<span>保证金商家，消费更多保障</span>
+							</div>
+							
+						</li>
+					</ol>
+				</div>
+			</div>
+			
+			<div class="gai-find-content">
+				<!--模板内容-->
+				<div class="gai-find-contentmodule" ng-repeat="item in zhaoshangjiaData.data.popular_merchant.list">
+					<div class="gai-find-content-top">
+						<div class="gai-find-content-top-main">
+							<img lazy-src="{{item.logo_path}}" animate-viseble='true' animate-speed='2s' />
+						</div>
+						<div class="gai-find-content-top-silder">
+							<p>
+								{{item.name}}
+							</p>
+							<p>
+								
+							</p>
+							<p class="gai-find-content-top-silder-p3">
+								<span>套餐<i>{{item.works_count}}</i></span>
+								<span>案例<i>{{item.m_count}}</i></span>
+								<span>粉丝<i>{{item.fans_count}}</i></span>
+							</p>
+						</div>
+					</div>
+					<div class="gai-find-content-center">
+						<span>到店礼</span><span>{{item.privilege.items.shop_gift.value}}</span>
+					</div>
+					<div class="gai-find-content-center">
+						<span>聚划算</span><span>{{item.privilege.items.cost_effective.value}}</span>
+					</div>
+				</div><!--模板内容-->
+			</div>
+		</div>

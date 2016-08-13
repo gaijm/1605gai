@@ -1,0 +1,236 @@
+
+<div class="bridePage">
+			<!--header start-->
+			<div class="header">
+				<div><i class="searchIcon"></i></div>
+				<div>新娘说</div>
+				<div><i class="bellIcon"></i></div>
+			</div>
+			<!--header end-->
+			<!--nav start-->
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="javascript:;">发现</a>
+					</li>
+					<li>
+						<a href="javascript:;">关注</a>
+					</li>
+					<li>
+						<a href="javascript:;">婚礼人</a>
+					</li>
+					<li>
+						<a href="javascript:;">爱情故事</a>
+					</li>
+				</ul>
+			</div>
+			<!--nav end-->
+			<div id="wrapper">
+				<!--<div id="bride-wrap">-->
+					
+				
+				<div id="xinniang-scroller">
+					<ul id="list">
+						<!--find start-->
+						<li class="find">
+							<!--swiper start-->
+							<div class="swiper">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img/images/swiper1.PNG"></div>
+									</div>
+									<div class="swiper-pagination">
+										<span class="round-icon"></span>
+									</div>
+								</div>
+							</div>
+							<!--swiper end-->
+							<!--container start-->
+							<div>
+								
+								<div class="rec">
+									<div class="rec-header hdr">
+										<div>精选频道<span>Selected channels</span></div>
+										<div>全部频道&gt;</div>
+									</div>
+									<div class="rec-body">
+										<ul>
+											<li ng-repeat="item in bridefaxianData.data">
+												<a href="javascript:;">
+													<img src="{{item.entity.cover_path}}">
+													<p class="title">{{item.entity.title}}</p>
+													<p>今日<span>{{item.entity.fans_count}}</span></p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--rec end-->
+								<div class="hot">
+									<div class="hot-header hdr">
+										<div>热门话题<span>Hot Topics</span></div>
+									</div>
+									<div class="hot-body">
+										<img src="img/images/s3_02.gif" />
+									</div>
+								</div>
+								<!--hot end-->
+								<div class="spoken">
+									<a href="javascript">
+										<div class="spoken-title">
+											<p>最美跟拍清新出炉 新娘全程笑颜如花</p>
+											<p>清晨，梳妆。最感动的是妈妈给爸爸打领带，最性感的是妈妈旗袍下的美腿</p>
+										</div>
+										<div class="spoken-body">
+											<ol>
+												<li><img src="img/images/spoken1.jpg"></li>
+												<li><img src="img/images/spoken2.jpg"></li>
+												<li><img src="img/images/spoken3.jpg"></li>
+											</ol>
+										</div>
+										<div class="spoken-footer">
+											<div><i></i>婚庆筹备</div>
+											<div><i class="msg-icon"></i><span>26</span><i class="praise-icon"></i><span>5</span></div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!--container end-->
+							
+						</li>
+						<!--find end-->
+						<!--attention start-->
+						<li class="attention">
+							<div class="hot">
+								<div class="hot-hed"><a href="#">热门频道</a></div>
+								<ol class="hot-bd">
+									<!--angular第二次获取数据-->
+									<li ng-repeat="item in brideguanzhuData.data.list">
+										<i class="li-icon">
+											<img src="{{item.entity.cover_path}}" />
+										</i>{{item.entity.title}}
+										<span>
+											<em>{{item.entity.fans_count}}</em>&gt;
+										</span>
+									</li>
+								</ol>
+								<div class="hot-ft">
+									更多频道 &gt;
+								</div>
+							</div>
+							<div class="spoken">
+									<a href="javascript">
+										<div class="spoken-header">
+											<div><i class="icon-image"></i></div>
+											<div>
+												<p>纪小犀</p>
+												<p>喜欢了话题</p>
+											</div>
+											<div>2天前</div>
+										</div>
+										<div class="spoken-title">
+											<p>最美跟拍清新出炉 新娘全程笑颜如花</p>
+											<p>清晨，梳妆。最感动的是妈妈给爸爸打领带，最性感的是妈妈旗袍下的美腿</p>
+										</div>
+										<div class="spoken-body">
+											<ol>
+												<li><img src="img/images/spoken1.jpg"></li>
+												<li><img src="img/images/spoken2.jpg"></li>
+												<li><img src="img/images/spoken3.jpg"></li>
+											</ol>
+										</div>
+										<div class="spoken-footer">
+											<div><i></i>婚庆筹备</div>
+											<div><i class="msg-icon"></i><span>26</span><i class="praise-icon"></i><span>5</span></div>
+										</div>
+									</a>
+								</div>
+						</li>
+						<!--attention end-->
+						<li class="weddingMan">
+							<div class="my-con">
+								<div>
+									<p>我关注的</p>
+									<p>看婚礼人动态，找更靠谱婚礼服务</p>
+								</div>
+								<div><i class="point-icon"></i>&gt;</div>
+							</div>
+							<div class="hot-msg">
+								<div class="hot-msg-header">热门动态<span> Hot Dynamics</span></div>
+								<div class="angular3" ng-repeat="item in bridehunlirenData.data.list">
+									<div class="hot-msg-title">
+										<div>
+											<i class="icon-ig">
+												<img src="{{item.merchant.logo_path}}" />
+											</i>
+										</div>
+										<div>
+											<p>{{item.merchant.name}}</p>
+											<p>{{item.merchant.property.name}}</p>
+										</div>
+										<div>关注</div>
+									</div>
+									<p ng-repeat="m in item.content">{{m.describe}}</p>
+									<ol class="ol-list">
+										<li ng-repeat="y in item.content" class="hlr-yubuImg">
+											<!--<span style="display: none;">{{y.image_path}}</span>-->
+											<img class="lazy-img"  data-src="{{y.image_path}}" src="{{y.image_path}}">
+										</li>
+									</ol>
+								</div>
+							</div>
+						</li>
+						<!--wedding end-->
+						<!--story start-->
+						<li class="story">
+							<div class="record">
+								<p>
+									据说每个新娘都会在这里<br/>
+									记录自己的爱情故事
+								</p>
+								<div>＋ 我也要写</div>
+							</div>
+							<div class="rec">
+								<div class="rec-header">
+									<div>为你推荐</div>
+									<div><span>默认</span><span>最热</span><span>最新</span></div>
+								</div>
+								<ol>
+									<li ng-repeat="item in bridegushiData.data.list">
+										<p class="angular4-p">{{item.title}}</p>
+										<a href="#">
+											<img src="{{item.cover_path}}">
+										</a>
+									</li>
+									
+								</ol>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--</div>-->
+			</div>
+
+			<!--swiper end-->
+				<script>
+					$('.nav li').each(function(){
+						$(this).click(function(){
+//							alert($(this).index());
+							$('#xinniang-scroller').animate({
+								left:-$(this).index()*16+'rem'
+							},1000)
+//						$('#scroller').css('left','100px')
+						})
+					});
+//					setTimeout(function(){
+//						for(var m=0;m<$('.angular3').length;m++){
+//							for(var i=0;i<$('.hlr-yubuImg').length;i++){
+//								$($($('.angular3')[m]).find($('.hlr-yubuImg')[i])).find('img').attr('data-src',$($($('.angular3')[m]).find($('.hlr-yubuImg')[i])).find('span').html());
+//							console.log($($($('.angular3')[m]).find($('.hlr-yubuImg')[i])).find('span').html())
+//							}
+//						}
+//						lazyLoad.init();
+//					},300);
+					
+				</script>
+			

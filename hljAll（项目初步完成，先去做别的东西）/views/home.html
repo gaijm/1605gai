@@ -1,0 +1,161 @@
+
+<!--<link rel="stylesheet" href="css/swiper.min.css" />-->
+<!--<script type="text/javascript" src="js/swiper-3.3.1.min.js" ></script>-->
+
+<div class="gai-wrap">
+			<!--回到顶部-->
+			<div id="toTop" ng-click="top('#toTop')">
+				
+			</div>
+			<header>
+				<div class="gai-header-grap">
+					<div class="gai-header-dis">
+						<a href="javascript:">全国</a>
+					</div>
+					<div class="gai-header-input">
+						<input placeholder="搜索商家、套餐、婚品" />
+						<i></i>
+					</div>
+					<div class="gai-header-other">
+						<a href="javascript:"></a>
+						<a href="javascript:"></a>
+					</div>
+				</div>
+			</header>
+			<!--下拉与上啦 是所有内容的外壳-->
+			<div id="gai-wrapper">
+				<div id="gai-scroller">
+					<!--下拉-->
+					<div id="pullDown">
+			            <span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+			        </div>
+			
+			<!--轮播-->
+			<div class="gai-home-slider swiper-container">
+				<ul class="swiper-wrapper" id="gai-home-slider">
+					<li class="swiper-slide"><a href="#" style="background-image: url(img/images/1.jpg);"></a></li>
+					<li class="swiper-slide"><a href="#" style="background-image: url(img/images/2.jpg);"></a></li>
+					<li class="swiper-slide"><a href="#" style="background-image: url(img/images/3.jpg);"></a></li>
+					<li class="swiper-slide"><a href="#" style="background-image: url(img/images/4.jpg);"></a></li>
+				</ul>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--中间的四个圆圈-->
+			<div class="gai-nav1">
+					<dl>
+						<dt>
+							<img src="img/images/o_1ad8epbnuu8412tf3t12h3csqm.png" style="width: 2.5rem;height: 2.5rem;"/>
+						</dt>
+						<dd>
+							全部分类
+						</dd>
+					</dl>
+					<dl><a href="#/zhaoshangjia">
+						<dt>
+							<img src="img/images/o_1ad8epi0f12uh16a11hj41se1407r.png" style="width: 2.5rem;height: 2.5rem;"/>
+						</dt>
+						<dd>
+							找商家
+						</dd>
+					</a></dl>
+					<dl>
+						<dt>
+							<img src="img/images/o_1ad8eprme1em61mbggc21rdd1hm810.png" style="width: 2.5rem;height: 2.5rem;"/>
+						</dt>
+						<dd>
+							新娘说
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="img/images/o_1ad8eq1os1k4u4qd14jq16181fv915.png" style="width: 2.5rem;height: 2.5rem;"/>
+						</dt>
+						<dd>
+							结婚百科
+						</dd>
+					</dl>
+			</div>
+			<!--第一部分-->
+			<section class="gai-section1">
+				<div></div>
+				<div></div>
+			</section>
+			<!--<第二部分-->
+			<section class="gai-section2">
+				<div></div>
+				<div></div>
+			</section>
+			<!--第三部分-->
+			<section class="gai-section3">
+				<div class="gai-section3-head">
+					<h3>婚礼专题</h3>
+					<a href="javascript:">更多&gt;</a>
+				</div>
+				<div class="gai-section3-wiper" ng-click="touchfn()">
+					<ul id="huadUl">
+						<li ng-repeat="item in categoryTdata.data.list">
+							<a href="javascript:" >
+								<!--<img lazy-src="{{item.img_title}}" animate-viseble='true' animate-speed='2s'/>-->
+								<img src="{{item.img_title}}" >
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--第四部分-->
+			<section class="gai-section4">
+				<img src="img/images/a4_03.png" />
+			</section>
+			<!--<section class="gai-section4">
+				<img src="img/images/a4_03.png" />
+			</section>-->
+			<!--第五部分-->
+			<section class="gai-section5" ng-repeat="item in homeData.data.fix_data.list">
+				<div class="gai-section5-head clear">
+					<div>
+						<img  lazy-src="{{item.entity.merchant.logo_path}}"  animate-viseble='true' animate-speed='2s'/>
+					</div>
+					<div>
+						<strong>{{item.entity.title}}</strong>
+						<p>{{item.entity.merchant.property.name}}</p>
+					</div>
+					<div class="gai-guanzhu">
+						<a href="javascript:">关注</a>
+					</div>
+				</div>
+				<div class="gai-section5-img">
+					<!--获取异步加载图片的url-->
+					<!--<span class="getUrl" style="display: none;">  
+						{{item.entity.cover_path}}
+					</span>-->
+					<img lazy-src="{{item.entity.cover_path}}" animate-viseble='true' animate-speed='2s'/>
+				</div>
+				<div class="gai-section5-foot">
+					<h4>{{item.entity.title}}</h4>
+					<div>
+						<div class="gai-section5-foot-span">
+							<span ng-repeat="x in item.entity.marks">
+								{{x.name}}
+							</span>
+						</div>
+						<div class="gai-section5-foot-star">
+							<img src="img/images/star_05.png"/>
+							<span>{{item.entity.watch_count}}</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+				<!--上拉-->
+				<div id="pullUp">
+		            <span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+		        </div>
+	         </div>
+        </div>
+        
+        
+</div>
+	<script>
+		 
+	</script>

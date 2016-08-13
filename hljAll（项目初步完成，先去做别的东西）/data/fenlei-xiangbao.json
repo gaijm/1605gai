@@ -1,0 +1,465 @@
+{
+"status": {
+"RetCode": 0,
+"msg": "success"
+},
+"data": {
+"list": [
+{
+"id": "2274",
+"title": "真皮婚鞋单鞋红色婚礼鞋超高跟细跟新娘鞋舒适柔软不磨脚敬酒鞋",
+"actual_price": "109.00",
+"collectors_count": "1288",
+"market_price": "369.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1abn3m8hr5bb19qefb85nqc7h.jpg"
+},
+"show_price": "109.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1abn3m8hr5bb19qefb85nqc7h.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "521",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "1000"
+},
+{
+"id": "300",
+"title": "婚鞋女亮片舒适浅口真皮新娘鞋子欧美婚纱鞋细跟尖头高跟鞋单鞋",
+"actual_price": "129.00",
+"collectors_count": 1745,
+"market_price": "215.00",
+"rule_id": null,
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1a3nvcean92echbmjmtne13cl2n.jpg"
+},
+"show_price": "129.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1a3nvcean92echbmjmtne13cl2n.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "947",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "998"
+},
+{
+"id": "1963",
+"title": "2016新款手工蕾丝珍珠脚链结婚新娘鞋婚纱礼服旗袍拍照鞋子",
+"actual_price": "53.00",
+"collectors_count": 1849,
+"market_price": "99.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1a9a129j8ka1s651551p74d4hh.jpg"
+},
+"show_price": "53.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1a9a129j8ka1s651551p74d4hh.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "6008",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "996"
+},
+{
+"id": "1987",
+"title": "2016新款纯手工蕾丝珍珠大红色结婚新娘鞋子婚纱礼服拍照鞋",
+"actual_price": "50.00",
+"collectors_count": "1159",
+"market_price": "99.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1a9ejuoig1abqrmrsnmc3lpkf73.jpg"
+},
+"show_price": "50.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1a9ejuoig1abqrmrsnmc3lpkf73.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "10559",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "994"
+},
+{
+"id": "5086",
+"title": "欧美时尚范水钻链条小尖头细跟高跟中空凉鞋女鞋新娘伴娘婚鞋！",
+"actual_price": "129.00",
+"collectors_count": "439",
+"market_price": "179.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1aiidurek1rp3gd31me0j9oab4h.jpg"
+},
+"show_price": "129.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1aiidurek1rp3gd31me0j9oab4h.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "3582",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "993"
+},
+{
+"id": "1714",
+"title": "纯手工婚鞋 中高跟蕾丝水钻新娘鞋婚纱拍照鞋礼服鞋",
+"actual_price": "49.00",
+"collectors_count": "591",
+"market_price": "89.00",
+"rule_id": null,
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1a8b4067h98m8jjef51qafi4k2n.jpg"
+},
+"show_price": "49.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1akmu2591rhi1s7b13k1e9u1oh123.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": 5847,
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "992"
+},
+{
+"id": "8436",
+"title": "夏季男士皮鞋个性美发师潮流尖头英伦漆光皮新郎婚鞋真皮休闲鞋子",
+"actual_price": "188.00",
+"collectors_count": "29",
+"market_price": "298.00",
+"rule_id": null,
+"is_published": "1",
+"rule_detail": [],
+"show_price": "188.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1ap20blr613687i7k981o4p17sp6u.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "5327",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "991"
+},
+{
+"id": "4473",
+"title": "新款防水台水钻珍珠婚鞋 鱼嘴细跟高跟一字扣结婚鞋 伴娘鞋",
+"actual_price": "199.00",
+"collectors_count": "324",
+"market_price": "369.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1agkvl3201g831i14knu16l21l3gh.jpg"
+},
+"show_price": "199.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1agkvl3201g831i14knu16l21l3gh.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "2387",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "990"
+},
+{
+"id": "4024",
+"title": "2016春新款单鞋女婚鞋结婚鞋高跟鞋尖头红色新娘鞋绸缎绣花宴",
+"actual_price": "129.00",
+"collectors_count": 1034,
+"market_price": "175.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1afnittii8gbrd01ujveie4a08c.jpg"
+},
+"show_price": "129.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1afnittii8gbrd01ujveie4a08c.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "528",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "989"
+},
+{
+"id": "5674",
+"title": "2016欧美新款鳄鱼纹女包真皮新娘单肩斜跨包牛皮大容量手提铂",
+"actual_price": "129.00",
+"collectors_count": 245,
+"market_price": "286.00",
+"rule_id": null,
+"is_published": "1",
+"rule_detail": [],
+"show_price": "129.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1ajtq6jstbi4aa1lk519m01h5rh.jpg",
+"width": "742",
+"height": "742"
+},
+"show_num": "34241",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "988"
+},
+{
+"id": "3234",
+"title": "婚鞋红色高跟钻鞋红色绑带新娘鞋细跟单鞋女尖头真皮绸缎伴娘鞋秋",
+"actual_price": "158.00",
+"collectors_count": 572,
+"market_price": "238.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1adg4jl0hl5oin6dek5d18en5m.jpg"
+},
+"show_price": "158.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1adg4jl0hl5oin6dek5d18en5m.jpg",
+"width": "600",
+"height": "600"
+},
+"show_num": "1076",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "987"
+},
+{
+"id": "1740",
+"title": "白色蕾丝水滴珍珠婚鞋中高跟新娘鞋韩版时尚公主鞋",
+"actual_price": "52.00",
+"collectors_count": 1337,
+"market_price": "99.00",
+"rule_id": null,
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1a8i2pn385s9elo865dd0i452i.jpg"
+},
+"show_price": "52.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1a8i2pn385s9elo865dd0i452i.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "5205",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "986"
+},
+{
+"id": "2011",
+"title": "2016新款婚鞋 女鞋 高跟鞋 甜美花朵防水台结婚鞋婚鞋50",
+"actual_price": "89.00",
+"collectors_count": "850",
+"market_price": "168.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1a9h8pikp1kqc1bdal9c5ot1sv4h.jpg"
+},
+"show_price": "89.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1a9h8pikp1kqc1bdal9c5ot1sv4h.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "2324",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "984"
+},
+{
+"id": "4447",
+"title": "尖头旗袍绣花单鞋细跟套脚婚庆结婚鞋",
+"actual_price": "128.00",
+"collectors_count": "504",
+"market_price": "199.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1agi9ljvuicn1u0o117rk49dbjh.jpg"
+},
+"show_price": "128.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1agi9ljvuicn1u0o117rk49dbjh.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "583",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "982"
+},
+{
+"id": "8433",
+"title": "尖头皮鞋男韩版透气英伦潮鞋发型师皮鞋男士结婚鞋潮流帅气休闲",
+"actual_price": "188.00",
+"collectors_count": "5",
+"market_price": "298.00",
+"rule_id": null,
+"is_published": "1",
+"rule_detail": [],
+"show_price": "188.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1ap1r9h3g3hc19f46qn1aporum5c.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "5302",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "981"
+},
+{
+"id": "3868",
+"title": "粗跟红色婚鞋尖头珍珠水钻舒适柔软新娘鞋春夏季中跟孕妇鞋单鞋",
+"actual_price": "119.00",
+"collectors_count": "363",
+"market_price": "369.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1af5mht04pgc1mt31rrl9af1bqtr.jpg"
+},
+"show_price": "119.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1af5mht04pgc1mt31rrl9af1bqtr.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "288",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "980"
+},
+{
+"id": "5373",
+"title": "灰姑娘水晶鞋银色水钻婚鞋 新娘鞋尖头高跟鞋",
+"actual_price": "145.00",
+"collectors_count": "304",
+"market_price": "260.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1aje8oa891ttn1bl11fqo5brcbuh.jpg"
+},
+"show_price": "145.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1aje8oa891ttn1bl11fqo5brcbuh.jpg",
+"width": "520",
+"height": "520"
+},
+"show_num": "49332",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "978"
+},
+{
+"id": "3250",
+"title": "金色婚鞋中跟宴会细跟尖头新娘亮片婚鞋银色婚纱鞋新娘鞋伴娘鞋",
+"actual_price": "99.00",
+"collectors_count": "553",
+"market_price": "219.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1adj4ikue19fhe4gv601sgm775h.jpg"
+},
+"show_price": "99.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1adj4ikue19fhe4gv601sgm775h.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "664",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "976"
+},
+{
+"id": "4704",
+"title": "超高跟一字扣防水台性感红色婚鞋绒面伴娘鞋定做大小码",
+"actual_price": "138.00",
+"collectors_count": "186",
+"market_price": "298.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1ah601praavr94p1rb81sljhdk3q.jpg"
+},
+"show_price": "138.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1ah601praavr94p1rb81sljhdk3q.jpg",
+"width": "640",
+"height": "640"
+},
+"show_num": "3289",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "974"
+},
+{
+"id": "4305",
+"title": "2016新款婚鞋女红色粗跟鞋中跟单鞋中式结婚鞋子新娘鞋红鞋婚",
+"actual_price": "105.00",
+"collectors_count": 159,
+"market_price": "139.00",
+"is_published": "1",
+"rule_detail": {
+"cover_img": "http://qnm.hunliji.com/o_1agc5dh9014hb2brr901aiahhqr.jpg"
+},
+"show_price": "105.00",
+"cover_image": {
+"img": "http://qnm.hunliji.com/o_1agc5dh9014hb2brr901aiahhqr.jpg",
+"width": "800",
+"height": "800"
+},
+"show_num": "3591",
+"is_old": false,
+"shop_img": "http://qnm.hunliji.com/o_19t72rqv913km137429i1hhuqsoi.png",
+"weight": "972"
+}
+],
+"page_count": 38,
+"total_count": 758,
+"category": {
+"id": "2",
+"name": "箱包婚鞋",
+"children": [
+{
+"id": "163",
+"name": "鞋类",
+"parent_id": "2",
+"spid": "2|",
+"cover_image": null,
+"description": null,
+"status": "1",
+"weight": "0",
+"created_at": "2016-05-03 18:05:30",
+"updated_at": "2016-05-03 18:05:30",
+"deleted": "0"
+},
+{
+"id": "173",
+"name": "箱包",
+"parent_id": "2",
+"spid": "2|",
+"cover_image": null,
+"description": null,
+"status": "1",
+"weight": "2",
+"created_at": "2016-05-03 18:07:00",
+"updated_at": "2016-05-03 18:07:00",
+"deleted": "0"
+}
+]
+}
+},
+"current_time": 1470793432
+}

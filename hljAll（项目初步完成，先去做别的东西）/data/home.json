@@ -1,0 +1,727 @@
+{
+    "status": {
+        "RetCode": 0,
+        "msg": "success"
+    },
+    "data": {
+        "list": [
+            {
+                "id": "291058",
+                "entity_type": "Example",
+                "entity_id": "188251",
+                "property_id": "6",
+                "cid": "1",
+                "new_value": "{\"id\":\"188251\",\"title\":\"欧式幸福宫殿2\",\"cover_path\":\"http://qnm.hunliji.com/62BE89858783E454853FB121F9280772\",\"content\":\"\",\"image_path\":\"\"}",
+                "begin_at": "2016-08-10 10:00:00",
+                "end_at": "2016-08-10 16:00:00",
+                "weight": "84",
+                "is_show": "1",
+                "is_fix": "0",
+                "created_at": "2016-08-08 00:16:01",
+                "updated_at": "2016-08-10 14:10:09",
+                "is_auto": "1",
+                "entity": {
+                    "id": "188251",
+                    "title": "欧式幸福宫殿2",
+                    "cover_path": "http://qnm.hunliji.com/62BE89858783E454853FB121F9280772",
+                    "merchant_id": "11942",
+                    "collectors_count": "0",
+                    "show_price": 0,
+                    "media_items_count": 14,
+                    "media_items_video_count": 0,
+                    "media_items_pic_count": 14,
+                    "merchant": {
+                        "id": "11942",
+                        "name": "嫣然城堡婚纱摄影",
+                        "logo_path": "http://qnm.hunliji.com/o_1aeoghubk1v9iui8n454kjft9i.jpg",
+                        "user_id": "865327",
+                        "property": {
+                            "id": "6",
+                            "name": "婚纱摄影",
+                            "bond_fee": "5000.00",
+                            "category": {
+                                "id": 2,
+                                "name": "工作室"
+                            }
+                        },
+                        "pro_price": 8800,
+                        "bond_merchant_expire_time": 7,
+                        "real_photos": null,
+                        "is_collected": 0
+                    },
+                    "marks": [
+                        {
+                            "id": "17",
+                            "name": "欧式",
+                            "marked_type": "1"
+                        },
+                        {
+                            "id": "204",
+                            "name": "内景",
+                            "marked_type": "1"
+                        },
+                        {
+                            "id": "206",
+                            "name": "宫殿",
+                            "marked_type": "1"
+                        }
+                    ],
+                    "is_installment": "0",
+                    "watch_count": 1728,
+                    "is_collected": 0
+                }
+            }
+        ],
+        "total_count": 24284,
+        "page_count": 24284,
+        "new_count": 6,
+        "last_time": 1470811025,
+        "fix_data": {
+            "list": [
+                {
+                    "id": "289180",
+                    "entity_type": "Example",
+                    "entity_id": "96407",
+                    "property_id": "12",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"96407\",\"title\":\"2016\\u65b0\\u6b3e\\u4e00\\u5b57\\u5305\\u80a9\\u8d85\\u5927\\u62d6\\u5c3e\\u4eea\\u5f0f\\u7eb1\",\"cover_path\":\"http:\\/\\/marry.qiniudn.com\\/2C7ADC6625B8E13332F976A6DD59DC71\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "13",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 17:11:33",
+                    "updated_at": "2016-08-06 17:11:33",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "96407",
+                        "title": "2016新款一字包肩超大拖尾仪式纱",
+                        "cover_path": "http://marry.qiniudn.com/2C7ADC6625B8E13332F976A6DD59DC71",
+                        "merchant_id": "25845",
+                        "collectors_count": "3",
+                        "show_price": 0,
+                        "earnest_money": 0,
+                        "media_items_count": 5,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 5,
+                        "merchant": {
+                            "id": "25845",
+                            "name": "悦色新娘婚纱礼服",
+                            "logo_path": "http://qnpic.hunliji.com/FlGI_3TyKUYs1f7_PUbIrVAopCjV",
+                            "property": {
+                                "id": "12",
+                                "name": "婚纱礼服",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 6,
+                                    "name": "女士婚纱"
+                                }
+                            },
+                            "user_id": "1586004",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "marks": [
+                            {
+                                "id": "114",
+                                "name": "婚纱",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "203",
+                                "name": "拖尾",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1013,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "289177",
+                    "entity_type": "Package",
+                    "entity_id": "188785",
+                    "property_id": "6",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"188785\",\"title\":\"\\u552f\\u7f8e\\u97e9\\u5f0f\\u5a5a\\u7167\\u5185\\u5916\\u666f4\\u9020\\u578b \\u62cd220\\u5f20\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/o_1aot2jpuuffg2g8ek110m611bn1k.jpg\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "11",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 17:07:02",
+                    "updated_at": "2016-08-06 17:07:02",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "188785",
+                        "title": "唯美韩式婚照内外景4造型 拍220张",
+                        "describe": "优艺摄影坚持技术原创之本，用镜头记录幸福影像，抓拍个人独特之美，用心记录感动是优艺团队对工作对梦想的价值理解。\n很多时候照片承载了太多的喜怒哀乐，几厘米的厚度却值得用一生回忆，凝固时光中的美好，若干年后，翻开泛黄的老照片，记忆是温暖感动的。\n",
+                        "cover_path": "http://qnm.hunliji.com/o_1aot2jpuuffg2g8ek110m611bn1k.jpg",
+                        "rule_id": null,
+                        "merchant_id": "13854",
+                        "market_price": 29999,
+                        "actual_price": "3999.00",
+                        "sale_price": "3999",
+                        "limit_num": "0",
+                        "limit_sold_out": "0",
+                        "collectors_count": "1",
+                        "property_id": "6",
+                        "show_price": 3999,
+                        "media_items_count": 3,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 3,
+                        "merchant": {
+                            "id": "13854",
+                            "name": "优艺婚纱摄影",
+                            "logo_path": "http://qnm.hunliji.com/o_1al9ft3fcn1rvpe8i6bo3nhi.jpg",
+                            "property": {
+                                "id": "6",
+                                "name": "婚纱摄影",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 2,
+                                    "name": "工作室"
+                                }
+                            },
+                            "user_id": "971434",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "property_name": "婚纱摄影",
+                        "kind": "婚纱摄影",
+                        "marks": [
+                            {
+                                "id": "388",
+                                "name": "小清新",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "297",
+                                "name": "唯美",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "534",
+                                "name": "街景",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1973,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "289166",
+                    "entity_type": "Package",
+                    "entity_id": "133393",
+                    "property_id": "6",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"133393\",\"title\":\"\\u6e05\\u65b0\\u7eaa\\u5b9e\\u5a5a\\u7eb1\\u7167 3\\u670d3\\u9020 \\u7eaf\\u5916\\u666f\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/o_1aia98jsh1vd36474uch8dg3er.jpg\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "10",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 16:37:03",
+                    "updated_at": "2016-08-06 16:37:03",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "133393",
+                        "title": "清新纪实婚纱照 3服3造 纯外景",
+                        "describe": "艺术家+老板+服务者+摄影师=韩盟摄影师\n一对一定制拍摄 摄影师陪同选片 全程服务\n免费升级“李小璐”主题拍摄",
+                        "cover_path": "http://qnm.hunliji.com/o_1aia98jsh1vd36474uch8dg3er.jpg",
+                        "rule_id": null,
+                        "merchant_id": "109377",
+                        "market_price": 9999,
+                        "actual_price": "4999.00",
+                        "sale_price": "4999",
+                        "limit_num": "0",
+                        "limit_sold_out": "0",
+                        "collectors_count": "5",
+                        "property_id": "6",
+                        "show_price": 4999,
+                        "media_items_count": 5,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 5,
+                        "merchant": {
+                            "id": "109377",
+                            "name": "韩国MAY STUDIO●韩盟拍摄",
+                            "logo_path": "http://qnm.hunliji.com/o_1agci4i501teb1ruu1d7s13h1lvli.jpg",
+                            "property": {
+                                "id": "6",
+                                "name": "婚纱摄影",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 2,
+                                    "name": "工作室"
+                                }
+                            },
+                            "user_id": "2299904",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "property_name": "婚纱摄影",
+                        "kind": "婚纱摄影",
+                        "marks": [
+                            {
+                                "id": "388",
+                                "name": "小清新",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "297",
+                                "name": "唯美",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "534",
+                                "name": "街景",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1806,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "289159",
+                    "entity_type": "Package",
+                    "entity_id": "111647",
+                    "property_id": "6",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"111647\",\"title\":\"\\u3010\\u8d85\\u503c\\u7279\\u60e0\\u3011\\u592a\\u5e99\\u53e4\\u5178\\u98ce\\u5a5a\\u7167\\u9f3b\\u7956 5\\u670d5\\u9020\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/o_1anc2eugq5tba4u21cjhe7s10.png\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "9",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 16:31:34",
+                    "updated_at": "2016-08-06 16:31:34",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "111647",
+                        "title": "【超值特惠】太庙古典风婚照鼻祖 5服5造",
+                        "describe": "好客片才是一个品牌的核心，我们是北京婚纱摄影工作室的领导品牌，更是太庙等中国风系列婚纱照的鼻祖，所以我们只接受挑剔的目光",
+                        "cover_path": "http://qnm.hunliji.com/o_1anc2eugq5tba4u21cjhe7s10.png",
+                        "rule_id": null,
+                        "merchant_id": "11381",
+                        "market_price": 6999,
+                        "actual_price": "5999.00",
+                        "sale_price": "5399",
+                        "limit_num": "20",
+                        "limit_sold_out": "0",
+                        "collectors_count": "11",
+                        "property_id": "6",
+                        "show_price": 5999,
+                        "media_items_count": 5,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 5,
+                        "sale_earnest_money": 3360,
+                        "merchant": {
+                            "id": "11381",
+                            "name": "香草影堂婚纱摄影",
+                            "logo_path": "http://qnm.hunliji.com/o_1ac9840dg1mev1fdiupgubk16ldi.jpg",
+                            "property": {
+                                "id": "6",
+                                "name": "婚纱摄影",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 2,
+                                    "name": "工作室"
+                                }
+                            },
+                            "user_id": "829755",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "property_name": "婚纱摄影",
+                        "kind": "婚纱摄影",
+                        "marks": [
+                            {
+                                "id": "297",
+                                "name": "唯美",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "299",
+                                "name": "时尚",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 3855,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "289152",
+                    "entity_type": "Package",
+                    "entity_id": "187930",
+                    "property_id": "6",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"187930\",\"title\":\"\\u8d85\\u503c\\u5a5a\\u7167 \\u591a\\u98ce\\u683c6\\u9020\\u578b \\u7cbe\\u4fee110\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/o_1aoogfd4rie8hcb1s2h1fhf7cr10.jpg\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "5",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 16:23:41",
+                    "updated_at": "2016-08-06 16:23:41",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "187930",
+                        "title": "超值婚照 多风格6造型 精修110",
+                        "describe": "韩式唯美    韩国KAMA夏季热推套餐  凡是八月订单顾客均享受赠送高级定制婚纱一套 （三件套）",
+                        "cover_path": "http://qnm.hunliji.com/o_1aoogfd4rie8hcb1s2h1fhf7cr10.jpg",
+                        "rule_id": null,
+                        "merchant_id": "12516",
+                        "market_price": 4998,
+                        "actual_price": "2998.00",
+                        "sale_price": null,
+                        "limit_num": "0",
+                        "limit_sold_out": "0",
+                        "collectors_count": "0",
+                        "property_id": "6",
+                        "show_price": 2998,
+                        "media_items_count": 5,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 5,
+                        "merchant": {
+                            "id": "12516",
+                            "name": "韩国kama婚纱摄影",
+                            "logo_path": "http://qnm.hunliji.com/o_1ae6p2h321j5i16h11h431vicf91n.jpg",
+                            "property": {
+                                "id": "6",
+                                "name": "婚纱摄影",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 2,
+                                    "name": "工作室"
+                                }
+                            },
+                            "user_id": "905717",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "property_name": "婚纱摄影",
+                        "kind": "婚纱摄影",
+                        "marks": [
+                            {
+                                "id": "411",
+                                "name": "简约",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "534",
+                                "name": "街景",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1944,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "289145",
+                    "entity_type": "Example",
+                    "entity_id": "178833",
+                    "property_id": "12",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"178833\",\"title\":\"2016\\u6700\\u6d41\\u884c \\u7ecf\\u5178\\u5c0f\\u62d6\\u5c3e\\u9c7c\\u5c3e\\u7eb1\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/AF4F6E416B59D38AC64B9BD5C683DCE1\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "6",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 16:14:24",
+                    "updated_at": "2016-08-06 16:14:24",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "178833",
+                        "title": "2016最流行 经典小拖尾鱼尾纱",
+                        "cover_path": "http://qnm.hunliji.com/AF4F6E416B59D38AC64B9BD5C683DCE1",
+                        "merchant_id": "12921",
+                        "collectors_count": "1",
+                        "show_price": 0,
+                        "media_items_count": 7,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 7,
+                        "merchant": {
+                            "id": "12921",
+                            "name": "DREAM WEAVING 婚纱礼服原创设计",
+                            "logo_path": "http://qnm.hunliji.com//Fripg7Sg6F312NsZziLEeqBrMHyT",
+                            "property": {
+                                "id": "12",
+                                "name": "婚纱礼服",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 6,
+                                    "name": "女士婚纱"
+                                }
+                            },
+                            "user_id": "929392",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "marks": [
+                            {
+                                "id": "349",
+                                "name": "仪式纱",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "350",
+                                "name": "外景纱",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "203",
+                                "name": "拖尾",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1842,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "289138",
+                    "entity_type": "Example",
+                    "entity_id": "185504",
+                    "property_id": "2",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"185504\",\"title\":\"\\u65b0\\u7586\\u5927\\u53a6 \\u68ee\\u7cfb\\u5c0f\\u6e05\\u65b0\\u5a5a\\u793c \\u6ee1\\u773c\\u90fd\\u662f\\u7eff\\u690d\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/A1DE5B6FB4E800CBAA115AC25EB200E1\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "4",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-06 16:07:09",
+                    "updated_at": "2016-08-06 16:07:09",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "185504",
+                        "title": "新疆大厦 森系小清新婚礼 满眼都是绿植",
+                        "cover_path": "http://qnm.hunliji.com/A1DE5B6FB4E800CBAA115AC25EB200E1",
+                        "merchant_id": "759",
+                        "collectors_count": "2",
+                        "show_price": 0,
+                        "media_items_count": 21,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 21,
+                        "merchant": {
+                            "id": "759",
+                            "name": "Lomo婚礼顾问",
+                            "logo_path": "http://qnm.hunliji.com/o_1a71u3p6g1iav1hlj1k5u1n2ddnhi.jpg",
+                            "property": {
+                                "id": "2",
+                                "name": "婚礼策划",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 4,
+                                    "name": "省心优选",
+                                    "desc": "非定制套餐类"
+                                }
+                            },
+                            "user_id": "151046",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "marks": [
+                            {
+                                "id": "411",
+                                "name": "简约",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "387",
+                                "name": "森系",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "735",
+                                "name": "室内",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1270,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "287359",
+                    "entity_type": "Package",
+                    "entity_id": "167151",
+                    "property_id": "6",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"167151\",\"title\":\"\\u590f\\u65e5\\u6700\\u6e05\\u51c9 \\u6d6a\\u6f2b\\u6c34\\u4e0b\\u5a5a\\u7167 \\u4e0d\\u4f1a\\u6e38\\u6cf3\\u4e5f\\u53ef\\u4ee5\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/o_1al1ptd7ijv712tvfhnv65le6r.jpg\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "8",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-04 18:04:12",
+                    "updated_at": "2016-08-04 18:04:12",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "167151",
+                        "title": "夏日最清凉 浪漫水下婚照 不会游泳也可以",
+                        "describe": "完全真实水下拍摄 ",
+                        "cover_path": "http://qnm.hunliji.com/o_1al1ptd7ijv712tvfhnv65le6r.jpg",
+                        "rule_id": null,
+                        "merchant_id": "12225",
+                        "market_price": 2699,
+                        "actual_price": "1699.00",
+                        "sale_price": "1699",
+                        "limit_num": "0",
+                        "limit_sold_out": "0",
+                        "collectors_count": "2",
+                        "property_id": "6",
+                        "show_price": 1699,
+                        "media_items_count": 3,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 3,
+                        "merchant": {
+                            "id": "12225",
+                            "name": "米兰风尚婚纱摄影",
+                            "logo_path": "http://qnm.hunliji.com/o_1alrb2pjb1bljobg0l1ef3tepi.jpg",
+                            "property": {
+                                "id": "6",
+                                "name": "婚纱摄影",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 2,
+                                    "name": "工作室"
+                                }
+                            },
+                            "user_id": "887979",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "property_name": "婚纱摄影",
+                        "kind": "婚纱摄影",
+                        "marks": [
+                            {
+                                "id": "302",
+                                "name": "纪实",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "525",
+                                "name": "前卫",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "76",
+                                "name": "水下",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "0",
+                        "watch_count": 1289,
+                        "is_collected": 0
+                    }
+                },
+                {
+                    "id": "287352",
+                    "entity_type": "Package",
+                    "entity_id": "186906",
+                    "property_id": "6",
+                    "cid": "1",
+                    "new_value": "{\"id\":\"186906\",\"title\":\"\\u7206\\u6b3e\\u6765\\u88ad \\u4e0d\\u9650\\u9020\\u578b\\u591a\\u98ce\\u683c\\u5a5a\\u7167\",\"cover_path\":\"http:\\/\\/qnm.hunliji.com\\/o_1aojlio7ftgl1li21gjgktn19o5r.jpg\",\"content\":\"\",\"image_path\":\"\"}",
+                    "begin_at": "2016-08-10 00:00:00",
+                    "end_at": "2016-08-11 00:00:00",
+                    "weight": "7",
+                    "is_show": "1",
+                    "is_fix": "1",
+                    "created_at": "2016-08-04 17:59:22",
+                    "updated_at": "2016-08-04 17:59:22",
+                    "is_auto": "0",
+                    "entity": {
+                        "id": "186906",
+                        "title": "爆款来袭 不限造型多风格婚照",
+                        "describe": "分期付款，拍婚照，想怎么拍就怎么拍！\n【爆款】V视觉摄影，婚纱照风格，涵盖中国风、城堡风、马场风、街拍风、韩式风、森系、花海、水系。\n【原创】所有样片均为原创拍摄，所有客片均为定制拍摄。所见即所得。\n【套系】2个外景+内景不限。\n【特点】无隐形消费，一天拍完，拍摄不满意免费重拍，满不满意你说了算。\n【专享】本套系仅针对婚礼纪平台会员专享，仅在婚礼纪平台销售。",
+                        "cover_path": "http://qnm.hunliji.com/o_1aojlio7ftgl1li21gjgktn19o5r.jpg",
+                        "rule_id": null,
+                        "merchant_id": "11975",
+                        "market_price": 5999,
+                        "actual_price": "5999.00",
+                        "sale_price": "5999",
+                        "limit_num": "0",
+                        "limit_sold_out": "0",
+                        "collectors_count": "1",
+                        "property_id": "6",
+                        "show_price": 5999,
+                        "media_items_count": 5,
+                        "media_items_video_count": 0,
+                        "media_items_pic_count": 5,
+                        "merchant": {
+                            "id": "11975",
+                            "name": "V视觉摄影",
+                            "logo_path": "http://qnm.hunliji.com/o_1adah7vcl7f21p9ifngbu51dfmi.jpg",
+                            "property": {
+                                "id": "6",
+                                "name": "婚纱摄影",
+                                "bond_fee": "5000.00",
+                                "category": {
+                                    "id": 2,
+                                    "name": "工作室"
+                                }
+                            },
+                            "user_id": "867503",
+                            "pro_price": 8800,
+                            "bond_merchant_expire_time": 7,
+                            "real_photos": null,
+                            "is_collected": 0
+                        },
+                        "property_name": "婚纱摄影",
+                        "kind": "婚纱摄影",
+                        "marks": [
+                            {
+                                "id": "101",
+                                "name": "复古",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "528",
+                                "name": "文艺",
+                                "marked_type": "1"
+                            },
+                            {
+                                "id": "340",
+                                "name": "教堂",
+                                "marked_type": "1"
+                            }
+                        ],
+                        "is_installment": "1",
+                        "watch_count": 1763,
+                        "is_collected": 0
+                    }
+                }
+            ]
+        }
+    },
+    "current_time": 1470811026
+}

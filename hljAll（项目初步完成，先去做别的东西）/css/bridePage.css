@@ -1,0 +1,569 @@
+body{
+	background:#f4f4f4;
+	font-family: "微软雅黑";
+}
+.bridePage{
+	position: relative;
+	width: 100%;
+	/*background: #f4f4f4;*/
+}
+.bridePage .header{
+	/*width: 100%;*/
+	height:2rem;
+	line-height: 2rem;
+	padding-left: 0.65rem;
+	padding-right: 0.4rem;
+	background: white;
+	display: flex;
+}
+.header div:nth-child(1){
+	width: 1.1rem;
+	height: 2rem;
+}
+.header .searchIcon{
+	display: inline-block;
+	width: 1rem;
+	height:0.9rem;
+	background: url(../img/images/bsearch.png) no-repeat;
+	background-size:cover;
+	vertical-align: middle;
+}
+.header div:nth-child(2){
+	width: 12.65rem;
+	height: 2rem;
+	text-align: center;
+	font-size: 0.8rem;
+	color:#fa4c63;
+}
+
+.header div:nth-child(3){
+	width: 1.2rem;
+	height: 2rem;
+}
+.header .bellIcon{
+	display: inline-block;
+	width: 1.2rem;
+	height:1.2rem;
+	background: url(../img/images/bell_03.gif) no-repeat;
+	background-size:cover;
+	vertical-align: middle;
+}
+
+/*nav start*/
+.bridePage .nav{
+	/*width: 100%;*/
+	padding-left: 0.65rem;
+	padding-right: 0.4rem;
+	background: white;
+	border-bottom: 1px solid #ccc;
+}
+.nav ul{
+	width: 100%;
+	display: flex;
+}
+.nav ul li{
+	flex-grow: 1;
+	/*height: 1.75rem;
+	line-height: 1.75rem;*/
+	text-align: center;
+}
+.nav ul a{
+	display: inline-block;
+	height: 1.75rem;
+	line-height: 1.75rem;
+	font-size: 0.625rem;
+	border-bottom: 1px solid white;
+}
+/*nav end*/
+
+#wrapper{
+  	position: absolute;
+  	top:3.75rem;
+  	left: 0px;
+  	width: 16rem;
+  	height: 22rem;
+  	z-index:1;
+  	overflow-x: hidden;
+  	/*overflow-y: auto;*/
+}
+/*#wrapper:after{
+	content: '';
+	display: block;
+	clear: both;
+}*/
+#xinniang-scroller {
+  	position: absolute;
+  	left: 0;
+  	z-index:1;
+  	width: 16rem;
+  	padding: 0;
+  }
+#wrapper>#xinniang-scroller>#list{
+  width:16rem;
+ }
+ #list>li:nth-of-type(1){
+ 	position: absolute;
+ 	left: 0;
+ }
+  #list>li:nth-of-type(2){
+ 	position: absolute;
+ 	left: 16rem;
+ }
+  #list>li:nth-of-type(3){
+ 	position: absolute;
+ 	left: 32rem;
+ }
+  #list>li:nth-of-type(4){
+ 	position: absolute;
+ 	left: 48rem;
+ }
+ #wrapper>#xinniang-scroller>#list:after{
+ 	content: '';
+ 	display: block;
+ 	clear: both;
+ }
+#wrapper>#xinniang-scroller>#list>li{
+ width:16rem; 
+ float: left;	
+ overflow: auto;
+ height: 22rem;
+ /*margin-bottom: 2rem;*/
+ }
+/*swiper start*/
+.find .swiper img{
+	width: 100%;
+	height:8.05rem;
+	display: block;
+}
+/*swiper end*/
+/*rec start*/
+.find .rec{
+	width: 100%;
+	background: white;
+}
+.find .hdr{
+	/*width: 100%;*/
+	height:2.25rem;
+	line-height: 2.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.4rem;
+	display: flex;
+	/*background: pink;*/
+}
+.find .hdr div:nth-child(1){
+	width: 11.25rem;
+	color: #404040;
+	font-size: 0.65rem;
+}
+.find .hdr div:nth-child(1) span{
+	padding-left:0.25rem;
+	color:#a2a2a2;
+}
+.find .rec-header div:nth-child(2){
+	text-align: right;
+	color: #e6787b;
+}
+
+.find .rec-body{
+	width: 100%;
+	overflow: hidden;
+}
+.find .rec-body ul{
+	width: 22rem;
+	padding-left: 0.55rem;
+	display: flex;
+}
+.find .rec-body ul li{
+	width: 4.05rem;
+	height:6.9rem;
+	margin-right:0.35rem;
+	
+}
+.find .rec-body ul li img{
+	width: 4.05rem;
+	height: 4.05rem;
+}
+.find .rec-body ul li p{
+	text-align: center;
+}
+.find .rec-body ul li .title{
+	height:1.4rem;
+	line-height: 1.4rem;
+}
+.find .rec-body ul li p:nth-of-type(2){
+	font-size: 0.5rem;
+	color:#9f9f9f;
+}
+/*rec end*/
+/*hot start*/
+.find .hot{
+	background: white;
+	margin-top: 0.5rem;
+}
+.find .hot .hot-body img{
+	width: 100%;
+	height: 10rem;
+	display: block;
+}
+/*hot end*/
+/*spoken start*/
+.spoken{
+	padding-left: 0.5rem;
+	padding-right: 0.4rem;
+	margin-top: 0.5rem;
+	padding-top:0.4rem;
+	background: white;
+}
+.spoken .spoken-title p:nth-child(1){
+	width: 100%;
+	height:1.45rem;
+	line-height: 1.45rem;
+	font-size: 0.85rem;
+	color: #383838;
+	font-size: 0.75rem;
+}
+.spoken .spoken-title p:nth-child(2){
+	line-height:1.25rem;
+	color: #626262;
+	
+}
+.spoken .spoken-body ol{
+	width: 100%;
+	display: flex;
+}
+.spoken .spoken-body ol li{
+	margin-right: 2px;
+	padding-bottom: 0.51rem;
+	border-bottom: 1px solid #f2f2f2;
+}
+.spoken .spoken-body ol img{
+	width: 4.95rem;
+	height:4.95rem;
+}
+.spoken-footer{
+	width: 100%;
+	
+	display: flex;
+}
+.spoken-footer div{
+	width:50%;
+	height:1.7rem;
+	line-height: 1.7rem;
+}
+.spoken-footer div:nth-child(1){
+	color:#e09fa3;
+}
+.spoken-footer i{
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+.spoken-footer div:nth-child(1) i{
+	width:1rem;
+	height: 1rem;
+	background: url(../img/images/si_03.gif) no-repeat;
+	background-size:cover;
+	margin-right: 0.25rem;
+}
+.spoken-footer div:nth-child(2){
+	text-align: right;
+	color: #858585;
+}
+.spoken-footer .msg-icon{
+	width:0.75rem;
+	height: 0.75rem;
+	background: url(../img/images/ic_06.gif) no-repeat;
+	background-size:cover;
+	margin-right: 0.125rem;
+
+}
+.spoken-footer .praise-icon{
+	width:0.75rem;
+	height: 0.75rem;
+	background:url(../img/images/ic_08.gif) no-repeat;
+	background-size:cover;
+	margin-left: 0.85rem;
+	margin-right: 0.125rem;
+}
+/*spoken end*/
+
+/*attention start*/
+.attention{
+	width: 100%;
+	
+}
+.attention .hot-hed{
+	background: #f4f4f4;
+	height: 2rem;
+	line-height: 2rem;
+	padding-left: 0.55rem;
+	border-bottom: 1px solid #e6e6e6;
+}
+.attention .hot-bd{
+	padding-left: 0.55rem;
+	background: white;
+	width: 100%;
+	height: 10.6rem;
+	overflow: auto;
+}
+.attention .hot-bd li{
+	padding-right: 0.7rem;
+	/*width: 100%;*/
+	height: 2.65rem;
+	line-height: 2.65rem;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+}
+.attention .hot-bd li .li-icon{
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	/*background: url(../img/images/xls2_03.gif) no-repeat;*/
+	/*background-size:cover;*/
+	/*vertical-align: middle;*/
+	margin-right: 0.55rem;
+}
+.attention .hot-bd li .li-icon img{
+	width: 2rem;
+	height: 2rem;
+}
+.attention .hot-bd li span{
+	float: right;
+	/*color: white;*/
+	margin-left: 6rem;
+}
+.attention .hot-bd em{
+	font-style: normal;
+	width: 1.8rem;
+	height: 0.75rem;
+	background:#57cef0;
+	color: white;
+	padding:0.15rem 0.3rem;
+	font-size: 0.05rem;
+	border-radius:0.25rem;
+	margin-right: 0.25rem;
+	/*vertical-align: middle;*/
+}
+.attention .hot-ft{
+	width: 100%;
+	height: 1.95rem;
+	line-height: 1.95rem;
+	text-align: center;
+	color: #dbdbdb;
+	background: white;
+}
+.attention .spoken-header{
+	width: 100%;
+	/*height: 1.95rem;*/
+	display: flex;
+}
+.attention .spoken-header div:nth-child(1){
+	width: 2rem;
+	height: 1.95rem;
+}
+.attention .spoken-header .icon-image{
+	display: inline-block;
+	width: 1.85rem;
+	height: 1.85rem;
+	background: url(../img/images/xls2_06.gif) no-repeat;
+	background-size:cover;
+	border-radius: 0.95rem;
+}
+.attention .spoken-header div:nth-child(2){
+	width: 11.575rem;
+	height:1.95rem;
+}
+.attention .spoken-header p:nth-child(2){
+	font-size: 0.55rem;
+	color:#969696;
+}
+.attention .spoken-header div:nth-child(3){
+	width: 1.8rem;
+	height: 1.95rem;
+	line-height: 1.95rem;
+	color:#939393;
+	font-size: 0.5rem;
+}
+/*attention end*/
+/*wedding man start*/
+.weddingMan .my-con{
+	/*height: 3.5rem;*/
+	background: white;
+	margin-top: 0.5rem;
+	display: flex;
+}
+.weddingMan .my-con div:nth-child(1){
+	width: 10.5rem;
+	/*height: 3.5rem;*/
+	padding-top:0.5rem ;
+	padding-left: 0.6rem;
+}
+.weddingMan .my-con div:nth-child(1) p{
+	margin-bottom: 0.55rem;
+
+}
+.weddingMan .my-con p:nth-child(2){
+	color:#838383;
+}
+
+.weddingMan .my-con div:nth-child(2){
+	line-height: 3.5rem;
+}
+.weddingMan .my-con .point-icon{
+	display: inline-block;
+	width: 3.75rem;
+	height:1.575rem;
+	background: url(../img/xls3_03.gif) no-repeat;
+	background-size:cover;
+	vertical-align: middle;
+}
+.weddingMan .hot-msg{
+	/*width: 100%;*/
+	background: white;
+	margin-top: 0.5rem;
+	padding-left: 0.6rem;
+	
+}
+.weddingMan .hot-msg .hot-msg-header{
+	height: 2.15rem;
+	line-height: 2.15rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+.weddingMan .hot-msg span{
+	color:#b6b6b6;
+}
+.weddingMan .hot-msg-title{
+	width: 100%;
+	height: 2.85rem;
+	
+	display: flex;
+	/*background: white;*/
+}
+.weddingMan .hot-msg-title div:nth-child(1){
+	width: 1.9rem;
+	height:2.85rem;	
+	line-height: 2.85rem;
+}
+.weddingMan .hot-msg-title .icon-ig{
+	display: inline-block;
+	width: 1.9rem;
+	height: 1.9rem;
+	border-radius:1.0rem;
+}
+.weddingMan .hot-msg-title .icon-ig img{
+	width: 1.9rem;
+	height: 1.9rem;
+	border-radius: 50%;
+}
+.weddingMan .hot-msg-title div:nth-child(2){
+	width: 10.475rem;
+	height:2.85rem;	
+	padding-left: 0.4rem;
+}
+.weddingMan .hot-msg-title p:nth-child(1){
+	padding-top: 0.75rem;
+	font-size: 0.625rem;
+}
+.weddingMan .hot-msg-title p:nth-child(2){
+	padding-top: 0.4rem;
+	font-size: 0.5rem;
+	color:#a9a9a9;
+}
+.weddingMan .hot-msg-title div:nth-child(3){
+	width: 2rem;
+	height: 1rem;
+	line-height: 1rem;
+	margin-top: 1.1rem;
+	text-align: center;
+	border-radius: 0.25rem;
+	border: 1px solid #fc7650;
+	color: #fc7650;
+}
+.weddingMan .hot-msg{
+	margin-bottom: 0.25rem;
+}
+.weddingMan .hot-msg>p{
+	height: 1.875rem;
+	line-height: 1.875rem;
+}
+.weddingMan .hot-msg .ol-list{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.weddingMan .hot-msg .ol-list li{
+	width: 4.875rem;
+	height: 4.875rem;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	
+}
+.weddingMan .hot-msg .ol-list li img{
+	width: 4.875rem;
+	height: 4.875rem;
+}
+/*wedding man end*/
+/*story start*/
+.story .record{
+	width: 100%;
+	padding-top: 0.11rem;
+	background: white;
+	padding-bottom:1.2rem;
+}
+.story .record p{
+	font-size: 0.55rem;
+	text-align: center;
+	line-height: 1.05rem;
+	color:#a5a5a5;
+	margin-bottom: 0.4rem;
+}
+.story .record div{
+	width: 4.95rem;
+	text-align: center;
+	color: #df7a7e;
+	border: 1px solid #df7a7e;
+	border-radius: 0.25rem;
+	margin-left: 5.5rem;
+}
+.story .rec{
+	margin-top: 0.5rem;
+}
+.story .rec-header{
+	/*width: 100%;*/
+	padding-left: 0.65rem;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	display: flex;
+	background: white;
+}
+.story .rec-header div{
+	width: 50%;
+}
+.story .rec-header span{
+	margin: 0 0.5rem;
+	color: #c0c0c0;
+}
+.story ol{
+		
+}
+.story ol li{
+	background: white;
+	/*width: 100%;*/
+	padding-left: 0.53rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+.story ol li img{
+	width:14.9rem;
+	height:8.25rem;
+	display: block;
+}
+.angular4-p{
+	position: absolute;
+	color: white;
+	top: 0.5rem;
+	left: 1.5rem;
+}
+/*story end*/

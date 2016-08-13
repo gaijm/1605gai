@@ -1,0 +1,62 @@
+		<link rel="stylesheet" href="css/weddingshoes.css">
+		<div class="wed">
+		<header>
+			<div class="title">
+				<a href="#/fenlei" class="header-back" style="font-size: 1rem;line-height: 1rem;">&lt;</a>
+				<h2 class="header-title">箱包婚鞋</h2>
+				<a  ng-click="wedClick()" href="javascript:;" class="header-search"><span class="glyphicon glyphicon-search"></span></a>
+				<a href="javascript:;" class="header-shopcar"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+			</div>
+			<div class="nav">
+				<ul class="tcf-flex tcf-justify-center">
+					<li class="firstnav">箱包婚鞋<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+					<li class="secondnav">综合排序<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+				</ul>
+				<!--通过关键字筛选-->
+				<input ng-model="title" id="wedsearch" type="text" placeholder="请输入搜索关键字" />
+				<ol class="firstnav-ol">
+					<!--模拟下拉菜单选择一类-->
+					<a href="javascript:;"><li ng-click="getItem()">全部</li></a>
+					<a href="javascript:;"><li ng-click="getItem(300)">箱包婚鞋 </li></a>
+					<a href="javascript:;"><li ng-click="getItem(1963)">家居家纺</li></a>
+					<a href="javascript:;"><li ng-click="getItem(1987)">婚纱礼服</li></a>
+					<a href="javascript:;"><li ng-click="getItem(5086)">结婚喜糖</li></a>
+					<a href="javascript:;"><li ng-click="getItem(1714)">珠宝首饰</li></a>
+					<a href="javascript:;"><li ng-click="getItem(8436)">结婚必备</li></a>
+					<a href="javascript:;"><li ng-click="getItem(4473)">内衣文胸</li></a>
+					<a href="javascript:;"><li ng-click="getItem(4024)">饰品配饰</li></a>
+				</ol>
+				<ol class="secondnav-ol">
+					<!--下拉菜单排序-->
+					<a href="javascript:;"><li ng-click="sortDataAll(weddingshoesData.data.list)">综合排序</li></a>
+					<a href="javascript:;"><li ng-click="sortDataUp(weddingshoesData.data.list)">价格最高</li></a>
+					<a href="javascript:;"><li ng-click="sortDataDown(weddingshoesData.data.list)">价格最低</li></a>
+				</ol>
+			</div>
+		</header>
+		
+		<div id="wed-wrapper">
+			<div id="scroller">
+				<div id="pullDown"><span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+		<div class="shop-box">
+			<ul class="tcf-flex tcf-justify-start">
+				<li ng-repeat="item in weddingshoesData.data.list | filter:liContent | orderBy:order+orderType | filter:title">
+					<a href="javascript:;">
+						<div class="shop-img">
+						<a href="#/buyshoes">
+							<img src="{{item.cover_image.img}}" />
+						   	<!--<img lazy-src="{{item.cover_image.img}}" animate-viseble='true' animate-speed='2s'>--> 
+							<p class="shop-describe">{{item.title}}</p>
+							<P class="shop-price"><span>￥</span><span>{{item.actual_price}}</span><span>{{item.collectors_count}}</span><span class="glyphicon glyphicon-star-empty"></span></P>
+						</a></div>
+					</a>
+				</li>
+				
+			</ul>
+			
+		</div> <!--shop-box-end-->
+		
+			<div id="pullup"><span class="pullUpIcon"></span><span class="pullUpLabel"><!--上拉刷新--></span>
+			</div> <!--scroller-end-->
+		<div> <!-- warp-end-->
+</div>

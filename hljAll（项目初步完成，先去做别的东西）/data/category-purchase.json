@@ -1,0 +1,600 @@
+{
+	"status": {
+		"RetCode": 0,
+		"msg": "success"
+	},
+	"data": {
+		"list": [
+			{
+				"id": "1",
+				"name": "婚纱礼服",
+				"parent_id": "0",
+				"cover_image": "http://77g2sq.com2.z0.glb.qiniucdn.com/hunshasheying.png",
+				"description": "婚纱 礼服",
+				"children": [
+					{
+						"id": "243",
+						"name": "婚纱",
+						"parent_id": "1",
+						"spid": "1|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "0",
+						"created_at": "2016-05-04 18:03:58",
+						"updated_at": "2016-05-04 18:03:58",
+						"deleted": "0"
+					}, {
+						"id": "244",
+						"name": "礼服",
+						"parent_id": "1",
+						"spid": "1|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-04 18:04:04",
+						"updated_at": "2016-05-04 18:04:04",
+						"deleted": "0"
+					}, {
+						"id": "245",
+						"name": "旗袍",
+						"parent_id": "1",
+						"spid": "1|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-04 18:04:10",
+						"updated_at": "2016-05-04 18:04:10",
+						"deleted": "0"
+					}, {
+						"id": "246",
+						"name": "秀禾服",
+						"parent_id": "1",
+						"spid": "1|",
+						"cover_image": "",
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-04 18:04:19",
+						"updated_at": "2016-05-04 18:04:25",
+						"deleted": "0"
+					}, {
+						"id": "247",
+						"name": "龙凤褂",
+						"parent_id": "1",
+						"spid": "1|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "4",
+						"created_at": "2016-05-04 18:04:33",
+						"updated_at": "2016-05-04 18:04:33",
+						"deleted": "0"
+					}
+				],
+				"target_id": "1",
+				"target_type": 43,
+				"target_url": "婚纱礼服"
+			}, {
+				"id": "2",
+				"name": "箱包婚鞋",
+				"parent_id": "0",
+				"cover_image": "http://77g2sq.com2.z0.glb.qiniucdn.com/shoes.png",
+				"description": "头纱 婚鞋",
+				"children": [
+					{
+						"id": "163",
+						"name": "鞋类",
+						"parent_id": "2",
+						"spid": "2|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "0",
+						"created_at": "2016-05-03 18:05:30",
+						"updated_at": "2016-05-03 18:05:30",
+						"deleted": "0"
+					}, {
+						"id": "173",
+						"name": "箱包",
+						"parent_id": "2",
+						"spid": "2|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-03 18:07:00",
+						"updated_at": "2016-05-03 18:07:00",
+						"deleted": "0"
+					}
+				],
+				"target_id": "2",
+				"target_type": 43,
+				"target_url": "箱包婚鞋"
+			}, {
+				"id": "5",
+				"name": "家居家纺",
+				"parent_id": "0",
+				"cover_image": "http://77g2sq.com2.z0.glb.qiniucdn.com/neiyi.png",
+				"description": "家居 四件套",
+				"children": [
+					{
+						"id": "152",
+						"name": "居家服",
+						"parent_id": "5",
+						"spid": "5|",
+						"cover_image": "",
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-03 18:00:48",
+						"updated_at": "2016-05-03 18:00:53",
+						"deleted": "0"
+					}, {
+						"id": "155",
+						"name": "床上用品",
+						"parent_id": "5",
+						"spid": "5|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-03 18:01:27",
+						"updated_at": "2016-05-03 18:01:27",
+						"deleted": "0"
+					}, {
+						"id": "159",
+						"name": "家居礼品",
+						"parent_id": "5",
+						"spid": "5|",
+						"cover_image": "",
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-03 18:01:57",
+						"updated_at": "2016-05-03 18:02:07",
+						"deleted": "0"
+					}
+				],
+				"target_id": "5",
+				"target_type": 43,
+				"target_url": "家居家纺"
+			}, {
+				"id": "6",
+				"name": "结婚喜糖",
+				"parent_id": "0",
+				"cover_image": "http://77g2sq.com2.z0.glb.qiniucdn.com/shiping.png",
+				"description": "喜糖 ",
+				"children": [
+					{
+						"id": "237",
+						"name": "喜糖",
+						"parent_id": "6",
+						"spid": "6|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "0",
+						"created_at": "2016-05-04 18:00:49",
+						"updated_at": "2016-05-04 18:00:49",
+						"deleted": "0"
+					}, {
+						"id": "239",
+						"name": "喜饼",
+						"parent_id": "6",
+						"spid": "6|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-04 18:01:02",
+						"updated_at": "2016-05-04 18:01:02",
+						"deleted": "0"
+					}, {
+						"id": "240",
+						"name": "喜酒",
+						"parent_id": "6",
+						"spid": "6|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-04 18:01:08",
+						"updated_at": "2016-05-04 18:01:08",
+						"deleted": "0"
+					}, {
+						"id": "241",
+						"name": "干果",
+						"parent_id": "6",
+						"spid": "6|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-04 18:01:14",
+						"updated_at": "2016-05-04 18:01:14",
+						"deleted": "0"
+					}, {
+						"id": "242",
+						"name": "伴手礼",
+						"parent_id": "6",
+						"spid": "6|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "4",
+						"created_at": "2016-05-04 18:01:20",
+						"updated_at": "2016-05-04 18:01:20",
+						"deleted": "0"
+					}
+				],
+				"target_id": "6",
+				"target_type": 43,
+				"target_url": "结婚喜糖"
+			}, {
+				"id": "7",
+				"name": "珠宝首饰",
+				"parent_id": "0",
+				"cover_image": "http://qnm.hunliji.com/o_1a8aun3711b0b4i24th1o8jd027.png",
+				"description": "钻石 珠宝 黄金",
+				"children": [
+					{
+						"id": "230",
+						"name": "戒指",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "0",
+						"created_at": "2016-05-04 17:59:00",
+						"updated_at": "2016-05-04 17:59:00",
+						"deleted": "0"
+					}, {
+						"id": "231",
+						"name": "项链",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-04 17:59:05",
+						"updated_at": "2016-05-04 17:59:05",
+						"deleted": "0"
+					}, {
+						"id": "232",
+						"name": "手镯",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-04 17:59:13",
+						"updated_at": "2016-05-04 17:59:13",
+						"deleted": "0"
+					}, {
+						"id": "233",
+						"name": "耳钉",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-04 17:59:28",
+						"updated_at": "2016-05-04 17:59:28",
+						"deleted": "0"
+					}, {
+						"id": "235",
+						"name": "手链",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": "",
+						"description": null,
+						"status": "1",
+						"weight": "4",
+						"created_at": "2016-05-04 18:00:21",
+						"updated_at": "2016-05-10 17:15:11",
+						"deleted": "0"
+					}, {
+						"id": "236",
+						"name": "脚链",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "5",
+						"created_at": "2016-05-04 18:00:28",
+						"updated_at": "2016-05-04 18:00:28",
+						"deleted": "0"
+					}, {
+						"id": "260",
+						"name": "套装",
+						"parent_id": "7",
+						"spid": "7|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "6",
+						"created_at": "2016-05-11 15:01:43",
+						"updated_at": "2016-05-11 15:01:43",
+						"deleted": "0"
+					}
+				],
+				"target_id": "7",
+				"target_type": 43,
+				"target_url": "珠宝首饰"
+			}, {
+				"id": "80",
+				"name": "结婚必备",
+				"parent_id": "0",
+				"cover_image": "http://qnm.hunliji.com/o_1ahqt5ns21f61mfdgdq16u31dls7.png",
+				"description": "请柬拉花 家居摆件",
+				"children": [
+					{
+						"id": "81",
+						"name": "喜糖盒",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-03 17:40:36",
+						"updated_at": "2016-05-03 17:40:36",
+						"deleted": "0"
+					}, {
+						"id": "86",
+						"name": "红包",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": "",
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-03 17:41:44",
+						"updated_at": "2016-05-03 17:41:55",
+						"deleted": "0"
+					}, {
+						"id": "91",
+						"name": "请柬",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-03 17:42:28",
+						"updated_at": "2016-05-03 17:42:28",
+						"deleted": "0"
+					}, {
+						"id": "224",
+						"name": "拉喜",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "4",
+						"created_at": "2016-05-04 17:54:31",
+						"updated_at": "2016-05-04 17:54:31",
+						"deleted": "0"
+					}, {
+						"id": "225",
+						"name": "喜字",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "5",
+						"created_at": "2016-05-04 17:54:38",
+						"updated_at": "2016-05-04 17:54:38",
+						"deleted": "0"
+					}, {
+						"id": "226",
+						"name": "气球",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "6",
+						"created_at": "2016-05-04 17:54:47",
+						"updated_at": "2016-05-04 17:54:47",
+						"deleted": "0"
+					}, {
+						"id": "227",
+						"name": "胸花",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "7",
+						"created_at": "2016-05-04 17:58:12",
+						"updated_at": "2016-05-04 17:58:12",
+						"deleted": "0"
+					}, {
+						"id": "228",
+						"name": "喜烛",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "8",
+						"created_at": "2016-05-04 17:58:20",
+						"updated_at": "2016-05-04 17:58:20",
+						"deleted": "0"
+					}, {
+						"id": "229",
+						"name": "其他婚品",
+						"parent_id": "80",
+						"spid": "80|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "9",
+						"created_at": "2016-05-04 17:58:31",
+						"updated_at": "2016-05-04 17:58:31",
+						"deleted": "0"
+					}
+				],
+				"target_id": "80",
+				"target_type": 43,
+				"target_url": "结婚必备"
+			}, {
+				"id": "248",
+				"name": "内衣文胸",
+				"parent_id": "0",
+				"cover_image": "http://qnm.hunliji.com/o_1aicqadanajske5ugv1hudja38.png",
+				"description": "胸贴胸垫 塑身内衣",
+				"children": [
+					{
+						"id": "250",
+						"name": "胸贴",
+						"parent_id": "248",
+						"spid": "248|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "0",
+						"created_at": "2016-05-10 17:13:33",
+						"updated_at": "2016-05-10 17:13:33",
+						"deleted": "0"
+					}, {
+						"id": "251",
+						"name": "文胸",
+						"parent_id": "248",
+						"spid": "248|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-10 17:14:22",
+						"updated_at": "2016-05-10 17:14:22",
+						"deleted": "0"
+					}, {
+						"id": "252",
+						"name": "塑身衣",
+						"parent_id": "248",
+						"spid": "248|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-10 17:14:31",
+						"updated_at": "2016-05-10 17:14:31",
+						"deleted": "0"
+					}, {
+						"id": "253",
+						"name": "内裤",
+						"parent_id": "248",
+						"spid": "248|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-10 17:14:37",
+						"updated_at": "2016-05-10 17:14:37",
+						"deleted": "0"
+					}, {
+						"id": "254",
+						"name": "袜子",
+						"parent_id": "248",
+						"spid": "248|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "4",
+						"created_at": "2016-05-10 17:14:42",
+						"updated_at": "2016-05-10 17:14:42",
+						"deleted": "0"
+					}, {
+						"id": "261",
+						"name": "内衣",
+						"parent_id": "248",
+						"spid": "248|",
+						"cover_image": "",
+						"description": null,
+						"status": "1",
+						"weight": "5",
+						"created_at": "2016-05-12 10:16:03",
+						"updated_at": "2016-05-12 10:16:10",
+						"deleted": "0"
+					}
+				],
+				"target_id": "248",
+				"target_type": 43,
+				"target_url": "内衣文胸"
+			}, {
+				"id": "249",
+				"name": "饰品配饰",
+				"parent_id": "0",
+				"cover_image": "http://qnm.hunliji.com/o_1aicqadaobboer8bke18k1ffl9.png",
+				"description": "头纱皇冠 耳环胸针",
+				"children": [
+					{
+						"id": "256",
+						"name": "披肩",
+						"parent_id": "249",
+						"spid": "249|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "1",
+						"created_at": "2016-05-10 17:16:02",
+						"updated_at": "2016-05-10 17:16:02",
+						"deleted": "0"
+					}, {
+						"id": "257",
+						"name": "服装配饰",
+						"parent_id": "249",
+						"spid": "249|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "2",
+						"created_at": "2016-05-10 17:16:08",
+						"updated_at": "2016-05-10 17:16:08",
+						"deleted": "0"
+					}, {
+						"id": "258",
+						"name": "领结领带",
+						"parent_id": "249",
+						"spid": "249|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "3",
+						"created_at": "2016-05-10 17:16:14",
+						"updated_at": "2016-05-10 17:16:14",
+						"deleted": "0"
+					}, {
+						"id": "234",
+						"name": "头饰",
+						"parent_id": "249",
+						"spid": "249|",
+						"cover_image": null,
+						"description": null,
+						"status": "1",
+						"weight": "4",
+						"created_at": "2016-05-04 17:59:36",
+						"updated_at": "2016-05-10 17:15:04",
+						"deleted": "0"
+					}
+				],
+				"target_id": "249",
+				"target_type": 43,
+				"target_url": "饰品配饰"
+			}
+		]
+	},
+	"current_time": 1470813477
+}

@@ -1,0 +1,32 @@
+		<link rel="stylesheet" type="text/css" href="css/shangjia.css"/>
+		<div id="header">
+			<a href="#/mine">
+			<img src="img/images/我的关注_3.png"/>
+			</a>
+			<span>
+				我是商家
+			</span>
+		</div>
+		<div id="main">
+			<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/1.jpg" /></div>
+						<div class="swiper-slide"><img src="img/2.jpg" /></div>
+						<div class="swiper-slide"><img src="img/3.jpg" /></div>
+						<div class="swiper-slide"><img src="img/4.jpg" /></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<script>
+				var mySwiper = new Swiper('.swiper-container', {
+					autoplay: 3000, //可选选项，自动滑动
+					autoplayDisableOnInteraction:false,
+					pagination:'.swiper-pagination',
+					loop:true
+				})
+			</script>
+		</div>
+		<div id="bottom">
+			<a href="javascript:">立即入住</a>
+		</div>
